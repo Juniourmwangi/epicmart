@@ -783,7 +783,7 @@ footer {
 }
 
 
-
+}
 
 
 /* ══ CART COMPLETE RESTYLE ══ */
@@ -954,7 +954,7 @@ footer {
 
 
 
-
+}
 
 
 /* ══ FONT SIZE REDUCTIONS ══ */
@@ -1892,6 +1892,70 @@ footer {
   .prod-img, .prod-img-wrap, .pcard-img { height: 140px !important; }
 }
 
+
+/* ── HERO IMAGE SLIDESHOW ── */
+.hero-slide {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  opacity: 0 !important;
+  transition: opacity .6s ease !important;
+}
+.hero-slide.active {
+  opacity: 1 !important;
+  position: absolute !important;
+}
+.hf-img {
+  position: relative !important;
+  height: 260px !important;
+  overflow: hidden !important;
+  background: linear-gradient(145deg,var(--surface2),#1E1418) !important;
+}
+/* Arrows */
+.hero-arr {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  background: rgba(0,0,0,.55) !important;
+  border: 1.5px solid rgba(255,255,255,.2) !important;
+  color: #fff !important;
+  width: 34px !important; height: 34px !important;
+  border-radius: 50% !important;
+  font-size: 20px !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 5 !important;
+  transition: .2s !important;
+  line-height: 1 !important;
+}
+.hero-arr:hover { background: rgba(212,160,23,.7) !important; border-color: #D4A017 !important; }
+.hero-arr-left  { left: 10px !important; }
+.hero-arr-right { right: 10px !important; }
+/* Dots */
+.hero-dots {
+  position: absolute !important;
+  bottom: 10px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  display: flex !important;
+  gap: 6px !important;
+  z-index: 5 !important;
+}
+.hero-dot {
+  width: 8px !important; height: 8px !important;
+  border-radius: 50% !important;
+  background: rgba(255,255,255,.4) !important;
+  cursor: pointer !important;
+  transition: .2s !important;
+  border: none !important;
+}
+.hero-dot.active { background: #D4A017 !important; transform: scale(1.2) !important; }
+
 </style>
 </head>
 <body>
@@ -1971,10 +2035,21 @@ footer {
       </div>
     </div>
     <div class="hero-featured">
-      <div class="hf-img">
-        <img src="Images\EXECUTIVE STYLING CHAIR26k (1).jpg" alt="Executive Styling Chair" onerror="this.hidden=true">
+      <div class="hf-img" id="heroImgWrap">
+        <!-- Image slideshow -->
+        <img id="heroImg0" src="images/EXECUTIVE STYLING CHAIR26K.jpg" alt="Executive Styling Chair" onerror="this.hidden=true" class="hero-slide active">
+        <img id="heroImg1" src="images/EXECUTIVE STYLING CHAIR26k (1).jpg" alt="Executive Styling Chair Side View" onerror="this.hidden=true" class="hero-slide">
         <span class="hf-badge">🔥 BEST SELLER</span>
+        <!-- Arrows -->
+        <button class="hero-arr hero-arr-left" onclick="heroSlide(-1)">&#8249;</button>
+        <button class="hero-arr hero-arr-right" onclick="heroSlide(1)">&#8250;</button>
+        <!-- Dots -->
+        <div class="hero-dots">
+          <span class="hero-dot active" onclick="heroGoTo(0)"></span>
+          <span class="hero-dot" onclick="heroGoTo(1)"></span>
+        </div>
       </div>
+      
       <div class="hf-body">
         <div class="hf-label">⚡ This Week's Top Pick</div>
         <div class="hf-name">Executive Styling Chair — Premium Hydraulic</div>
@@ -2113,8 +2188,8 @@ footer {
         <div class="contact-row">📞 <a href="tel:+254740190837">+254 740 190 837</a></div>
         <div class="contact-row">💬 <a href="https://wa.me/254740190837">WhatsApp: 0740 190 837</a></div>
         <div class="contact-row">✉️ <a href="mailto:info@epicmart.co.ke">info@epicmart.co.ke</a></div>
-        <div class="contact-row">📍 Tom Mboya Street, Nairobi CBD</div>
-        <div class="contact-row">🕒 Mon–Sat: 8:00 AM – 6:00 PM</div>
+        <div class="contact-row">📍 Ronald Ngala Street, Nairobi CBD</div>
+        <div class="contact-row">🕒 Mon–Sat: 8:00 AM – 7:00 PM</div>
       </address>
     </div>
   </div>
@@ -2182,83 +2257,83 @@ footer {
 // ═══════════════════════════════════
 const PRODUCTS = [
   // CHAIRS
-  {id:811,name:'Black Salon & Barber Chair',cat:'chairs',price:8000,oldPrice:11000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Locally-Made-SalonBarber-Chair.jpg',badge:'sale',stars:5,reviews:87,url:'https://epicmart.co.ke/product/black-saloon-and-barber-chair/'},
-  {id:815,name:'Classy Salon Barber Chair',cat:'chairs',price:25000,oldPrice:28000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Classy-Salon-Barber-Chair.jpg',badge:'hot',stars:5,reviews:54,url:'https://epicmart.co.ke/product/classy-saloon-barber-chair/'},
-  {id:824,name:'Chrome Barber Chair',cat:'chairs',price:28000,oldPrice:30000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/SaloonBarber-Chair-1.jpg',badge:'sale',stars:4,reviews:31,url:'https://epicmart.co.ke/product/chrome-barber-chair/'},
-  {id:823,name:'Executive Styling Chair',cat:'chairs',price:26000,oldPrice:28000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Executive-Styling-Chair.jpg',badge:'hot',stars:4,reviews:23,url:'https://epicmart.co.ke/product/executive-styling-chair/'},
-  {id:828,name:'Modern Simple Styling Chair',cat:'chairs',price:24000,oldPrice:26000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Modern-Simple-Styling-Chair.jpg',badge:'sale',stars:5,reviews:37,url:'https://epicmart.co.ke/product/modern-simple-styling-chair/'},
-  {id:842,name:'Styling Chair Cream White Gold',cat:'chairs',price:25000,oldPrice:27000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Styling-Chair-Cream-White-Gold.jpg',badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/styling-chair-cream-white-gold/'},
-  {id:843,name:'Styling Leather Black Silver Chair',cat:'chairs',price:23000,oldPrice:27000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Styling-Leather-Black-Silver-Chair.png',badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/styling-leather-black-silver-chair/'},
-  {id:844,name:'Styling Chair Cream Black Gold',cat:'chairs',price:25000,oldPrice:27000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Styling-Chair-Cream-Black-Gold.jpg',badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/styling-chair-cream-black-gold/'},
-  {id:845,name:'Modern Styling Chair Black',cat:'chairs',price:26500,oldPrice:30000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Modern-Styling-Chair-Black-2.jpg',badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/modern-styling-chair-black/'},
-  {id:846,name:'Reclining Salon Seat',cat:'chairs',price:30000,oldPrice:35000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Reclining-Salon-Seat-1.jpg',badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/reclining-salon-seat/'},
-  {id:847,name:'Salon Rose Gold Barber Chair',cat:'chairs',price:26000,oldPrice:32000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Salon-Rose-Gold-Barber-Chair-1.jpg',badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/salon-rose-gold-barber-chair/'},
-  {id:848,name:'Saloon Barber Chair Red Black',cat:'chairs',price:13000,oldPrice:16000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Saloon-Barber-Chair-Red-Black.jpg',badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/saloon-barber-chair-red-black/'},
-  {id:849,name:'Saloon & Barber Chair',cat:'chairs',price:7000,oldPrice:9000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/SaloonBarber-Chair-1.jpg',badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/saloon-barber-chair/'},
-  {id:851,name:'Heavy Duty Hydraulic Chair',cat:'chairs',price:58000,oldPrice:65000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Heavy-Duty-Hydraulic-Chair-1.jpg',badge:'hot',stars:5,reviews:0,url:'https://epicmart.co.ke/product/heavy-duty-multipurpose-hydraulic-chair/'},
-  {id:830,name:'Jumbo Seat Waiting Chair',cat:'chairs',price:36500,oldPrice:43000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Jumbo-Seat-Waiting-Chair.jpg',badge:'sale',stars:4,reviews:13,url:'https://epicmart.co.ke/product/jumbo-seat/'},
-  {id:857,name:'Waiting Bench',cat:'chairs',price:10000,oldPrice:13000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Waiting-Bench.png',badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/waiting-bench/'},
-  {id:819,name:'Fibre Spa Pedicure Chair',cat:'chairs',price:40000,oldPrice:42000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Fibre-Spa-Pedicure-Chair.jpg',badge:'sale',stars:5,reviews:9,url:'https://epicmart.co.ke/product/fibre-spa/'},
+  {id:811,name:'Black Salon & Barber Chair',cat:'chairs',price:8000,oldPrice:11000,img:'images/Locally-Made-SalonBarber-Chair.jpg',imgs:['images/Locally-Made-SalonBarber-Chair.jpg','images/Locally-Made-SalonBarber-Chair-1.jpg','images/SaloonBarber-Chair.jpg','images/Black saloon and Barber chair8K.jpg'],badge:'sale',stars:5,reviews:87,url:'https://epicmart.co.ke/product/black-saloon-and-barber-chair/'},
+  {id:815,name:'Classy Salon Barber Chair',cat:'chairs',price:25000,oldPrice:28000,img:'images/Classy saloon barber chair25K.jpg',imgs:['images/Classy saloon barber chair25K.jpg','images/Classy saloon barber chair25K.jpg','images/Classy saloon barber chair25K.jpg','images/Classy saloon barber chair25K.jpg'],badge:'hot',stars:5,reviews:54,url:'https://epicmart.co.ke/product/classy-saloon-barber-chair/'},
+  {id:824,name:'Chrome Barber Chair',cat:'chairs',price:28000,oldPrice:30000,img:'images/CHROME BARBER CHAIR28K.jpg',imgs:['images/CHROME BARBER CHAIR28K.jpg','images/CHROME BARBER CHAIR28K..jpg','images/CHROME BARBER CHAIR28K.jpg','images/CHROME BARBER CHAIR28K..jpg'],badge:'sale',stars:4,reviews:31,url:'https://epicmart.co.ke/product/chrome-barber-chair/'},
+  {id:823,name:'Executive Styling Chair',cat:'chairs',price:26000,oldPrice:28000,img:'images/EXECUTIVE STYLING CHAIR26K.jpg',imgs:['images/EXECUTIVE STYLING CHAIR26K.jpg','images/EXECUTIVE STYLING CHAIR26K..jpg','images/EXECUTIVE STYLING CHAIR26k (1).jpg','images/EXECUTIVE STYLING CHAIR.jpg'],badge:'hot',stars:4,reviews:23,url:'https://epicmart.co.ke/product/executive-styling-chair/'},
+  {id:828,name:'Modern Simple Styling Chair',cat:'chairs',price:24000,oldPrice:26000,img:'images/modern Simple Styling chair5K.jpg',imgs:['images/modern Simple Styling chair5K.jpg','images/modern Simple Styling chair5K...jpg','images/modern Simple Styling chair5K.jpg','images/modern Simple Styling chair5K...jpg'],badge:'sale',stars:5,reviews:37,url:'https://epicmart.co.ke/product/modern-simple-styling-chair/'},
+  {id:842,name:'Styling Chair Cream White Gold',cat:'chairs',price:25000,oldPrice:27000,img:'images/Styling-Chair-Cream-White-Gold-1.jpg',imgs:['images/Styling-Chair-Cream-White-Gold-1.jpg','images/Styling chair cream white gold 25K...jpg','images/Styling-Chair-Cream-White-Gold-1.jpg','images/Styling chair cream white gold 25K...jpg'],badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/styling-chair-cream-white-gold/'},
+  {id:843,name:'Styling Leather Black Silver Chair',cat:'chairs',price:23000,oldPrice:27000,img:'images/Styling-Leather-Black-Silver-Chair.png',imgs:['images/Styling-Leather-Black-Silver-Chair.png','images/Styling leather black silver chair23K.jpg','images/Styling leather black silver chair25K.png','images/Styling leather black silver chair 25K.jpg'],badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/styling-leather-black-silver-chair/'},
+  {id:844,name:'Styling Chair Cream Black Gold',cat:'chairs',price:25000,oldPrice:27000,img:'images/Styling-Chair-Cream-Black-Gold.jpg',imgs:['images/Styling-Chair-Cream-Black-Gold.jpg','images/Styling-Chair-Cream-Black-Gold-1.jpg','images/Styling-Chair-Cream-Black-Gold.jpg','images/Styling-Chair-Cream-Black-Gold-1.jpg'],badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/styling-chair-cream-black-gold/'},
+  {id:845,name:'Modern Styling Chair Black',cat:'chairs',price:26500,oldPrice:30000,img:'images/Modern-Styling-Chair-Black-2.jpg',imgs:['images/Modern-Styling-Chair-Black-2.jpg','images/Modern Styling chair black 26.5K.jpg','images/Modern Styling chair black26.5K.jpg','images/Modern-Styling-Chair-Black-1.jpg'],badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/modern-styling-chair-black/'},
+  {id:846,name:'Reclining Salon Seat',cat:'chairs',price:30000,oldPrice:35000,img:'images/Reclining-Salon-Seat-1.jpg',imgs:['images/Reclining-Salon-Seat-1.jpg','images/Reclining salon seat 30K.jpg','images/Reclining salon seat30K.png','images/Reclining-Salon-Seat.jpg'],badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/reclining-salon-seat/'},
+  {id:847,name:'Salon Rose Gold Barber Chair',cat:'chairs',price:26000,oldPrice:32000,img:'images/Salon-Rose-Gold-Barber-Chair-1.jpg',imgs:['images/Salon-Rose-Gold-Barber-Chair-1.jpg','images/Salon rose gold barber chair 26K.jpg','images/Salon rose gold barber chair26K.jpg','images/Salon rose gold barber chair26.jpg'],badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/salon-rose-gold-barber-chair/'},
+  {id:848,name:'Saloon Barber Chair Red Black',cat:'chairs',price:13000,oldPrice:16000,img:'images/Saloon-Barber-Chair-Red-Black.jpg',imgs:['images/Saloon-Barber-Chair-Red-Black.jpg','images/Saloon Barber chair red Black13K.jpg','images/Saloon-Barber-Chair-Red-Black-1.jpg','images/Saloon-Barber-Chair-Red-Black.jpg'],badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/saloon-barber-chair-red-black/'},
+  {id:849,name:'Saloon & Barber Chair',cat:'chairs',price:7000,oldPrice:9000,img:'images/SaloonBarber-Chair.jpg',imgs:['images/SaloonBarber-Chair.jpg','images/Saloon & Barber Chair7K.jpg','images/SaloonBarber-Chair-1.jpg','images/SaloonBarber-Chair.jpg'],badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/saloon-barber-chair/'},
+  {id:851,name:'Heavy Duty Hydraulic Chair',cat:'chairs',price:58000,oldPrice:65000,img:'images/Heavy-Duty-Hydraulic-Chair-1.jpg',imgs:['images/Heavy-Duty-Hydraulic-Chair-1.jpg','images/Heavy Duty multipurpose hydraulic Chair 58K.jpg','images/Heavy Duty multipurpose hydraulic Chair58K.jpg','images/Heavy-Duty-Hydraulic-Chair.jpg'],badge:'hot',stars:5,reviews:0,url:'https://epicmart.co.ke/product/heavy-duty-multipurpose-hydraulic-chair/'},
+  {id:830,name:'Jumbo Seat Waiting Chair',cat:'chairs',price:36500,oldPrice:43000,img:'images/jumbo waiting chair.jpg',imgs:['images/jumbo waiting chair.jpg','images/Mini-Jumbo-Chair.jpg','images/jumbo waiting chair.jpg','images/Mini-Jumbo-Chair.jpg'],badge:'sale',stars:4,reviews:13,url:'https://epicmart.co.ke/product/jumbo-seat/'},
+  {id:857,name:'Waiting Bench',cat:'chairs',price:10000,oldPrice:13000,img:'images/Waiting-Bench.png',imgs:['images/Waiting-Bench.png','images/WaitingBench10k.png','images/Waiting-Bench.png','images/Bench.jpg'],badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/waiting-bench/'},
+  {id:819,name:'Fibre Spa Pedicure Chair',cat:'chairs',price:40000,oldPrice:42000,img:'images/FIBRE SPA 40k.jpg',imgs:['images/FIBRE SPA 40k.jpg','images/FIBRE SPA40k.jpg','images/Pedicure-Seat.jpg','images/FIBRE SPA 40k.jpg'],badge:'sale',stars:5,reviews:9,url:'https://epicmart.co.ke/product/fibre-spa/'},
 
   // BARBER ACCESSORIES
-  {id:816,name:'Wahl Balding Clipper',cat:'barber',price:9000,oldPrice:9500,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Wahl-SuperTaper-Cordless-Clipper-%E2%80%94-Professional-Grade.jpg',badge:'hot',stars:5,reviews:118,url:'https://epicmart.co.ke/product/wahl-balding/'},
-  {id:836,name:'Wahl SuperTaper Cordless',cat:'barber',price:14000,oldPrice:16000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Wahl-SuperTaper-Cordless.jpg',badge:'hot',stars:5,reviews:93,url:'https://epicmart.co.ke/product/wahl-supertaper-cordless/'},
-  {id:818,name:'Original Super Taper Clipper',cat:'barber',price:7500,oldPrice:8500,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Original-Super-Taper-Clipper.jpg',badge:'sale',stars:5,reviews:75,url:'https://epicmart.co.ke/product/original-super-taper/'},
-  {id:817,name:'Cordless Detailer Trimmer',cat:'barber',price:19500,oldPrice:22500,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Cordless-Detailer-Trimmer.jpg',badge:'sale',stars:5,reviews:46,url:'https://epicmart.co.ke/product/cordless-detailer/'},
-  {id:832,name:'Launch Wahl Trimmer',cat:'barber',price:6000,oldPrice:8000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/launch-wahl-trimmer.webp',badge:'sale',stars:5,reviews:67,url:'https://epicmart.co.ke/product/launch-wahl-trimmer/'},
-  {id:834,name:'Rechargeable Clipper',cat:'barber',price:6500,oldPrice:7500,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Rechargeable-Clipper.jpg',badge:'sale',stars:5,reviews:52,url:'https://epicmart.co.ke/product/reachangable-clipper/'},
-  {id:820,name:'Wahl Cables',cat:'barber',price:1500,oldPrice:2000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Wahl-Cables.jpg',badge:'sale',stars:4,reviews:82,url:'https://epicmart.co.ke/product/wahl-cables/'},
-  {id:821,name:'Disposable Gloves (Box)',cat:'barber',price:1000,oldPrice:1200,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Disposable-Gloves-Box.jpg',badge:'sale',stars:5,reviews:104,url:'https://epicmart.co.ke/product/disposable-glooves/'},
-  {id:859,name:'Magic Taper',cat:'barber',price:5000,oldPrice:6000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Magic-Taper.jpg',badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/magic-taper/'},
-  {id:860,name:'Wahl Professional Detailer',cat:'barber',price:13500,oldPrice:16000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Wahl-Professional-Detailer.jpg',badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/wahl-professional-detailer/'},
-  {id:861,name:'5-Star Gold Cordless Magic Clip',cat:'barber',price:22000,oldPrice:27000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/5-Star-Gold-Cordless-Magic-Clip.webp',badge:'hot',stars:5,reviews:0,url:'https://epicmart.co.ke/product/5-star-gold-cordless-magic-clip/'},
-  {id:862,name:'Starke Salon Pro Balding Clipper',cat:'barber',price:8000,oldPrice:11500,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Starke-Salon-Pro-Balding-Cliiper.jpg',badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/starke-salon-pro-balding-cordless-clipper/'},
-  {id:863,name:'Wahl 300 Series Home Clipper',cat:'barber',price:6000,oldPrice:7500,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Wahl-300-Series-Home-Clipper.webp',badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/wahl-300-series-home-use-hair-clipper/'},
-  {id:864,name:'Nose Trimmer',cat:'barber',price:2500,oldPrice:3500,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Nose-Trimmer.jpg',badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/nose-trimmer/'},
-  {id:865,name:'Neck Ruffles',cat:'barber',price:600,oldPrice:800,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Neck-Ruffles.jpg',badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/neck-ruffles/'},
-  {id:868,name:'Adult Barber Gowns',cat:'barber',price:700,oldPrice:1200,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Adult-Barber-Gowns.jpg',badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/adult-barber-gowns/'},
-  {id:869,name:'Barber Blower',cat:'barber',price:3500,oldPrice:4500,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Barber-Blower.jpg',badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/barber-blower/'},
-  {id:870,name:'Ayers Sterilizer',cat:'barber',price:6000,oldPrice:8000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Ayers-Sterilizer.jpg',badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/ayers-sterilizer/'},
+  {id:816,name:'Wahl Balding Clipper',cat:'barber',price:9000,oldPrice:9500,img:'images/WAHL BALDING 9k.jpg',imgs:['images/WAHL BALDING 9k.jpg','images/WAHL BALDING9k.jpg','images/WAHL BALDING 9k.jpg','images/WAHL BALDING9k.jpg'],badge:'hot',stars:5,reviews:118,url:'https://epicmart.co.ke/product/wahl-balding/'},
+  {id:836,name:'Wahl SuperTaper Cordless',cat:'barber',price:14000,oldPrice:16000,img:'images/Wahl SuperTaper Cordless  14k.jpg',imgs:['images/Wahl SuperTaper Cordless  14k.jpg','images/Wahl SuperTaper Cordless14k.jpg','images/Wahl SuperTaper Cordless 1 4k.jpg','images/Wahl SuperTaper Cordless  14k.jpg'],badge:'hot',stars:5,reviews:93,url:'https://epicmart.co.ke/product/wahl-supertaper-cordless/'},
+  {id:818,name:'Original Super Taper Clipper',cat:'barber',price:7500,oldPrice:8500,img:'images/ORIGINAL SUPER TAPER 7.5k.jpg',imgs:['images/ORIGINAL SUPER TAPER 7.5k.jpg','images/ORIGINAL SUPER TAPER  7.5k.jpg','images/ORIGINAL SUPER TAPER7.5k.jpg','images/ORIGINAL SUPER TAPER 7.5k.jpg'],badge:'sale',stars:5,reviews:75,url:'https://epicmart.co.ke/product/original-super-taper/'},
+  {id:817,name:'Cordless Detailer Trimmer',cat:'barber',price:19500,oldPrice:22500,img:'images/CORDLESS DETAILER 19.5k.jpg',imgs:['images/CORDLESS DETAILER 19.5k.jpg','images/CORDLESS DETAILER19.5k.jpg','images/CORDLESS DETAILER 19.5k.jpg','images/CORDLESS DETAILER19.5k.jpg'],badge:'sale',stars:5,reviews:46,url:'https://epicmart.co.ke/product/cordless-detailer/'},
+  {id:832,name:'Launch Wahl Trimmer',cat:'barber',price:6000,oldPrice:8000,img:'images/LAUNCH WAHL TRIMMER 6k.jpg',imgs:['images/LAUNCH WAHL TRIMMER 6k.jpg','images/LAUNCH WAHL TRIMMER  6k.jpg','images/LAUNCH WAHL TRIMMER6k.jpg','images/LAUNCH WAHL TRIMMER 6k.jpg'],badge:'sale',stars:5,reviews:67,url:'https://epicmart.co.ke/product/launch-wahl-trimmer/'},
+  {id:834,name:'Rechargeable Clipper',cat:'barber',price:6500,oldPrice:7500,img:'images/REACHANGABLE CLIPPER 6.5k.jpg',imgs:['images/REACHANGABLE CLIPPER 6.5k.jpg','images/REACHANGABLE CLIPPER  6.5kk.jpg','images/REACHANGABLE CLIPPER6.5k.jpg','images/REACHANGABLE CLIPPER 6.5k.jpg'],badge:'sale',stars:5,reviews:52,url:'https://epicmart.co.ke/product/reachangable-clipper/'},
+  {id:820,name:'Wahl Cables',cat:'barber',price:1500,oldPrice:2000,img:'images/Wahl cables  1.5k.jpg',imgs:['images/Wahl cables  1.5k.jpg','images/Wahl cables1.5k.png','images/Wahl cables  1.5k.jpg','images/Wahl cables1.5k.png'],badge:'sale',stars:4,reviews:82,url:'https://epicmart.co.ke/product/wahl-cables/'},
+  {id:821,name:'Disposable Gloves (Box)',cat:'barber',price:1000,oldPrice:1200,img:'images/DISPOSABLE GLOOVES  1k.jpg',imgs:['images/DISPOSABLE GLOOVES  1k.jpg','images/DISPOSABLE GLOOVES1k.jpg','images/DISPOSABLE GLOOVES  1k.jpg','images/DISPOSABLE GLOOVES1k.jpg'],badge:'sale',stars:5,reviews:104,url:'https://epicmart.co.ke/product/disposable-glooves/'},
+  {id:859,name:'Magic Taper',cat:'barber',price:5000,oldPrice:6000,img:'images/Magic-Taper.jpg',imgs:['images/Magic-Taper.jpg','images/Magic Taper 5k.jpg','images/Magic Taper5k.jpg','images/Magic-Taper.jpg'],badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/magic-taper/'},
+  {id:860,name:'Wahl Professional Detailer',cat:'barber',price:13500,oldPrice:16000,img:'images/Wahl-Professional-Detailer.jpg',imgs:['images/Wahl-Professional-Detailer.jpg','images/Wahl Professional Detailer 13.5K.jpg','images/Wahl Professional Detailer13.5K.jpg','images/Wahl-Professional-Detailer.jpg'],badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/wahl-professional-detailer/'},
+  {id:861,name:'5-Star Gold Cordless Magic Clip',cat:'barber',price:22000,oldPrice:27000,img:'images/5-Star Gold Cordless Magic Clip 22K.jpg',imgs:['images/5-Star Gold Cordless Magic Clip 22K.jpg','images/5-Star Gold Cordless Magic Clip  22K.jpg','images/5-Star Gold Cordless Magic Clip22K.jpg','images/5-Star-Gold-Cordless-Magic-Clip.webp'],badge:'hot',stars:5,reviews:0,url:'https://epicmart.co.ke/product/5-star-gold-cordless-magic-clip/'},
+  {id:862,name:'Starke Salon Pro Balding Clipper',cat:'barber',price:8000,oldPrice:11500,img:'images/Starke-Salon-Pro-Balding-Cliiper.jpg',imgs:['images/Starke-Salon-Pro-Balding-Cliiper.jpg','images/Starke Salon Pro Balding Cordless Clipper 8K.jpg','images/Starke Salon Pro Balding Cordless Clipper8K.jpg','images/Starke-Salon-Pro-Balding-Clipper.webp'],badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/starke-salon-pro-balding-cordless-clipper/'},
+  {id:863,name:'Wahl 300 Series Home Clipper',cat:'barber',price:6000,oldPrice:7500,img:'images/Wahl-300-Series-Home-Clipper.webp',imgs:['images/Wahl-300-Series-Home-Clipper.webp','images/Wahl-300 Series Home Use Hair Clipper 6K.jpg','images/Wahl-300 Series Home Use Hair Clipper6K.jpg','images/Wahl-300-Series-Home-Clipper.webp'],badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/wahl-300-series-home-use-hair-clipper/'},
+  {id:864,name:'Nose Trimmer',cat:'barber',price:2500,oldPrice:3500,img:'images/Nose-Trimmer.jpg',imgs:['images/Nose-Trimmer.jpg','images/NOSE TRIMMER 2.5K.jpg','images/NOSE TRIMMER2.5K.jpg','images/Nose-Trimmer.jpg'],badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/nose-trimmer/'},
+  {id:865,name:'Neck Ruffles',cat:'barber',price:600,oldPrice:800,img:'images/Neck-Ruffles.jpg',imgs:['images/Neck-Ruffles.jpg','images/NECK RUFFLES 0.6K.jpg','images/NECK RUFFLES0.6K.jpg','images/Neck-Ruffles.jpg'],badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/neck-ruffles/'},
+  {id:868,name:'Adult Barber Gowns',cat:'barber',price:700,oldPrice:1200,img:'images/Adult-Barber-Gowns.jpg',imgs:['images/Adult-Barber-Gowns.jpg','images/Adult barber gowns 0.7.jpg','images/Adult barber gowns0.7.jpg','images/Adult-Barber-Gowns.jpg'],badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/adult-barber-gowns/'},
+  {id:869,name:'Barber Blower',cat:'barber',price:3500,oldPrice:4500,img:'images/Barber-Blower.jpg',imgs:['images/Barber-Blower.jpg','images/BARBER BLOWER 3.5K.jpg','images/BARBER BLOWER3.5K.jpg','images/Barber-Blower.jpg'],badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/barber-blower/'},
+  {id:870,name:'Ayers Sterilizer',cat:'barber',price:6000,oldPrice:8000,img:'images/Ayers-Sterilizer.jpg',imgs:['images/Ayers-Sterilizer.jpg','images/Ayers Sterilizer 6K.png','images/Ayers Sterilizer6K.jpg','images/Ayers-Sterilizer.jpg'],badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/ayers-sterilizer/'},
 
   // MASSAGE
-  {id:812,name:'Massage Bed Portable & Foldable',cat:'massage',price:26000,oldPrice:32000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Massage-Bed-Foldable.jpg',badge:'sale',stars:5,reviews:63,url:'https://epicmart.co.ke/product/massage-bed-portable-and-foldable/'},
-  {id:810,name:'Massage Oil Warmer',cat:'massage',price:10500,oldPrice:12500,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Massage-Oil-Warmer.jpg',badge:'sale',stars:5,reviews:41,url:'https://epicmart.co.ke/product/massage-oil-warmer/'},
-  {id:814,name:'32L Towel Warmer 2 Cabinet',cat:'massage',price:19000,oldPrice:24000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/32L-Towel-Warmer-2-Cabinet.jpg',badge:'sale',stars:5,reviews:35,url:'https://epicmart.co.ke/product/32l-towel-warmer-2-cabinet/'},
-  {id:831,name:'Massage Bed Foldable',cat:'massage',price:25000,oldPrice:30000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Massage-Bed-Foldable.jpg',badge:'sale',stars:5,reviews:29,url:'https://epicmart.co.ke/product/massage-bed-foldable/'},
-  {id:872,name:'Locally Made Massage Bed',cat:'massage',price:14000,oldPrice:16000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/locally-made-massage-bed.jpg',badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/locally-made-massage-bed/'},
-  {id:873,name:'Wooden Massage Sticks',cat:'massage',price:9000,oldPrice:12000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Wooden-Massage-Sticks.jpg',badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/wooden-massage-sticks/'},
-  {id:874,name:'Body Massage Hammer / Gun',cat:'massage',price:4500,oldPrice:6000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Body-Massage-Hammer-Gun.jpg',badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/body-massage-hammer-gun/'},
-  {id:875,name:'Max Footspa',cat:'massage',price:8000,oldPrice:9000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Max-FootSPA.webp',badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/max-footspar/'},
-  {id:876,name:'Fibre Footbath',cat:'massage',price:38000,oldPrice:40000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Fibre-FootBath.jpg',badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/fibre-footbath-2/'},
+  {id:812,name:'Massage Bed Portable & Foldable',cat:'massage',price:26000,oldPrice:32000,img:'images/Massage bed portable and foldable 26K.jpg',imgs:['images/Massage bed portable and foldable 26K.jpg','images/Massage bed portable and foldable26K.jpg','images/Massage bed Foldable25K.jpg','images/locally-made-massage-bed.jpg'],badge:'sale',stars:5,reviews:63,url:'https://epicmart.co.ke/product/massage-bed-portable-and-foldable/'},
+  {id:810,name:'Massage Oil Warmer',cat:'massage',price:10500,oldPrice:12500,img:'images/MASSAGE OIL WARMER 10.5K.jpg',imgs:['images/MASSAGE OIL WARMER 10.5K.jpg','images/MASSAGE OIL WARMER10.5K.jpg','images/MASSAGE OIL WARMER 10.5K.jpg','images/MASSAGE OIL WARMER10.5K.jpg'],badge:'sale',stars:5,reviews:41,url:'https://epicmart.co.ke/product/massage-oil-warmer/'},
+  {id:814,name:'32L Towel Warmer 2 Cabinet',cat:'massage',price:19000,oldPrice:24000,img:'images/32L towel warmer 2 cabinet 19K.jpg',imgs:['images/32L towel warmer 2 cabinet 19K.jpg','images/32L towel warmer 2 cabinet19K.jpg','images/32L towel warmer 2 cabinet 19K.jpg','images/32L towel warmer 2 cabinet19K.jpg'],badge:'sale',stars:5,reviews:35,url:'https://epicmart.co.ke/product/32l-towel-warmer-2-cabinet/'},
+  {id:831,name:'Massage Bed Foldable',cat:'massage',price:25000,oldPrice:30000,img:'images/Massage bed Foldable25K.jpg',imgs:['images/Massage bed Foldable25K.jpg','images/Massage bed portable and foldable 26K.jpg','images/locally-made-massage-bed.jpg','images/Massage bed Foldable25K.jpg'],badge:'sale',stars:5,reviews:29,url:'https://epicmart.co.ke/product/massage-bed-foldable/'},
+  {id:872,name:'Locally Made Massage Bed',cat:'massage',price:14000,oldPrice:16000,img:'images/locally-made-massage-bed.jpg',imgs:['images/locally-made-massage-bed.jpg','images/Massage bed Foldable25K.jpg','images/locally-made-massage-bed.jpg','images/Massage bed portable and foldable 26K.jpg'],badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/locally-made-massage-bed/'},
+  {id:873,name:'Wooden Massage Sticks',cat:'massage',price:9000,oldPrice:12000,img:'images/Wooden-Massage-Sticks.jpg',imgs:['images/Wooden-Massage-Sticks.jpg','images/Wooden-Massage-Sticks.jpg','images/Wooden-Massage-Sticks.jpg','images/Wooden-Massage-Sticks.jpg'],badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/wooden-massage-sticks/'},
+  {id:874,name:'Body Massage Hammer / Gun',cat:'massage',price:4500,oldPrice:6000,img:'images/Body-Massage-Hammer-Gun.jpg',imgs:['images/Body-Massage-Hammer-Gun.jpg','images/Body-Massage-Hammer-Gun.jpg','images/Body-Massage-Hammer-Gun.jpg','images/Body-Massage-Hammer-Gun.jpg'],badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/body-massage-hammer-gun/'},
+  {id:875,name:'Max Footspa',cat:'massage',price:8000,oldPrice:9000,img:'images/Max-FootSPA.webp',imgs:['images/Max-FootSPA.webp','images/Max-FootSPA.webp','images/Max-FootSPA.webp','images/Fibre-FootBath.jpg'],badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/max-footspar/'},
+  {id:876,name:'Fibre Footbath',cat:'massage',price:38000,oldPrice:40000,img:'images/Fibre-FootBath.jpg',imgs:['images/Fibre-FootBath.jpg','images/salon-pedicure-bowl2.png','images/Fibre-FootBath.jpg','images/salon-pedicure-bowl2.png'],badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/fibre-footbath-2/'},
 
   // SALON
-  {id:813,name:'Double Manicure Table',cat:'salon',price:36000,oldPrice:40000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Double-Manicure-Table.jpg',badge:'sale',stars:4,reviews:22,url:'https://epicmart.co.ke/product/double-manicure-table/'},
-  {id:825,name:'Shampoo Unit',cat:'salon',price:13000,oldPrice:15500,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Shampoo-Unit.jpg',badge:'sale',stars:5,reviews:19,url:'https://epicmart.co.ke/product/shampoo-unit/'},
-  {id:826,name:'Wall Mount Hair Dryer',cat:'salon',price:18500,oldPrice:22000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Wall-Mount-Hair-Dryer.jpg',badge:'sale',stars:5,reviews:38,url:'https://epicmart.co.ke/product/wall-mount-dryer/'},
-  {id:827,name:'Super Hair Dryer Professional',cat:'salon',price:5500,oldPrice:7000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Super-Hair-Dryer-Professional.jpg',badge:'sale',stars:5,reviews:44,url:'https://epicmart.co.ke/product/super-hair-dryer/'},
-  {id:838,name:'Ceriotti Monsoon Hair Dryer',cat:'salon',price:7000,oldPrice:7500,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Ceriotti-Monsoon-Hair-Dryer.jpg',badge:'sale',stars:5,reviews:28,url:'https://epicmart.co.ke/product/cerriot-monsoon/'},
-  {id:839,name:'Cerriot Blow Dryer',cat:'salon',price:7000,oldPrice:8500,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Cerriot-Blow-Dryer.jpg',badge:'sale',stars:5,reviews:48,url:'https://epicmart.co.ke/product/cerriot-blowdrier/'},
-  {id:829,name:'Single Manicure Table',cat:'salon',price:29000,oldPrice:32000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Single-Manicure-Table.jpg',badge:'sale',stars:4,reviews:11,url:'https://epicmart.co.ke/product/single-manicure-table/'},
-  {id:841,name:'Foldable Manicure Table',cat:'salon',price:14000,oldPrice:15000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Foldable-Manicure-Table.jpg',badge:'sale',stars:4,reviews:17,url:'https://epicmart.co.ke/product/foldable-manicure-table-2/'},
-  {id:837,name:'VVIP Shampoo Unit / Sink',cat:'salon',price:62000,oldPrice:65000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/VVIP-Shampoo-Unit-Sink.jpg',badge:'hot',stars:5,reviews:7,url:'https://epicmart.co.ke/product/vvip-shampoo-unit-sink/'},
-  {id:835,name:'Salon Pedicure Bowl',cat:'salon',price:39600,oldPrice:44000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/salon-pedicure-bowl.jpg',badge:'sale',stars:4,reviews:16,url:'https://epicmart.co.ke/product/salon-pedicure-bowl/'},
-  {id:840,name:'Paraffin Wax Heater',cat:'salon',price:9000,oldPrice:12000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Paraffin-Wax-Heater.jpg',badge:'sale',stars:5,reviews:14,url:'https://epicmart.co.ke/product/paraffin-wax-heater/'},
-  {id:879,name:'Facial Steamer (Pro)',cat:'salon',price:13500,oldPrice:14500,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Facial-Steamer-Pro.png',badge:'new',stars:5,reviews:0,url:'https://epicmart.co.ke/product/facial-steamer-2/'},
-  {id:880,name:'Stand Dryer',cat:'salon',price:13500,oldPrice:15500,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Stand-Dryer.jpg',badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/stand-dryer/'},
-  {id:881,name:'GEK Blowdryer',cat:'salon',price:3500,oldPrice:4500,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/GEK-Blowdryer.jpg',badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/gek-blowdry/'},
-  {id:882,name:'Aspatek Professional Blow Dryer',cat:'salon',price:4500,oldPrice:6500,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Aspatek-Proffessional-Blow-Dryer.jpg',badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/aspatek-professional-blow-dryer/'},
-  {id:883,name:'Steam Styler Flat Iron',cat:'salon',price:9000,oldPrice:12000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Steam-Styler-Flat-Iron.jpg',badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/steam-styler-flat-iron/'},
-  {id:884,name:'Ombre Machine',cat:'salon',price:7000,oldPrice:8500,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Ombre-Machine.jpg',badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/ombre-machine/'},
-  {id:887,name:'Salon Sink',cat:'salon',price:13000,oldPrice:16000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Salon-Sink.png',badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/salon-sink/'},
-  {id:888,name:'Salon Sink (Large)',cat:'salon',price:30000,oldPrice:32000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Salon-Sink-Large.jpg',badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/salon-sink-2/'},
-  {id:891,name:'23L Towel Warmer & UV Sterilizer',cat:'salon',price:13500,oldPrice:16000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/23l-Towel-Warmer-UV-Sterlizer.jpg',badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/23l-towel-warmer-uv-sterilization-cabinet/'},
-  {id:892,name:'Double Wax Warmer',cat:'salon',price:8500,oldPrice:11000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Double-Wax-Warmer.jpg',badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/double-wax-warmer/'},
-  {id:893,name:'UV Sterilizer',cat:'salon',price:8000,oldPrice:9000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/UV-Sterllizer.jpg',badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/uv-sterilizer/'},
-  {id:895,name:'2-in-1 UV Lamp',cat:'salon',price:5000,oldPrice:6000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/2-in-1-uv-Lamp.jpg',badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/2in1-uv-lamp/'},
-  {id:898,name:'Low Level LED Therapy',cat:'salon',price:18000,oldPrice:25000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Low-level-Led-Therapy.webp',badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/low-level-led-therapy/'},
-  {id:899,name:'3-in-1 Facial Machine',cat:'salon',price:18500,oldPrice:22000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/3-in-1-Facial-Machine.jpg',badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/3-in-1-facial-machine/'},
-  {id:822,name:'Lyons Electric Kettle',cat:'salon',price:1500,oldPrice:2000,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/Lyons-Electric-Kettle.jpg',badge:'sale',stars:4,reviews:56,url:'https://epicmart.co.ke/product/lyons-electric-kettle/'},
-  {id:833,name:'20L Professional Shampoo',cat:'salon',price:2400,oldPrice:2800,img:'https://epicmart.co.ke/wp-content/uploads/2026/03/20-litres-Professional-Shampoo.jpg',badge:'sale',stars:5,reviews:72,url:'https://epicmart.co.ke/product/20l/'},
+  {id:813,name:'Double Manicure Table',cat:'salon',price:36000,oldPrice:40000,img:'images/Manicure-Stool.jpg',imgs:['images/Manicure-Stool.jpg','images/Manicure-Stool.jpg','images/Manicure-Stool.jpg','images/Manicure-Stool.jpg'],badge:'sale',stars:4,reviews:22,url:'https://epicmart.co.ke/product/double-manicure-table/'},
+  {id:825,name:'Shampoo Unit',cat:'salon',price:13000,oldPrice:15500,img:'images/Salon-Sink.png',imgs:['images/Salon-Sink.png','images/Salon-Sink-Large.jpg','images/Chrome-Sink.jpg','images/Chrome-Sink-Chair.jpg'],badge:'sale',stars:5,reviews:19,url:'https://epicmart.co.ke/product/shampoo-unit/'},
+  {id:826,name:'Wall Mount Hair Dryer',cat:'salon',price:18500,oldPrice:22000,img:'images/Stand-Dryer.jpg',imgs:['images/Stand-Dryer.jpg','images/Wall-Mount-Hair-Dryer.jpg','images/Stand-Dryer.jpg','images/Wall-Mount-Hair-Dryer.jpg'],badge:'sale',stars:5,reviews:38,url:'https://epicmart.co.ke/product/wall-mount-dryer/'},
+  {id:827,name:'Super Hair Dryer Professional',cat:'salon',price:5500,oldPrice:7000,img:'images/GEK-Blowdryer.jpg',imgs:['images/GEK-Blowdryer.jpg','images/Aspatek-Proffessional-Blow-Dryer.jpg','images/GEK-Blowdryer.jpg','images/Cerriot-Blow-Dryer-1.jpg'],badge:'sale',stars:5,reviews:44,url:'https://epicmart.co.ke/product/super-hair-dryer/'},
+  {id:838,name:'Ceriotti Monsoon Hair Dryer',cat:'salon',price:7000,oldPrice:7500,img:'images/Cerriot-Blow-Dryer-1.jpg',imgs:['images/Cerriot-Blow-Dryer-1.jpg','images/GEK-Blowdryer.jpg','images/Aspatek-Proffessional-Blow-Dryer.jpg','images/Cerriot-Blow-Dryer-1.jpg'],badge:'sale',stars:5,reviews:28,url:'https://epicmart.co.ke/product/cerriot-monsoon/'},
+  {id:839,name:'Cerriot Blow Dryer',cat:'salon',price:7000,oldPrice:8500,img:'images/Cerriot-Blow-Dryer-1.jpg',imgs:['images/Cerriot-Blow-Dryer-1.jpg','images/GEK-Blowdryer.jpg','images/Stand-Dryer.jpg','images/Aspatek-Proffessional-Blow-Dryer.jpg'],badge:'sale',stars:5,reviews:48,url:'https://epicmart.co.ke/product/cerriot-blowdrier/'},
+  {id:829,name:'Single Manicure Table',cat:'salon',price:29000,oldPrice:32000,img:'images/Manicure-Stool.jpg',imgs:['images/Manicure-Stool.jpg','images/Manicure-Stool.jpg','images/Manicure-Stool.jpg','images/Manicure-Stool.jpg'],badge:'sale',stars:4,reviews:11,url:'https://epicmart.co.ke/product/single-manicure-table/'},
+  {id:841,name:'Foldable Manicure Table',cat:'salon',price:14000,oldPrice:15000,img:'images/Manicure-Stool.jpg',imgs:['images/Manicure-Stool.jpg','images/Manicure-Stool.jpg','images/Manicure-Stool.jpg','images/Manicure-Stool.jpg'],badge:'sale',stars:4,reviews:17,url:'https://epicmart.co.ke/product/foldable-manicure-table-2/'},
+  {id:837,name:'VVIP Shampoo Unit / Sink',cat:'salon',price:62000,oldPrice:65000,img:'images/Chrome-Sink.jpg',imgs:['images/Chrome-Sink.jpg','images/Chrome-Sink-Chair.jpg','images/Salon-Sink.png','images/VVIP Shampoo Unit.jpg'],badge:'hot',stars:5,reviews:7,url:'https://epicmart.co.ke/product/vvip-shampoo-unit-sink/'},
+  {id:835,name:'Salon Pedicure Bowl',cat:'salon',price:39600,oldPrice:44000,img:'images/salon-pedicure-bowl2.png',imgs:['images/salon-pedicure-bowl2.png','images/FIBRE SPA 40k.jpg','images/salon-pedicure-bowl2.png','images/FIBRE SPA40k.jpg'],badge:'sale',stars:4,reviews:16,url:'https://epicmart.co.ke/product/salon-pedicure-bowl/'},
+  {id:840,name:'Paraffin Wax Heater',cat:'salon',price:9000,oldPrice:12000,img:'images/Double-Wax-Warmer.jpg',imgs:['images/Double-Wax-Warmer.jpg','images/Double wax warmer 8.5k.jpg','images/Double wax warmer8.5k.jpg','images/Double-Wax-Warmer.jpg'],badge:'sale',stars:5,reviews:14,url:'https://epicmart.co.ke/product/paraffin-wax-heater/'},
+  {id:879,name:'Facial Steamer (Pro)',cat:'salon',price:13500,oldPrice:14500,img:'images/Facial-Steamer-Pro.png',imgs:['images/Facial-Steamer-Pro.png','images/3 in 1 Facial machine 18.5k.jpg','images/Facial-Steamer-Pro.png','images/3 in 1 Facial machine18.5k.jpg'],badge:'new',stars:5,reviews:0,url:'https://epicmart.co.ke/product/facial-steamer-2/'},
+  {id:880,name:'Stand Dryer',cat:'salon',price:13500,oldPrice:15500,img:'images/Stand-Dryer.jpg',imgs:['images/Stand-Dryer.jpg','images/Wall-Mount-Hair-Dryer.jpg','images/GEK-Blowdryer.jpg','images/Stand-Dryer.jpg'],badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/stand-dryer/'},
+  {id:881,name:'GEK Blowdryer',cat:'salon',price:3500,oldPrice:4500,img:'images/GEK-Blowdryer.jpg',imgs:['images/GEK-Blowdryer.jpg','images/Aspatek-Proffessional-Blow-Dryer.jpg','images/Cerriot-Blow-Dryer-1.jpg','images/GEK-Blowdryer.jpg'],badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/gek-blowdry/'},
+  {id:882,name:'Aspatek Professional Blow Dryer',cat:'salon',price:4500,oldPrice:6500,img:'images/Aspatek-Proffessional-Blow-Dryer.jpg',imgs:['images/Aspatek-Proffessional-Blow-Dryer.jpg','images/GEK-Blowdryer.jpg','images/Cerriot-Blow-Dryer-1.jpg','images/Aspatek-Proffessional-Blow-Dryer.jpg'],badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/aspatek-professional-blow-dryer/'},
+  {id:883,name:'Steam Styler Flat Iron',cat:'salon',price:9000,oldPrice:12000,img:'images/Steam-Styler-Flat-Iron.jpg',imgs:['images/Steam-Styler-Flat-Iron.jpg','images/Ombre-Machine.jpg','images/Steam-Styler-Flat-Iron.jpg','images/Wave-Nouveau2.jpg'],badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/steam-styler-flat-iron/'},
+  {id:884,name:'Ombre Machine',cat:'salon',price:7000,oldPrice:8500,img:'images/Ombre-Machine.jpg',imgs:['images/Ombre-Machine.jpg','images/Steam-Styler-Flat-Iron.jpg','images/Wave-Nouveau2.jpg','images/Ombre-Machine.jpg'],badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/ombre-machine/'},
+  {id:887,name:'Salon Sink',cat:'salon',price:13000,oldPrice:16000,img:'images/Salon-Sink.png',imgs:['images/Salon-Sink.png','images/Salon-Sink-Large.jpg','images/Chrome-Sink.jpg','images/Chrome-Sink-Chair.jpg'],badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/salon-sink/'},
+  {id:888,name:'Salon Sink (Large)',cat:'salon',price:30000,oldPrice:32000,img:'images/Salon-Sink-Large.jpg',imgs:['images/Salon-Sink-Large.jpg','images/Salon-Sink.png','images/Chrome-Sink.jpg','images/Chrome-Sink-Chair.jpg'],badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/salon-sink-2/'},
+  {id:891,name:'23L Towel Warmer & UV Sterilizer',cat:'salon',price:13500,oldPrice:16000,img:'images/23l-Towel-Warmer-UV-Sterlizer.jpg',imgs:['images/23l-Towel-Warmer-UV-Sterlizer.jpg','images/32L towel warmer 2 cabinet 19K.jpg','images/23l-Towel-Warmer-UV-Sterlizer.jpg','images/32L towel warmer 2 cabinet19K.jpg'],badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/23l-towel-warmer-uv-sterilization-cabinet/'},
+  {id:892,name:'Double Wax Warmer',cat:'salon',price:8500,oldPrice:11000,img:'images/Double-Wax-Warmer.jpg',imgs:['images/Double-Wax-Warmer.jpg','images/Double wax warmer 8.5k.jpg','images/Double wax warmer8.5k.jpg','images/Double-Wax-Warmer.jpg'],badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/double-wax-warmer/'},
+  {id:893,name:'UV Sterilizer',cat:'salon',price:8000,oldPrice:9000,img:'images/UV-Sterllizer.jpg',imgs:['images/UV-Sterllizer.jpg','images/UV STERILIZER 8k.jpg','images/UV-Sterlizer-Pro.jpg','images/UV STERILIZER8k.jpg'],badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/uv-sterilizer/'},
+  {id:895,name:'2-in-1 UV Lamp',cat:'salon',price:5000,oldPrice:6000,img:'images/2-in-1-uv-Lamp.jpg',imgs:['images/2-in-1-uv-Lamp.jpg','images/2IN1 UV LAMP  5k.jpg','images/2IN1 UV LAMP 5k.jpg','images/2IN1 UV LAMP5k.jpg'],badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/2in1-uv-lamp/'},
+  {id:898,name:'Low Level LED Therapy',cat:'salon',price:18000,oldPrice:25000,img:'images/LOW LEVEL LED THERAPY 18k.jpg',imgs:['images/LOW LEVEL LED THERAPY 18k.jpg','images/LOW LEVEL LED THERAPY  18k.jpg','images/LOW LEVEL LED THERAPY18k.jpg','images/LOW LEVEL LED THERAPY 18k.jpg'],badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/low-level-led-therapy/'},
+  {id:899,name:'3-in-1 Facial Machine',cat:'salon',price:18500,oldPrice:22000,img:'images/3 in 1 Facial machine 18.5k.jpg',imgs:['images/3 in 1 Facial machine 18.5k.jpg','images/3 in 1 Facial machine  18.5k.jpg','images/3 in 1 Facial machine18.5k.jpg','images/Facial-Steamer-Pro.png'],badge:'sale',stars:5,reviews:0,url:'https://epicmart.co.ke/product/3-in-1-facial-machine/'},
+  {id:822,name:'Lyons Electric Kettle',cat:'salon',price:1500,oldPrice:2000,img:'images/Lyons electric kettle 1.5k.jpg',imgs:['images/Lyons electric kettle 1.5k.jpg','images/Lyons electric kettle1.5k.jpg','images/Lyons electric kettle 1.5k.jpg','images/Lyons electric kettle1.5k.jpg'],badge:'sale',stars:4,reviews:56,url:'https://epicmart.co.ke/product/lyons-electric-kettle/'},
+  {id:833,name:'20L Professional Shampoo',cat:'salon',price:2400,oldPrice:2800,img:'images/20l SHAMPOO2.4k.jpg',imgs:['images/20l SHAMPOO2.4k.jpg','images/20l SHAMPOO2.4k.jpg','images/20l SHAMPOO2.4k.jpg','images/20l SHAMPOO2.4k.jpg'],badge:'sale',stars:5,reviews:72,url:'https://epicmart.co.ke/product/20l/'},
 ];
 
 // ═══════════════════════════════════
@@ -2564,6 +2639,41 @@ function pmClose(e) {
 </script>
 <!-- PRODUCT MODAL - paste this before 
 
+<script>
+
+/* ── HERO SLIDESHOW ── */
+var heroIdx = 0;
+var heroTotal = 2;
+var heroTimer;
+
+function heroGoTo(idx) {
+  document.querySelectorAll('.hero-slide').forEach(function(el, i) {
+    el.classList.toggle('active', i === idx);
+  });
+  document.querySelectorAll('.hero-dot').forEach(function(el, i) {
+    el.classList.toggle('active', i === idx);
+  });
+  heroIdx = idx;
+}
+
+function heroSlide(dir) {
+  heroGoTo((heroIdx + dir + heroTotal) % heroTotal);
+  resetHeroTimer();
+}
+
+function resetHeroTimer() {
+  clearInterval(heroTimer);
+  heroTimer = setInterval(function() {
+    heroGoTo((heroIdx + 1) % heroTotal);
+  }, 4000);
+}
+
+// Auto-start slideshow
+document.addEventListener('DOMContentLoaded', function() {
+  resetHeroTimer();
+});
+
+</script>
 </body> in each page -->
 
 <!-- Modal Overlay -->
@@ -2753,10 +2863,11 @@ function showCheckout() {
 
 /* ── SEARCH ── */
 function doSearch(q) {
-  if (typeof searchQ !== 'undefined') {
-    searchQ = q || '';
-    if (typeof render === 'function') render();
-  }
+  var val = (q || '').toLowerCase().trim();
+  if (typeof searchQ !== 'undefined') { searchQ = val; if (typeof render === 'function') render(); }
+  if (typeof searchQuery !== 'undefined') { searchQuery = val; if (typeof renderProducts === 'function') renderProducts(); }
+  if (typeof handleSearch === 'function') handleSearch(val);
+}
   if (typeof searchQuery !== 'undefined') {
     searchQuery = q || '';
     if (typeof renderProducts === 'function') renderProducts();
@@ -2914,6 +3025,41 @@ document.addEventListener('DOMContentLoaded', function() {
 
   refreshCart();
 });
+</script>
+<script>
+
+/* ── HERO SLIDESHOW ── */
+var heroIdx = 0;
+var heroTotal = 2;
+var heroTimer;
+
+function heroGoTo(idx) {
+  document.querySelectorAll('.hero-slide').forEach(function(el, i) {
+    el.classList.toggle('active', i === idx);
+  });
+  document.querySelectorAll('.hero-dot').forEach(function(el, i) {
+    el.classList.toggle('active', i === idx);
+  });
+  heroIdx = idx;
+}
+
+function heroSlide(dir) {
+  heroGoTo((heroIdx + dir + heroTotal) % heroTotal);
+  resetHeroTimer();
+}
+
+function resetHeroTimer() {
+  clearInterval(heroTimer);
+  heroTimer = setInterval(function() {
+    heroGoTo((heroIdx + 1) % heroTotal);
+  }, 4000);
+}
+
+// Auto-start slideshow
+document.addEventListener('DOMContentLoaded', function() {
+  resetHeroTimer();
+});
+
 </script>
 </body>
 </html>
