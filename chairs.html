@@ -180,7 +180,7 @@ header{background:rgba(10,10,10,.97);backdrop-filter:blur(20px);border-bottom:1p
 .mpesa-amt-val{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;color:var(--gold)}
 .mpesa-num{background:rgba(76,175,80,.1);border:1.5px solid rgba(76,175,80,.35);border-radius:10px;padding:12px;font-size:20px;font-weight:800;color:#4CAF50;letter-spacing:2px;margin-bottom:8px}
 .mpesa-steps{text-align:left;background:var(--surface2);border-radius:10px;padding:14px;margin-bottom:18px;font-size:13px;line-height:1.9}
-.mpesa-steps li{list-style:none;color:#ccc}.mpesa-steps li::before{content:"→ ";color:var(--gold)}
+.mpesa-steps li{list-style:none;color:#ccc}.mpesa-steps li::before{content:"â ";color:var(--gold)}
 .mpesa-confirm-btn{background:var(--maroon);color:#fff;border:none;padding:12px;border-radius:8px;font-weight:700;font-size:14px;cursor:pointer;width:100%;transition:.2s}
 .mpesa-confirm-btn:hover{background:var(--maroon-mid)}
 /* TOAST */
@@ -225,15 +225,15 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 }
 
 
-/* ══ CART COMPLETE RESTYLE ══ */
+/* ââ CART COMPLETE RESTYLE ââ */
 .cart-overlay{position:fixed!important;inset:0!important;background:rgba(0,0,0,.7)!important;z-index:9000!important;opacity:0!important;pointer-events:none!important;transition:opacity .3s!important;backdrop-filter:blur(4px)!important}
 .cart-overlay.open{opacity:1!important;pointer-events:all!important}
 
-/* Panel — full height, flex column */
+/* Panel â full height, flex column */
 .cart-panel,
 .cart-panel.open,
 
-/* Header — fixed height, never shrinks */
+/* Header â fixed height, never shrinks */
 .cart-hdr,.cart-header{
   flex:0 0 auto!important;
   padding:18px 22px!important;
@@ -252,7 +252,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 }
 .cart-x:hover,.cart-close:hover{border-color:#D93B3B!important;color:#D93B3B!important}
 
-/* Items — SCROLLABLE, fills remaining space */
+/* Items â SCROLLABLE, fills remaining space */
 .cart-body,.cart-items{
   flex:1 1 0!important;          /* takes ALL remaining space */
   min-height:0!important;        /* critical for flex scroll */
@@ -327,7 +327,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 }
 .ci-del:hover,.cart-item-remove:hover{color:#D93B3B!important}
 
-/* Summary — fixed, never shrinks */
+/* Summary â fixed, never shrinks */
 .cart-summary{
   flex:0 0 auto!important;
   padding:14px 22px!important;
@@ -347,7 +347,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 .cart-row.total-row span:last-child{color:#D4A017!important}
 .clabel,.cart-label{color:#888!important;font-size:13px!important}
 
-/* Checkout — fixed, never shrinks */
+/* Checkout â fixed, never shrinks */
 .checkout-area,.checkout-section{
   flex:0 0 auto!important;
   padding:14px 22px 18px!important;
@@ -396,8 +396,8 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 }
 
 
-/* ══ FONT SIZE REDUCTIONS ══ */
-/* Hero — smaller so products show on first load */
+/* ââ FONT SIZE REDUCTIONS ââ */
+/* Hero â smaller so products show on first load */
 .hero h1, .em-hero-in h1 {
   font-size: clamp(22px, 3vw, 36px) !important;
   line-height: 1.15 !important;
@@ -448,7 +448,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 .add-btn, .atc-btn { padding: 8px !important; font-size: 11px !important; }
 
 
-/* ══ FONT & HERO REDUCTION ══ */
+/* ââ FONT & HERO REDUCTION ââ */
 .page-hero, .em-hero { padding: 20px 24px 16px !important; }
 .page-hero h1, .em-hero-in h1 { font-size: 22px !important; margin-bottom: 6px !important; }
 .page-hero p, .em-hero-in p { font-size: 12.5px !important; margin-bottom: 0 !important; }
@@ -457,13 +457,13 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 .filter-bar { padding: 8px 0 !important; }
 .filter-btn, .fb { padding: 5px 13px !important; font-size: 11.5px !important; }
 
-/* ══ CART — ITEMS FIRST, CHECKOUT HIDDEN UNTIL READY ══ */
+/* ââ CART â ITEMS FIRST, CHECKOUT HIDDEN UNTIL READY ââ */
 
 
 
 
 
-/* Header — fixed */
+/* Header â fixed */
 #cartHeader, #cartHdr, .cart-hdr, .cart-header {
   flex-shrink: 0 !important;
   display: flex !important; align-items: center !important; justify-content: space-between !important;
@@ -472,7 +472,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
   border-bottom: 1px solid rgba(255,255,255,.08) !important;
 }
 
-/* Items area — scrollable, takes ALL space */
+/* Items area â scrollable, takes ALL space */
 #cartScroll, #cartItemsWrap, .cart-body, .cart-items {
   flex: 1 1 0 !important;
   min-height: 0 !important;
@@ -484,7 +484,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 #cartScroll::-webkit-scrollbar-thumb,
 #cartItemsWrap::-webkit-scrollbar-thumb { background: #D4A017; border-radius: 2px; }
 
-/* Footer — ONLY summary + checkout button, NOT full form */
+/* Footer â ONLY summary + checkout button, NOT full form */
 #cartFtr, #cartFooter { flex-shrink: 0 !important; }
 
 /* Summary box */
@@ -494,7 +494,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
   border-top: 1px solid rgba(255,255,255,.08) !important;
 }
 
-/* Proceed button — shown instead of full form */
+/* Proceed button â shown instead of full form */
 #cartProceedBtn {
   display: block;
   width: calc(100% - 36px);
@@ -514,7 +514,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 }
 #cartProceedBtn:hover { background: #F0C040; }
 
-/* Checkout form — hidden by default, shown after proceed */
+/* Checkout form â hidden by default, shown after proceed */
 #cartForm, #cartCheckout, .checkout-area, .checkout-section {
   display: none !important;
   flex-shrink: 0 !important;
@@ -698,7 +698,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
     font-size: 11px !important; padding: 8px 6px !important;
   }
 
-  /* Cart panel — full width on mobile */
+  /* Cart panel â full width on mobile */
   
 
   /* Product modal */
@@ -723,9 +723,9 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 }
 
 
-/* ════════════════════════════
-   CART — CLEAN REBUILD v3
-════════════════════════════ */
+/* ââââââââââââââââââââââââââââ
+   CART â CLEAN REBUILD v3
+ââââââââââââââââââââââââââââ */
 #cartOverlay {
   position: fixed; inset: 0;
   background: rgba(0,0,0,.65);
@@ -775,7 +775,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 }
 #cartXBtn:hover { background: #D93B3B; border-color: #D93B3B; }
 
-/* Scroll area — takes ALL remaining space */
+/* Scroll area â takes ALL remaining space */
 #cartScroll {
   flex: 1;
   min-height: 0;        /* critical */
@@ -1011,7 +1011,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
   gap: 16px !important;
 }
 
-/* ── MOBILE ── */
+/* ââ MOBILE ââ */
 @media (max-width: 900px) {
   .prod-grid, #prodGrid, .grid {
     grid-template-columns: repeat(2, 1fr) !important;
@@ -1055,9 +1055,9 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 }
 
 
-/* ══ DEFINITIVE BUTTON + CART FIX ══ */
+/* ââ DEFINITIVE BUTTON + CART FIX ââ */
 
-/* Product cards — ensure clicks propagate correctly */
+/* Product cards â ensure clicks propagate correctly */
 .prod-card, .pcard {
   position: relative !important;
   cursor: pointer !important;
@@ -1117,7 +1117,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
   z-index: 10 !important;
 }
 
-/* Cart panel — definitive z-index */
+/* Cart panel â definitive z-index */
 #cartOverlay {
   position: fixed !important;
   inset: 0 !important;
@@ -1248,9 +1248,9 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 }
 
 
-/* ══ PRODUCT IMAGE FIT — ALL SIZES ══ */
+/* ââ PRODUCT IMAGE FIT â ALL SIZES ââ */
 
-/* Card image container — fixed height, never overflow */
+/* Card image container â fixed height, never overflow */
 .prod-img, .prod-img-wrap, .pcard-img {
   width: 100% !important;
   height: 200px !important;
@@ -1280,7 +1280,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
   transform: scale(1.06) !important;
 }
 
-/* Product modal main image — fits perfectly */
+/* Product modal main image â fits perfectly */
 .pm-main-img, #pm-overlay .pm-main-img {
   width: 100% !important;
   height: 340px !important;
@@ -1338,9 +1338,9 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 <!-- TOPBAR -->
 <div class="topbar">
   <div class="topbar-inner">
-    <span>📞 Call / WhatsApp: <strong>+254 740 190 837</strong></span>
-    <span class="gold-pill">🚚 Countrywide Delivery</span>
-    <span>✉️ <a href="mailto:info@epicmart.co.ke">info@epicmart.co.ke</a></span>
+    <span>ð Call / WhatsApp: <strong>+254 740 190 837</strong></span>
+    <span class="gold-pill">ð Countrywide Delivery</span>
+    <span>âï¸ <a href="mailto:info@epicmart.co.ke">info@epicmart.co.ke</a></span>
   </div>
 </div>
 
@@ -1353,11 +1353,11 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
     </a>
     <div class="search-wrap">
       <input type="search" id="searchInput" placeholder="Search products..." autocomplete="off" >
-      <button type="button" aria-label="Search" >🔍</button>
+      <button type="button" aria-label="Search" >ð</button>
     </div>
     <div class="header-right">
       <a href="https://wa.me/254740190837?text=Hello%20Epic%20Mart!%20I%20am%20interested%20in%20chairs%20and%20seating.%20Please%20assist%20me." target="_blank" class="btn-wa"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp</a>
-      <div class="cart-btn">🛒<span class="cart-count" id="cartCount">0</span></div>
+      <div class="cart-btn">ð<span class="cart-count" id="cartCount">0</span></div>
     </div>
   </div>
 </header>
@@ -1366,30 +1366,30 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 <nav class="nav-bar">
   <div class="nav-inner">
     <ul class="nav-list"><li><a href="index.html" >Shop All</a></li><li><a href="chairs.html" class="active">Chairs &amp; Seating</a></li><li><a href="barber.html" >Barber Accessories</a></li><li><a href="massage.html" >Massage</a></li><li><a href="salon.html" >Salon</a></li></ul>
-    <span class="nav-phone">📞 0740 190 837</span>
+    <span class="nav-phone">ð 0740 190 837</span>
   </div>
 </nav>
 
 <!-- TRUST BAR -->
 <div class="trust-bar">
   <div class="trust-inner">
-    <div class="ti"><span class="ti-icon">🚚</span><div><div class="ti-title">Nationwide Delivery</div><div class="ti-sub">All 47 counties</div></div></div>
-    <div class="ti"><span class="ti-icon">💳</span><div><div class="ti-title">M-Pesa Payments</div><div class="ti-sub">Safe &amp; instant</div></div></div>
-    <div class="ti"><span class="ti-icon">✅</span><div><div class="ti-title">100% Genuine</div><div class="ti-sub">Authentic equipment</div></div></div>
-    <div class="ti"><span class="ti-icon">🔄</span><div><div class="ti-title">Easy Returns</div><div class="ti-sub">7-day policy</div></div></div>
-    <div class="ti"><span class="ti-icon">📞</span><div><div class="ti-title">Expert Support</div><div class="ti-sub">Call or WhatsApp</div></div></div>
+    <div class="ti"><span class="ti-icon">ð</span><div><div class="ti-title">Nationwide Delivery</div><div class="ti-sub">All 47 counties</div></div></div>
+    <div class="ti"><span class="ti-icon">ð³</span><div><div class="ti-title">M-Pesa Payments</div><div class="ti-sub">Safe &amp; instant</div></div></div>
+    <div class="ti"><span class="ti-icon">â</span><div><div class="ti-title">100% Genuine</div><div class="ti-sub">Authentic equipment</div></div></div>
+    <div class="ti"><span class="ti-icon">ð</span><div><div class="ti-title">Easy Returns</div><div class="ti-sub">7-day policy</div></div></div>
+    <div class="ti"><span class="ti-icon">ð</span><div><div class="ti-title">Expert Support</div><div class="ti-sub">Call or WhatsApp</div></div></div>
   </div>
 </div>
 
 <!-- PAGE HERO -->
 <div class="page-hero">
   <div class="page-hero-inner">
-    <div class="hero-tag">🪑 Chairs & Seating</div>
+    <div class="hero-tag">ðª Chairs & Seating</div>
     <h1>Barber Chairs, <em>Salon Chairs</em> &amp; Benches</h1>
     <p>Complete range of professional barber chairs, styling chairs, salon seating and waiting benches. Best prices in Kenya, genuine products, countrywide delivery.</p>
     <nav class="breadcrumb" aria-label="Breadcrumb">
-      <a href="index.html">Home</a><span>›</span>
-      <a href="index.html">Shop</a><span>›</span>
+      <a href="index.html">Home</a><span>âº</span>
+      <a href="index.html">Shop</a><span>âº</span>
       <span>Chairs &amp; Seating</span>
     </nav>
   </div>
@@ -1407,8 +1407,8 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
     <div class="sort-wrap">
       <select class="sort-select" id="sortSelect">
         <option value="default">Sort: Default</option>
-        <option value="price-low">Price: Low → High</option>
-        <option value="price-high">Price: High → Low</option>
+        <option value="price-low">Price: Low â High</option>
+        <option value="price-high">Price: High â Low</option>
         <option value="discount">Biggest Discount</option>
         <option value="rating">Highest Rated</option>
       </select>
@@ -1434,7 +1434,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
       <button class="btn-filter-apply" onclick="applyPrice()">Apply Filter</button>
     </div>
     <div class="promo-box">
-      <div style="font-size:34px;margin-bottom:10px">🚚</div>
+      <div style="font-size:34px;margin-bottom:10px">ð</div>
       <div class="promo-box-title">Nationwide Delivery</div>
       <div class="promo-box-sub">Order now, we deliver to your door</div>
       <a href="index.html" class="promo-shop-btn">Browse All Products</a>
@@ -1443,7 +1443,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
       <h3>Need Help?</h3>
       <p class="help-text">Our team is ready to help you choose the right equipment for your salon or barbershop.</p>
       <a href="https://wa.me/254740190837?text=Hello%20Epic%20Mart!%20I%20am%20interested%20in%20chairs%20and%20seating.%20Please%20assist%20me." target="_blank" class="wa-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Chat on WhatsApp</a>
-      <a href="tel:+254740190837" class="call-link">📞 Call: 0740 190 837</a>
+      <a href="tel:+254740190837" class="call-link">ð Call: 0740 190 837</a>
     </div>
   </aside>
 
@@ -1452,8 +1452,8 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
     <div class="prod-topbar">
       <div class="prod-count">Showing <strong id="prodCount">24</strong> products</div>
       <div class="view-toggle">
-        <button class="view-btn active" id="gridBtn" onclick="setView('grid')" title="Grid view">⊞</button>
-        <button class="view-btn" id="listBtn" onclick="setView('list')" title="List view">☰</button>
+        <button class="view-btn active" id="gridBtn" onclick="setView('grid')" title="Grid view">â</button>
+        <button class="view-btn" id="listBtn" onclick="setView('list')" title="List view">â°</button>
       </div>
     </div>
     <div class="prod-grid" id="prodGrid">
@@ -1472,10 +1472,10 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
       </div>
       <p class="foot-desc">Kenya's premier supplier of professional salon and barbershop equipment. Genuine products, best prices, countrywide delivery.</p>
       <div class="foot-socials">
-        <a href="https://facebook.com/epicmartenterprises" target="_blank" class="soc-btn">📘</a>
-        <a href="https://instagram.com/epicmartenterprises" target="_blank" class="soc-btn">📸</a>
+        <a href="https://facebook.com/epicmartenterprises" target="_blank" class="soc-btn">ð</a>
+        <a href="https://instagram.com/epicmartenterprises" target="_blank" class="soc-btn">ð¸</a>
         <a href="https://wa.me/254740190837" target="_blank" class="soc-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="#fff"><path d="M17.472 16.382c-.297-.169-1.758-.867-2.03-.967-.273-.099-.471-.168-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.169-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.169-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.169.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.216-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.162 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
-        <a href="https://tiktok.com/@epicmartenterprises" target="_blank" class="soc-btn">🎵</a>
+        <a href="https://tiktok.com/@epicmartenterprises" target="_blank" class="soc-btn">ðµ</a>
       </div>
     </div>
     <div class="foot-col"><h4>Categories</h4><ul>
@@ -1493,16 +1493,16 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
     </ul></div>
     <div class="foot-col"><h4>Contact Us</h4>
       <address style="font-style:normal">
-        <div class="contact-row">📞 <a href="tel:+254740190837">+254 740 190 837</a></div>
-        <div class="contact-row">💬 <a href="https://wa.me/254740190837">WhatsApp: 0740 190 837</a></div>
-        <div class="contact-row">✉️ <a href="mailto:info@epicmart.co.ke">info@epicmart.co.ke</a></div>
-        <div class="contact-row">📍 Ronald Ngala Street, Nairobi CBD</div>
-        <div class="contact-row">🕒 Mon–Sat: 8:00 AM – 7:00 PM</div>
+        <div class="contact-row">ð <a href="tel:+254740190837">+254 740 190 837</a></div>
+        <div class="contact-row">ð¬ <a href="https://wa.me/254740190837">WhatsApp: 0740 190 837</a></div>
+        <div class="contact-row">âï¸ <a href="mailto:info@epicmart.co.ke">info@epicmart.co.ke</a></div>
+        <div class="contact-row">ð Ronald Ngala Street, Nairobi CBD</div>
+        <div class="contact-row">ð MonâSat: 8:00 AM â 7:00 PM</div>
       </address>
     </div>
   </div>
   <div class="foot-bottom">
-    <span>© 2025 Epic Mart Enterprises. All rights reserved. | <a href="https://epicmart.co.ke/privacy-policy/">Privacy Policy</a> | <a href="https://epicmart.co.ke/terms-of-service/">Terms</a></span>
+    <span>Â© 2025 Epic Mart Enterprises. All rights reserved. | <a href="https://epicmart.co.ke/privacy-policy/">Privacy Policy</a> | <a href="https://epicmart.co.ke/terms-of-service/">Terms</a></span>
     <div class="pay-icons"><span class="pay-tag">M-PESA</span><span class="pay-tag">VISA</span><span class="pay-tag">MASTERCARD</span><span class="pay-tag">AIRTEL</span></div>
   </div>
 </footer>
@@ -1519,7 +1519,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
     <button id="cartXBtn">&#x2715;</button>
   </div>
 
-  <!-- Items — scrollable -->
+  <!-- Items â scrollable -->
   <div id="cartScroll">
     <div id="cartItems">
       <div class="cempty">
@@ -1530,7 +1530,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
     </div>
   </div>
 
-  <!-- Footer — always at bottom -->
+  <!-- Footer â always at bottom -->
   <div id="cartFtr">
 
     <!-- Summary (hidden when empty) -->
@@ -1538,7 +1538,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
       <div class="crow"><span class="clbl">Subtotal</span><span id="cSubtotal">KSh 0</span></div>
       <div class="crow"><span class="clbl">Delivery</span><span style="color:#22A05A;font-size:12.5px">Payment on order confirmation &#x2705;</span></div>
       <div class="crow ctotal"><span>Total</span><span id="cTotal">KSh 0</span></div>
-      <!-- PROCEED BUTTON — after total, before checkout form -->
+      <!-- PROCEED BUTTON â after total, before checkout form -->
       <button id="cProceedBtn">Proceed to Checkout &#x2192;</button>
     </div>
 
@@ -1558,28 +1558,28 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 <!-- MPESA MODAL -->
 <div class="mpesa-modal" id="mpesaModal" style="z-index:10000">
   <div class="mpesa-box">
-    <div style="font-size:46px">📱</div>
+    <div style="font-size:46px">ð±</div>
     <h2>M-Pesa Payment</h2>
     <p>Complete your payment then confirm via WhatsApp with your receipt</p>
     <div class="mpesa-amt"><div class="mpesa-amt-label">Amount to Pay</div><div class="mpesa-amt-val" id="mpesaAmt">KSh 0</div></div>
     <div class="mpesa-num">0740 190 837</div>
     <p style="font-size:11.5px;color:var(--muted);margin-bottom:14px">Send to this number via M-Pesa Send Money</p>
     <ul class="mpesa-steps">
-      <li>Open M-Pesa → Send Money</li>
+      <li>Open M-Pesa â Send Money</li>
       <li>Enter number: <strong>0740 190 837</strong></li>
       <li>Enter the exact amount above</li>
       <li>Save the confirmation SMS</li>
       <li>Click button below to confirm on WhatsApp</li>
     </ul>
-    <button class="mpesa-confirm-btn" onclick="closeMpesa();orderWhatsApp()">✓ Confirm &amp; Send Order →</button>
+    <button class="mpesa-confirm-btn" onclick="closeMpesa();orderWhatsApp()">â Confirm &amp; Send Order â</button>
   </div>
 </div>
 
 <!-- TOAST -->
 <div class="toast" id="toast">
-  <span style="font-size:18px">✅</span>
+  <span style="font-size:18px">â</span>
   <div><strong id="toastName">Added!</strong><span id="toastSub">Item added to cart</span></div>
-  <button class="toast-x" onclick="hideToast()">×</button>
+  <button class="toast-x" onclick="hideToast()">Ã</button>
 </div>
 
 <!-- FLOATING WHATSAPP -->
@@ -1588,11 +1588,11 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 </a>
 
 <script>
-// ── PRODUCT DATA ──
+// ââ PRODUCT DATA ââ
 var wishlist = JSON.parse(localStorage.getItem("em_wish") || "[]");
-const PRODUCTS = [{"id": 811, "name": "Black Salon & Barber Chair", "cat":"chairs","catLabel":"Chairs & Seating", "sub": "barber_chairs", "price": 8000, "oldPrice": 11000, "img":"images/Locally-Made-SalonBarber-Chair.jpg","imgs":["images/Locally-Made-SalonBarber-Chair.jpg","images/Locally-Made-SalonBarber-Chair-1.jpg","images/SaloonBarber-Chair.jpg","images/Black saloon and Barber chair8K.jpg"], "badge": "sale", "stars": 5, "reviews": 87, "url": "https://epicmart.co.ke/product/black-saloon-and-barber-chair/"}, {"id": 815, "name": "Classy Salon Barber Chair", "cat":"chairs","catLabel":"Chairs & Seating", "sub": "barber_chairs", "price": 25000, "oldPrice": 28000, "img":"images/Classy saloon barber chair25K.jpg","imgs":["images/Classy saloon barber chair25K.jpg","images/Classy saloon barber chair25K.jpg","images/Classy saloon barber chair25K.jpg","images/Classy saloon barber chair25K.jpg"], "badge": "hot", "stars": 5, "reviews": 54, "url": "https://epicmart.co.ke/product/classy-saloon-barber-chair/"}, {"id": 824, "name": "Chrome Barber Chair", "cat":"chairs","catLabel":"Chairs & Seating", "sub": "barber_chairs", "price": 28000, "oldPrice": 30000, "img":"images/CHROME BARBER CHAIR28K.jpg","imgs":["images/CHROME BARBER CHAIR28K.jpg","images/CHROME BARBER CHAIR28K..jpg","images/CHROME BARBER CHAIR28K.jpg","images/CHROME BARBER CHAIR28K..jpg"], "badge": "sale", "stars": 4, "reviews": 31, "url": "https://epicmart.co.ke/product/chrome-barber-chair/"}, {"id": 823, "name": "Executive Styling Chair", "cat":"chairs","catLabel":"Chairs & Seating", "sub": "styling_chairs", "price": 26000, "oldPrice": 28000, "img":"images/EXECUTIVE STYLING CHAIR26K.jpg","imgs":["images/EXECUTIVE STYLING CHAIR26K.jpg","images/EXECUTIVE STYLING CHAIR26K..jpg","images/EXECUTIVE STYLING CHAIR26k (1).jpg","images/EXECUTIVE STYLING CHAIR.jpg"], "badge": "hot", "stars": 4, "reviews": 23, "url": "https://epicmart.co.ke/product/executive-styling-chair/"}, {"id": 828, "name": "Modern Simple Styling Chair", "cat":"chairs","catLabel":"Chairs & Seating", "sub": "styling_chairs", "price": 24000, "oldPrice": 26000, "img":"images/modern Simple Styling chair5K.jpg","imgs":["images/modern Simple Styling chair5K.jpg","images/modern Simple Styling chair5K...jpg","images/modern Simple Styling chair5K.jpg","images/modern Simple Styling chair5K...jpg"], "badge": "sale", "stars": 5, "reviews": 37, "url": "https://epicmart.co.ke/product/modern-simple-styling-chair/"}, {"id": 842, "name": "Styling Chair Cream White Gold", "cat":"chairs","catLabel":"Chairs & Seating", "sub": "styling_chairs", "price": 25000, "oldPrice": 27000, "img":"images/Styling-Chair-Cream-White-Gold-1.jpg","imgs":["images/Styling-Chair-Cream-White-Gold-1.jpg","images/Styling chair cream white gold 25K...jpg","images/Styling-Chair-Cream-White-Gold-1.jpg","images/Styling chair cream white gold 25K...jpg"], "badge": "sale", "stars": 5, "reviews": 0, "url": "https://epicmart.co.ke/product/styling-chair-cream-white-gold/"}, {"id": 843, "name": "Styling Leather Black Silver Chair", "cat":"chairs","catLabel":"Chairs & Seating", "sub": "styling_chairs", "price": 23000, "oldPrice": 27000, "img":"images/Styling-Leather-Black-Silver-Chair.png","imgs":["images/Styling-Leather-Black-Silver-Chair.png","images/Styling leather black silver chair23K.jpg","images/Styling leather black silver chair25K.png","images/Styling leather black silver chair 25K.jpg"], "badge": "sale", "stars": 5, "reviews": 0, "url": "https://epicmart.co.ke/product/styling-leather-black-silver-chair/"}, {"id": 844, "name": "Styling Chair Cream Black Gold", "cat":"chairs","catLabel":"Chairs & Seating", "sub": "styling_chairs", "price": 25000, "oldPrice": 27000, "img":"images/Styling-Chair-Cream-Black-Gold.jpg","imgs":["images/Styling-Chair-Cream-Black-Gold.jpg","images/Styling-Chair-Cream-Black-Gold-1.jpg","images/Styling-Chair-Cream-Black-Gold.jpg","images/Styling-Chair-Cream-Black-Gold-1.jpg"], "badge": "sale", "stars": 5, "reviews": 0, "url": "https://epicmart.co.ke/product/styling-chair-cream-black-gold/"}, {"id": 845, "name": "Modern Styling Chair Black", "cat":"chairs","catLabel":"Chairs & Seating", "sub": "styling_chairs", "price": 26500, "oldPrice": 30000, "img":"images/Modern-Styling-Chair-Black-2.jpg","imgs":["images/Modern-Styling-Chair-Black-2.jpg","images/Modern Styling chair black 26.5K.jpg","images/Modern Styling chair black26.5K.jpg","images/Modern-Styling-Chair-Black-1.jpg"], "badge": "sale", "stars": 5, "reviews": 0, "url": "https://epicmart.co.ke/product/modern-styling-chair-black/"}, {"id": 846, "name": "Reclining Salon Seat", "cat":"chairs","catLabel":"Chairs & Seating", "sub": "styling_chairs", "price": 30000, "oldPrice": 35000, "img":"images/Reclining-Salon-Seat-1.jpg","imgs":["images/Reclining-Salon-Seat-1.jpg","images/Reclining salon seat 30K.jpg","images/Reclining salon seat30K.png","images/Reclining-Salon-Seat.jpg"], "badge": "sale", "stars": 5, "reviews": 0, "url": "https://epicmart.co.ke/product/reclining-salon-seat/"}, {"id": 847, "name": "Salon Rose Gold Barber Chair", "cat":"chairs","catLabel":"Chairs & Seating", "sub": "barber_chairs", "price": 26000, "oldPrice": 32000, "img":"images/Salon-Rose-Gold-Barber-Chair-1.jpg","imgs":["images/Salon-Rose-Gold-Barber-Chair-1.jpg","images/Salon rose gold barber chair 26K.jpg","images/Salon rose gold barber chair26K.jpg","images/Salon rose gold barber chair26.jpg"], "badge": "sale", "stars": 5, "reviews": 0, "url": "https://epicmart.co.ke/product/salon-rose-gold-barber-chair/"}, {"id": 848, "name": "Saloon Barber Chair Red Black", "cat":"chairs","catLabel":"Chairs & Seating", "sub": "barber_chairs", "price": 13000, "oldPrice": 16000, "img":"images/Saloon-Barber-Chair-Red-Black.jpg","imgs":["images/Saloon-Barber-Chair-Red-Black.jpg","images/Saloon Barber chair red Black13K.jpg","images/Saloon-Barber-Chair-Red-Black-1.jpg","images/Saloon-Barber-Chair-Red-Black.jpg"], "badge": "sale", "stars": 5, "reviews": 0, "url": "https://epicmart.co.ke/product/saloon-barber-chair-red-black/"}, {"id": 849, "name": "Saloon & Barber Chair", "cat":"chairs","catLabel":"Chairs & Seating", "sub": "barber_chairs", "price": 7000, "oldPrice": 9000, "img":"images/SaloonBarber-Chair.jpg","imgs":["images/SaloonBarber-Chair.jpg","images/Saloon & Barber Chair7K.jpg","images/SaloonBarber-Chair-1.jpg","images/SaloonBarber-Chair.jpg"], "badge": "sale", "stars": 5, "reviews": 0, "url": "https://epicmart.co.ke/product/saloon-barber-chair/"}, {"id": 850, "name": "Locally Made Salon & Barber Chair", "cat":"chairs","catLabel":"Chairs & Seating", "sub": "barber_chairs", "price": 7000, "oldPrice": 9500, "img":"images/Locally-Made-SalonBarber-Chair-1.jpg","imgs":["images/Locally-Made-SalonBarber-Chair-1.jpg","images/Locally-Made-SalonBarber-Chair.jpg","images/Black saloon and Barber chair8K.jpg","images/Locally-Made-SalonBarber-Chair-1.jpg"], "badge": "sale", "stars": 5, "reviews": 0, "url": "https://epicmart.co.ke/product/locally-made-salon-barber-shop-chair/"}, {"id": 851, "name": "Heavy Duty Hydraulic Chair", "cat":"chairs","catLabel":"Chairs & Seating", "sub": "barber_chairs", "price": 58000, "oldPrice": 65000, "img":"images/Heavy-Duty-Hydraulic-Chair-1.jpg","imgs":["images/Heavy-Duty-Hydraulic-Chair-1.jpg","images/Heavy Duty multipurpose hydraulic Chair 58K.jpg","images/Heavy Duty multipurpose hydraulic Chair58K.jpg","images/Heavy-Duty-Hydraulic-Chair.jpg"], "badge": "hot", "stars": 5, "reviews": 0, "url": "https://epicmart.co.ke/product/heavy-duty-multipurpose-hydraulic-chair/"}, {"id": 852, "name": "Wooden Styling Chairs", "cat":"chairs","catLabel":"Chairs & Seating", "sub": "styling_chairs", "price": 26500, "oldPrice": 28000, "img":"images/Wooden-Styling-Chairs.jpg","imgs":["images/Wooden-Styling-Chairs.jpg","images/Wooden-Styling-Chairs.jpg","images/Wooden-Styling-Chairs.jpg","images/Wooden-Styling-Chairs.jpg"], "badge": "sale", "stars": 5, "reviews": 0, "url": "https://epicmart.co.ke/product/wooden-styling-chairs/"}, {"id": 853, "name": "Stylish Barber Saloon Seat", "cat":"chairs","catLabel":"Chairs & Seating", "sub": "barber_chairs", "price": 26500, "oldPrice": 30000, "img":"images/Styling-Barber-Saloon-Seat.jpg","imgs":["images/Styling-Barber-Saloon-Seat.jpg","images/Styling-Barber-Saloon-Seat.jpg","images/Styling-Barber-Saloon-Seat.jpg","images/Styling-Barber-Saloon-Seat.jpg"], "badge": "sale", "stars": 5, "reviews": 0, "url": "https://epicmart.co.ke/product/stylish-barber-saloon-seat/"}, {"id": 854, "name": "Salon Barber Chair Gold Green", "cat":"chairs","catLabel":"Chairs & Seating", "sub": "barber_chairs", "price": 25000, "oldPrice": 28000, "img":"images/Salon-Barber-Chair-Gold-Green.jpg","imgs":["images/Salon-Barber-Chair-Gold-Green.jpg","images/Salon-Barber-Chair-Gold-Green.jpg","images/Salon-Barber-Chair-Gold-Green.jpg","images/Salon-Barber-Chair-Gold-Green.jpg"], "badge": "sale", "stars": 5, "reviews": 0, "url": "https://epicmart.co.ke/product/salon-barber-chair-gold-green/"}, {"id": 830, "name": "Jumbo Seat Waiting Chair", "cat":"chairs","catLabel":"Chairs & Seating", "sub": "waiting", "price": 36500, "oldPrice": 43000, "img":"images/jumbo waiting chair.jpg","imgs":["images/jumbo waiting chair.jpg","images/Mini-Jumbo-Chair.jpg","images/jumbo waiting chair.jpg","images/Mini-Jumbo-Chair.jpg"], "badge": "sale", "stars": 4, "reviews": 13, "url": "https://epicmart.co.ke/product/jumbo-seat/"}, {"id": 856, "name": "Pedicure Seat", "cat":"chairs","catLabel":"Chairs & Seating", "sub": "styling_chairs", "price": 18500, "oldPrice": 20000, "img":"images/Pedicure-Seat.jpg","imgs":["images/Pedicure-Seat.jpg","images/FIBRE SPA 40k.jpg","images/Pedicure-Seat.jpg","images/FIBRE SPA 40k.jpg"], "badge": "sale", "stars": 5, "reviews": 0, "url": "https://epicmart.co.ke/product/product-7/"}, {"id": 857, "name": "Waiting Bench", "cat":"chairs","catLabel":"Chairs & Seating", "sub": "waiting", "price": 10000, "oldPrice": 13000, "img":"images/Waiting-Bench.png","imgs":["images/Waiting-Bench.png","images/WaitingBench10k.png","images/Waiting-Bench.png","images/Bench.jpg"], "badge": "sale", "stars": 5, "reviews": 0, "url": "https://epicmart.co.ke/product/waiting-bench/"}, {"id": 858, "name": "Bench", "cat":"chairs","catLabel":"Chairs & Seating", "sub": "waiting", "price": 9500, "oldPrice": 10000, "img": "https://epicmart.co.ke/wp-content/uploads/2026/03/Bench.jpg", "badge": "sale", "stars": 5, "reviews": 0, "url": "https://epicmart.co.ke/product/bench/"}, {"id": 819, "name": "Fibre Spa Pedicure Chair", "cat":"chairs","catLabel":"Chairs & Seating", "sub": "styling_chairs", "price": 40000, "oldPrice": 42000, "img":"images/FIBRE SPA 40k.jpg","imgs":["images/FIBRE SPA 40k.jpg","images/FIBRE SPA40k.jpg","images/Pedicure-Seat.jpg","images/FIBRE SPA 40k.jpg"], "badge": "sale", "stars": 5, "reviews": 9, "url": "https://epicmart.co.ke/product/fibre-spa/"}, {"id": 855, "name": "Mini Jumbo Chair", "cat":"chairs","catLabel":"Chairs & Seating", "sub": "waiting", "price": 27000, "oldPrice": 30000, "img":"images/Mini-Jumbo-Chair.jpg","imgs":["images/Mini-Jumbo-Chair.jpg","images/jumbo waiting chair.jpg","images/Mini-Jumbo-Chair.jpg","images/jumbo waiting chair.jpg"], "badge": "sale", "stars": 5, "reviews": 0, "url": "https://epicmart.co.ke/product/mini-jumbo-chair/"}];
+const PRODUCTS = [{"id":811,"name":"Black Salon & Barber Chair","cat":"chairs","catLabel":"Chairs & Seating","sub":"barber_chairs","price":8000,"oldPrice":11000,"img":"https://picsum.photos/seed/chair811a/400/400","imgs":["https://picsum.photos/seed/chair811a/400/400","https://picsum.photos/seed/chair811b/400/400","https://picsum.photos/seed/chair811c/400/400","https://picsum.photos/seed/chair811d/400/400"],"badge":"sale","stars":5,"reviews":87,"url":"https://epicmart.co.ke/product/black-saloon-and-barber-chair/"},{"id":815,"name":"Classy Salon Barber Chair","cat":"chairs","catLabel":"Chairs & Seating","sub":"barber_chairs","price":25000,"oldPrice":28000,"img":"https://picsum.photos/seed/chair815a/400/400","imgs":["https://picsum.photos/seed/chair815a/400/400","https://picsum.photos/seed/chair815b/400/400","https://picsum.photos/seed/chair815c/400/400","https://picsum.photos/seed/chair815d/400/400"],"badge":"hot","stars":5,"reviews":54,"url":"https://epicmart.co.ke/product/classy-saloon-barber-chair/"},{"id":824,"name":"Chrome Barber Chair","cat":"chairs","catLabel":"Chairs & Seating","sub":"barber_chairs","price":28000,"oldPrice":30000,"img":"https://picsum.photos/seed/chair824a/400/400","imgs":["https://picsum.photos/seed/chair824a/400/400","https://picsum.photos/seed/chair824b/400/400","https://picsum.photos/seed/chair824c/400/400","https://picsum.photos/seed/chair824d/400/400"],"badge":"sale","stars":4,"reviews":31,"url":"https://epicmart.co.ke/product/chrome-barber-chair/"},{"id":823,"name":"Executive Styling Chair","cat":"chairs","catLabel":"Chairs & Seating","sub":"styling_chairs","price":26000,"oldPrice":28000,"img":"https://picsum.photos/seed/chair823a/400/400","imgs":["https://picsum.photos/seed/chair823a/400/400","https://picsum.photos/seed/chair823b/400/400","https://picsum.photos/seed/chair823c/400/400","https://picsum.photos/seed/chair823d/400/400"],"badge":"hot","stars":4,"reviews":23,"url":"https://epicmart.co.ke/product/executive-styling-chair/"},{"id":828,"name":"Modern Simple Styling Chair","cat":"chairs","catLabel":"Chairs & Seating","sub":"styling_chairs","price":24000,"oldPrice":26000,"img":"https://picsum.photos/seed/chair828a/400/400","imgs":["https://picsum.photos/seed/chair828a/400/400","https://picsum.photos/seed/chair828b/400/400","https://picsum.photos/seed/chair828c/400/400","https://picsum.photos/seed/chair828d/400/400"],"badge":"sale","stars":5,"reviews":37,"url":"https://epicmart.co.ke/product/modern-simple-styling-chair/"},{"id":842,"name":"Styling Chair Cream White Gold","cat":"chairs","catLabel":"Chairs & Seating","sub":"styling_chairs","price":25000,"oldPrice":27000,"img":"https://picsum.photos/seed/chair842a/400/400","imgs":["https://picsum.photos/seed/chair842a/400/400","https://picsum.photos/seed/chair842b/400/400","https://picsum.photos/seed/chair842c/400/400","https://picsum.photos/seed/chair842d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/styling-chair-cream-white-gold/"},{"id":843,"name":"Styling Leather Black Silver Chair","cat":"chairs","catLabel":"Chairs & Seating","sub":"styling_chairs","price":23000,"oldPrice":27000,"img":"https://picsum.photos/seed/chair843a/400/400","imgs":["https://picsum.photos/seed/chair843a/400/400","https://picsum.photos/seed/chair843b/400/400","https://picsum.photos/seed/chair843c/400/400","https://picsum.photos/seed/chair843d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/styling-leather-black-silver-chair/"},{"id":844,"name":"Styling Chair Cream Black Gold","cat":"chairs","catLabel":"Chairs & Seating","sub":"styling_chairs","price":25000,"oldPrice":27000,"img":"https://picsum.photos/seed/chair844a/400/400","imgs":["https://picsum.photos/seed/chair844a/400/400","https://picsum.photos/seed/chair844b/400/400","https://picsum.photos/seed/chair844c/400/400","https://picsum.photos/seed/chair844d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/styling-chair-cream-black-gold/"},{"id":845,"name":"Modern Styling Chair Black","cat":"chairs","catLabel":"Chairs & Seating","sub":"styling_chairs","price":26500,"oldPrice":30000,"img":"https://picsum.photos/seed/chair845a/400/400","imgs":["https://picsum.photos/seed/chair845a/400/400","https://picsum.photos/seed/chair845b/400/400","https://picsum.photos/seed/chair845c/400/400","https://picsum.photos/seed/chair845d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/modern-styling-chair-black/"},{"id":846,"name":"Reclining Salon Seat","cat":"chairs","catLabel":"Chairs & Seating","sub":"styling_chairs","price":30000,"oldPrice":35000,"img":"https://picsum.photos/seed/chair846a/400/400","imgs":["https://picsum.photos/seed/chair846a/400/400","https://picsum.photos/seed/chair846b/400/400","https://picsum.photos/seed/chair846c/400/400","https://picsum.photos/seed/chair846d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/reclining-salon-seat/"},{"id":847,"name":"Salon Rose Gold Barber Chair","cat":"chairs","catLabel":"Chairs & Seating","sub":"barber_chairs","price":26000,"oldPrice":32000,"img":"https://picsum.photos/seed/chair847a/400/400","imgs":["https://picsum.photos/seed/chair847a/400/400","https://picsum.photos/seed/chair847b/400/400","https://picsum.photos/seed/chair847c/400/400","https://picsum.photos/seed/chair847d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/salon-rose-gold-barber-chair/"},{"id":848,"name":"Saloon Barber Chair Red Black","cat":"chairs","catLabel":"Chairs & Seating","sub":"barber_chairs","price":13000,"oldPrice":16000,"img":"https://picsum.photos/seed/chair848a/400/400","imgs":["https://picsum.photos/seed/chair848a/400/400","https://picsum.photos/seed/chair848b/400/400","https://picsum.photos/seed/chair848c/400/400","https://picsum.photos/seed/chair848d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/saloon-barber-chair-red-black/"},{"id":849,"name":"Saloon & Barber Chair","cat":"chairs","catLabel":"Chairs & Seating","sub":"barber_chairs","price":7000,"oldPrice":9000,"img":"https://picsum.photos/seed/chair849a/400/400","imgs":["https://picsum.photos/seed/chair849a/400/400","https://picsum.photos/seed/chair849b/400/400","https://picsum.photos/seed/chair849c/400/400","https://picsum.photos/seed/chair849d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/saloon-barber-chair/"},{"id":850,"name":"Locally Made Salon & Barber Chair","cat":"chairs","catLabel":"Chairs & Seating","sub":"barber_chairs","price":7000,"oldPrice":9500,"img":"https://picsum.photos/seed/chair850a/400/400","imgs":["https://picsum.photos/seed/chair850a/400/400","https://picsum.photos/seed/chair850b/400/400","https://picsum.photos/seed/chair850c/400/400","https://picsum.photos/seed/chair850d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/locally-made-salon-barber-shop-chair/"},{"id":851,"name":"Heavy Duty Hydraulic Chair","cat":"chairs","catLabel":"Chairs & Seating","sub":"barber_chairs","price":58000,"oldPrice":65000,"img":"https://picsum.photos/seed/chair851a/400/400","imgs":["https://picsum.photos/seed/chair851a/400/400","https://picsum.photos/seed/chair851b/400/400","https://picsum.photos/seed/chair851c/400/400","https://picsum.photos/seed/chair851d/400/400"],"badge":"hot","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/heavy-duty-multipurpose-hydraulic-chair/"},{"id":852,"name":"Wooden Styling Chairs","cat":"chairs","catLabel":"Chairs & Seating","sub":"styling_chairs","price":26500,"oldPrice":28000,"img":"https://picsum.photos/seed/chair852a/400/400","imgs":["https://picsum.photos/seed/chair852a/400/400","https://picsum.photos/seed/chair852b/400/400","https://picsum.photos/seed/chair852c/400/400","https://picsum.photos/seed/chair852d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/wooden-styling-chairs/"},{"id":853,"name":"Stylish Barber Saloon Seat","cat":"chairs","catLabel":"Chairs & Seating","sub":"barber_chairs","price":26500,"oldPrice":30000,"img":"https://picsum.photos/seed/chair853a/400/400","imgs":["https://picsum.photos/seed/chair853a/400/400","https://picsum.photos/seed/chair853b/400/400","https://picsum.photos/seed/chair853c/400/400","https://picsum.photos/seed/chair853d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/stylish-barber-saloon-seat/"},{"id":854,"name":"Salon Barber Chair Gold Green","cat":"chairs","catLabel":"Chairs & Seating","sub":"barber_chairs","price":25000,"oldPrice":28000,"img":"https://picsum.photos/seed/chair854a/400/400","imgs":["https://picsum.photos/seed/chair854a/400/400","https://picsum.photos/seed/chair854b/400/400","https://picsum.photos/seed/chair854c/400/400","https://picsum.photos/seed/chair854d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/salon-barber-chair-gold-green/"},{"id":830,"name":"Jumbo Seat Waiting Chair","cat":"chairs","catLabel":"Chairs & Seating","sub":"waiting","price":36500,"oldPrice":43000,"img":"https://picsum.photos/seed/chair830a/400/400","imgs":["https://picsum.photos/seed/chair830a/400/400","https://picsum.photos/seed/chair830b/400/400","https://picsum.photos/seed/chair830c/400/400","https://picsum.photos/seed/chair830d/400/400"],"badge":"sale","stars":4,"reviews":13,"url":"https://epicmart.co.ke/product/jumbo-seat/"},{"id":856,"name":"Pedicure Seat","cat":"chairs","catLabel":"Chairs & Seating","sub":"styling_chairs","price":18500,"oldPrice":20000,"img":"https://picsum.photos/seed/chair856a/400/400","imgs":["https://picsum.photos/seed/chair856a/400/400","https://picsum.photos/seed/chair856b/400/400","https://picsum.photos/seed/chair856c/400/400","https://picsum.photos/seed/chair856d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/product-7/"},{"id":857,"name":"Waiting Bench","cat":"chairs","catLabel":"Chairs & Seating","sub":"waiting","price":10000,"oldPrice":13000,"img":"https://picsum.photos/seed/chair857a/400/400","imgs":["https://picsum.photos/seed/chair857a/400/400","https://picsum.photos/seed/chair857b/400/400","https://picsum.photos/seed/chair857c/400/400","https://picsum.photos/seed/chair857d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/waiting-bench/"},{"id":858,"name":"Bench","cat":"chairs","catLabel":"Chairs & Seating","sub":"waiting","price":9500,"oldPrice":10000,"img":"https://picsum.photos/seed/chair858a/400/400","badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/bench/","imgs":["https://picsum.photos/seed/chair858a/400/400","https://picsum.photos/seed/chair858b/400/400","https://picsum.photos/seed/chair858c/400/400","https://picsum.photos/seed/chair858d/400/400"]},{"id":819,"name":"Fibre Spa Pedicure Chair","cat":"chairs","catLabel":"Chairs & Seating","sub":"styling_chairs","price":40000,"oldPrice":42000,"img":"https://picsum.photos/seed/chair819a/400/400","imgs":["https://picsum.photos/seed/chair819a/400/400","https://picsum.photos/seed/chair819b/400/400","https://picsum.photos/seed/chair819c/400/400","https://picsum.photos/seed/chair819d/400/400"],"badge":"sale","stars":5,"reviews":9,"url":"https://epicmart.co.ke/product/fibre-spa/"},{"id":855,"name":"Mini Jumbo Chair","cat":"chairs","catLabel":"Chairs & Seating","sub":"waiting","price":27000,"oldPrice":30000,"img":"https://picsum.photos/seed/chair855a/400/400","imgs":["https://picsum.photos/seed/chair855a/400/400","https://picsum.photos/seed/chair855b/400/400","https://picsum.photos/seed/chair855c/400/400","https://picsum.photos/seed/chair855d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/mini-jumbo-chair/"}];
 
-// ── STATE ──
+// ââ STATE ââ
 
 
 let activeFilter = 'all';
@@ -1600,12 +1600,12 @@ let activeSort = 'default';
 let searchQ = '';
 let toastT;
 
-// ── HELPERS ──
+// ââ HELPERS ââ
 function disc(p) { return p.oldPrice ? Math.round((p.oldPrice - p.price) / p.oldPrice * 100) : 0; }
-function stars(n) { return '★'.repeat(n) + '☆'.repeat(5 - n); }
+function stars(n) { return 'â'.repeat(n) + 'â'.repeat(5 - n); }
 function fmt(n) { return n.toLocaleString(); }
 
-// ── RENDER ──
+// ââ RENDER ââ
 function render() {
   let list = [...PRODUCTS];
 
@@ -1632,7 +1632,7 @@ function render() {
   grid.innerHTML = list.map(p => {
     const d = disc(p);
     const badge = d > 0 && p.badge === 'sale' ? '<span class="prod-badge badge-sale">-'+d+'%</span>' :
-      p.badge === 'hot' ? '<span class="prod-badge badge-hot">🔥 HOT</span>' :
+      p.badge === 'hot' ? '<span class="prod-badge badge-hot">ð¥ HOT</span>' :
       p.badge === 'new' ? '<span class="prod-badge badge-new">NEW</span>' : '';
     const saveTag = d >= 15 ? '<span class="p-save">Save '+d+'%</span>' : '';
     const priceHtml = p.oldPrice
@@ -1645,7 +1645,7 @@ function render() {
       <div class="prod-img">
         <img src="${p.img}" alt="${nm}" loading="lazy" onerror="this.hidden=true">
         ${badge}
-        <button class="wish-btn ${inW ? 'wishlisted' : ''}" onclick="toggleWish(event, ${p.id})">${inW ? '♥' : '♡'}</button>
+        <button class="wish-btn ${inW ? 'wishlisted' : ''}" onclick="toggleWish(event, ${p.id})">${inW ? 'â¥' : 'â¡'}</button>
       </div>
       <div class="prod-body">
         <div class="prod-cat-tag" style="font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#D4A017;opacity:.7;margin-bottom:5px">Chairs & Seating</div>
@@ -1654,13 +1654,13 @@ function render() {
         <div class="prod-prices">${priceHtml}</div>
       </div>
       <div class="prod-foot">
-        <button class="add-btn" >🛒 Buy Now</button>
+        <button class="add-btn" >ð Buy Now</button>
       </div>
     </div>`;
   }).join('');
 }
 
-// ── FILTER TABS ──
+// ââ FILTER TABS ââ
 document.querySelectorAll('.filter-btn').forEach(btn => {
   btn.addEventListener('click', function() {
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
@@ -1670,19 +1670,19 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
   });
 });
 
-// ── SORT ──
+// ââ SORT ââ
 document.getElementById('sortSelect').addEventListener('change', function() {
   activeSort = this.value;
   render();
 });
 
-// ── SEARCH ──
+// ââ SEARCH ââ
 document.getElementById('searchInput').addEventListener('input', function() {
   searchQ = this.value;
   render();
 });
 
-// ── VIEW TOGGLE ──
+// ââ VIEW TOGGLE ââ
 function setView(type) {
   const grid = document.getElementById('prodGrid');
   grid.classList.toggle('list-view', type === 'list');
@@ -1690,7 +1690,7 @@ function setView(type) {
   document.getElementById('listBtn').classList.toggle('active', type === 'list');
 }
 
-// ── PRICE FILTER ──
+// ââ PRICE FILTER ââ
 function applyPrice() {
   const mn = parseFloat(document.getElementById('priceMin').value) || 0;
   const mx = parseFloat(document.getElementById('priceMax').value) || Infinity;
@@ -1699,7 +1699,7 @@ function applyPrice() {
     if (pr) c.classList.toggle('hidden', pr.price < mn || pr.price > mx);
   });
 }
-// ── WISHLIST ──
+// ââ WISHLIST ââ
 function toggleWish(e, id) {
   e.stopPropagation();
   const i = wishlist.indexOf(id);
@@ -1708,14 +1708,14 @@ function toggleWish(e, id) {
   render();
 }
 
-// ── TOAST ──
+// ââ TOAST ââ
 
 function hideToast() { document.getElementById('toast').classList.remove('show'); }
 
-// ── KEYBOARD ──
-// ── INIT ──
+// ââ KEYBOARD ââ
+// ââ INIT ââ
 render();
-refreshCart();
+if (typeof refreshCart === 'function') { refreshCart(); }
 
 </script>
 <!-- PRODUCT MODAL - paste this before 
@@ -1725,7 +1725,7 @@ refreshCart();
 <!-- Modal Overlay -->
 <div id="pm-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:10000;backdrop-filter:blur(6px);overflow-y:auto;padding:20px" onclick="pmClose(event)">
   <div id="pm-box" style="position:relative;z-index:10001" onclick="event.stopPropagation()" style="background:#141414;border:1px solid rgba(212,160,23,.25);border-radius:16px;max-width:920px;margin:auto;overflow:hidden;position:relative;animation:pmPop .3s ease">
-    <button onclick="closePM()" style="position:absolute;top:14px;right:16px;background:rgba(255,255,255,.1);border:none;color:#fff;width:34px;height:34px;border-radius:50%;font-size:20px;cursor:pointer;z-index:10;display:flex;align-items:center;justify-content:center;line-height:1">×</button>
+    <button onclick="closePM()" style="position:absolute;top:14px;right:16px;background:rgba(255,255,255,.1);border:none;color:#fff;width:34px;height:34px;border-radius:50%;font-size:20px;cursor:pointer;z-index:10;display:flex;align-items:center;justify-content:center;line-height:1">Ã</button>
     <div style="display:grid;grid-template-columns:1fr 1fr;min-height:420px">
 
       <!-- LEFT: Image Gallery -->
@@ -1735,9 +1735,9 @@ refreshCart();
           <img id="pm-main-img" src="" alt="" style="width:100%;height:100%;object-fit:cover;transition:opacity .3s">
           <span id="pm-badge" style="position:absolute;top:14px;left:14px;background:#D93B3B;color:#fff;font-size:11px;font-weight:800;padding:4px 12px;border-radius:20px;letter-spacing:.04em"></span>
           <!-- Arrow Left -->
-          <button onclick="event.stopPropagation();pmPrevImg()" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.2);color:#fff;width:36px;height:36px;border-radius:50%;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center">‹</button>
+          <button onclick="event.stopPropagation();pmPrevImg()" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.2);color:#fff;width:36px;height:36px;border-radius:50%;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center">â¹</button>
           <!-- Arrow Right -->
-          <button onclick="event.stopPropagation();pmNextImg()" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.2);color:#fff;width:36px;height:36px;border-radius:50%;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center">›</button>
+          <button onclick="event.stopPropagation();pmNextImg()" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.2);color:#fff;width:36px;height:36px;border-radius:50%;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center">âº</button>
         </div>
         <!-- Thumbnails -->
         <div id="pm-thumbs" style="display:flex;gap:8px;padding:10px 12px;overflow-x:auto;background:#111"></div>
@@ -1768,7 +1768,7 @@ refreshCart();
         <div style="margin-bottom:20px">
           <div style="font-size:12px;font-weight:700;color:#888;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px">Quantity</div>
           <div style="display:flex;align-items:center;gap:0;border:1.5px solid rgba(255,255,255,.12);border-radius:9px;width:fit-content;overflow:hidden">
-            <button onclick="event.stopPropagation();pmQty(-1)" style="background:#1C1C1C;border:none;color:#F8F6F2;width:40px;height:40px;font-size:20px;cursor:pointer;transition:.2s;font-family:'Plus Jakarta Sans',sans-serif" onmouseover="this.style.background='#242424'" onmouseout="this.style.background='#1C1C1C'">−</button>
+            <button onclick="event.stopPropagation();pmQty(-1)" style="background:#1C1C1C;border:none;color:#F8F6F2;width:40px;height:40px;font-size:20px;cursor:pointer;transition:.2s;font-family:'Plus Jakarta Sans',sans-serif" onmouseover="this.style.background='#242424'" onmouseout="this.style.background='#1C1C1C'">â</button>
             <span id="pm-qty" style="min-width:44px;text-align:center;font-size:16px;font-weight:700;color:#F8F6F2;background:#141414;height:40px;display:flex;align-items:center;justify-content:center;border-left:1px solid rgba(255,255,255,.1);border-right:1px solid rgba(255,255,255,.1)">1</span>
             <button onclick="event.stopPropagation();pmQty(1)" style="background:#1C1C1C;border:none;color:#F8F6F2;width:40px;height:40px;font-size:20px;cursor:pointer;transition:.2s;font-family:'Plus Jakarta Sans',sans-serif" onmouseover="this.style.background='#242424'" onmouseout="this.style.background='#1C1C1C'">+</button>
           </div>
@@ -1777,7 +1777,7 @@ refreshCart();
         <!-- Buttons -->
         <div style="display:flex;flex-direction:column;gap:10px;margin-top:auto">
           <!-- Buy Now / Add to Cart -->
-          <button id="pm-buy-btn" onclick="event.stopPropagation();pmAddToCart()" style="background:#D4A017;color:#4A0910;border:none;padding:14px;border-radius:9px;font-weight:800;font-size:15px;letter-spacing:.05em;text-transform:uppercase;cursor:pointer;transition:.2s;display:flex;align-items:center;justify-content:center;gap:8px" onmouseover="this.style.background='#F0C040'" onmouseout="this.style.background='#D4A017'">🛒 Add to Cart</button>
+          <button id="pm-buy-btn" onclick="event.stopPropagation();pmAddToCart()" style="background:#D4A017;color:#4A0910;border:none;padding:14px;border-radius:9px;font-weight:800;font-size:15px;letter-spacing:.05em;text-transform:uppercase;cursor:pointer;transition:.2s;display:flex;align-items:center;justify-content:center;gap:8px" onmouseover="this.style.background='#F0C040'" onmouseout="this.style.background='#D4A017'">ð Add to Cart</button>
           <!-- WhatsApp Order -->
           <button id="pm-wa-btn" onclick="event.stopPropagation();pmWhatsApp()" style="background:#25D366;color:#fff;border:none;padding:13px;border-radius:9px;font-weight:800;font-size:14px;letter-spacing:.05em;text-transform:uppercase;cursor:pointer;transition:.2s;display:flex;align-items:center;justify-content:center;gap:8px" onmouseover="this.style.background='#1e8e3e'" onmouseout="this.style.background='#25D366'">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -1787,7 +1787,7 @@ refreshCart();
 
         <!-- Delivery note -->
         <div style="margin-top:14px;background:rgba(34,160,90,.08);border:1px solid rgba(34,160,90,.2);border-radius:8px;padding:10px 14px;font-size:12.5px;color:#22A05A;display:flex;align-items:center;gap:8px">
-          🚚 <span>Nationwide delivery · Payment on order confirmation</span>
+          ð <span>Nationwide delivery Â· Payment on order confirmation</span>
         </div>
       </div>
     </div>
@@ -1811,12 +1811,12 @@ refreshCart();
 
 
 <script>
-/* ═══════════════════════════════
-   EPIC MART — MAIN CONTROLLER
+/* âââââââââââââââââââââââââââââââ
+   EPIC MART â MAIN CONTROLLER
    One script. No conflicts.
-═══════════════════════════════ */
+âââââââââââââââââââââââââââââââ */
 
-/* ── CART STATE ── */
+/* ââ CART STATE ââ */
 var cart = JSON.parse(localStorage.getItem('em_cart') || '[]');
 
 function saveCart() {
@@ -1882,7 +1882,7 @@ function refreshCart() {
   if (amtEl) amtEl.textContent = t;
 }
 
-/* ── CART OPEN / CLOSE ── */
+/* ââ CART OPEN / CLOSE ââ */
 function openCart() {
   var panel   = document.getElementById('cartPanel');
   var overlay = document.getElementById('cartOverlay');
@@ -1907,20 +1907,19 @@ function showCheckout() {
   if (form) { form.style.display = 'block'; form.classList.add('show'); }
 }
 
-/* ── SEARCH ── */
+/* ââ SEARCH ââ */
 function doSearch(q) {
   var val = (q || '').toLowerCase().trim();
   if (typeof searchQ !== 'undefined') { searchQ = val; if (typeof render === 'function') render(); }
   if (typeof searchQuery !== 'undefined') { searchQuery = val; if (typeof renderProducts === 'function') renderProducts(); }
   if (typeof handleSearch === 'function') handleSearch(val);
-}
   if (typeof searchQuery !== 'undefined') {
     searchQuery = q || '';
     if (typeof renderProducts === 'function') renderProducts();
   }
 }
 
-/* ── CHECKOUT ── */
+/* ââ CHECKOUT ââ */
 function openMpesa() {
   var n  = (document.getElementById('cfName')  || {}).value || '';
   var ph = (document.getElementById('cfPhone') || {}).value || '';
@@ -1954,9 +1953,9 @@ function orderViaWA() {
     'Please confirm my order. Thank you!', '_blank');
 }
 
-/* ── INIT ON DOM READY ── */
+/* ââ INIT ON DOM READY ââ */
 
-/* ── ADD TO CART ── */
+/* ââ ADD TO CART ââ */
 function addToCart(id, name, price, img, qty) {
   cart = JSON.parse(localStorage.getItem('em_cart') || '[]');
   qty = qty || 1;
@@ -1966,7 +1965,7 @@ function addToCart(id, name, price, img, qty) {
   saveCart(); refreshCart();
 }
 
-/* ── PRODUCT MODAL ── */
+/* ââ PRODUCT MODAL ââ */
 var pmProduct = null, pmImages = [], pmImgIdx = 0, pmQtyVal = 1;
 
 function openPM(id) {
@@ -1984,7 +1983,7 @@ function openPM(id) {
   // Stars
   var starsEl = document.querySelector('#pm-stars span:first-child');
   var rcEl    = document.querySelector('#pm-stars span:last-child');
-  if (starsEl) starsEl.textContent = '★'.repeat(p.stars) + '☆'.repeat(5-p.stars);
+  if (starsEl) starsEl.textContent = 'â'.repeat(p.stars) + 'â'.repeat(5-p.stars);
   if (rcEl)    rcEl.textContent = p.reviews > 0 ? '(' + p.reviews + ' reviews)' : '(New)';
 
   // Prices
@@ -2003,7 +2002,7 @@ function openPM(id) {
   if (badgeEl) {
     var d2 = p.oldPrice ? Math.round((p.oldPrice-p.price)/p.oldPrice*100) : 0;
     if (d2 > 0)           { badgeEl.textContent='-'+d2+'%'; badgeEl.style.background='#D93B3B'; badgeEl.style.display=''; }
-    else if (p.badge==='hot') { badgeEl.textContent='🔥 HOT'; badgeEl.style.background='#D4A017'; badgeEl.style.display=''; }
+    else if (p.badge==='hot') { badgeEl.textContent='ð¥ HOT'; badgeEl.style.background='#D4A017'; badgeEl.style.display=''; }
     else if (p.badge==='new') { badgeEl.textContent='NEW'; badgeEl.style.background='#22A05A'; badgeEl.style.display=''; }
     else                  { badgeEl.style.display='none'; }
   }
@@ -2012,7 +2011,7 @@ function openPM(id) {
 
   // Reset buy button
   var addBtn = el('pm-buy-btn') || el('pmAddBtn');
-  if (addBtn) { addBtn.textContent = '🛒 Add to Cart'; addBtn.style.background = ''; }
+  if (addBtn) { addBtn.textContent = 'ð Add to Cart'; addBtn.style.background = ''; }
 
   // Show modal
   var overlay = el('pm-overlay');
@@ -2050,9 +2049,9 @@ function pmAddToCart() {
   addToCart(pmProduct.id, pmProduct.name, pmProduct.price, pmProduct.img, pmQtyVal);
   var btn = document.getElementById('pm-buy-btn') || document.getElementById('pmAddBtn');
   if (btn) {
-    btn.textContent = '✓ Added to Cart!';
+    btn.textContent = 'â Added to Cart!';
     btn.style.background = '#22A05A';
-    setTimeout(function(){ btn.textContent='🛒 Add to Cart'; btn.style.background=''; }, 2000);
+    setTimeout(function(){ btn.textContent='ð Add to Cart'; btn.style.background=''; }, 2000);
   }
 }
 
@@ -2111,7 +2110,7 @@ document.addEventListener('DOMContentLoaded', function() {
     e.stopPropagation(); orderViaWA();
   });
 
-  /* Cart item qty/delete — event delegation on #cartItems */
+  /* Cart item qty/delete â event delegation on #cartItems */
   var cartItems = document.getElementById('cartItems');
   if (cartItems) {
     cartItems.addEventListener('click', function(e) {
@@ -2139,7 +2138,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var si = document.getElementById('searchInput');
   if (si) si.addEventListener('input', function() { doSearch(this.value); });
 
-  /* Search button — the button right after the search input */
+  /* Search button â the button right after the search input */
   if (si && si.nextElementSibling && si.nextElementSibling.tagName === 'BUTTON') {
     si.nextElementSibling.addEventListener('click', function() {
       doSearch(document.getElementById('searchInput').value);
@@ -2163,7 +2162,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (e.key === 'Escape') { closeCart(); closeMpesa(); }
   });
 
-  /* BUY NOW — delegation on prodGrid */
+  /* BUY NOW â delegation on prodGrid */
   var grid = document.getElementById('prodGrid');
   if (grid) {
     grid.addEventListener('click', function(e) {
@@ -2192,4 +2191,4 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 </body>
-</html>
+  </html>
