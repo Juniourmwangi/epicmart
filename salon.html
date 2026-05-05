@@ -222,18 +222,17 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 @media(max-width:480px){.prod-grid{grid-template-columns:1fr}}
 
 
-}
 
 
-/* ââ CART COMPLETE RESTYLE ââ */
+/* CART COMPLETE RESTYLE */
 .cart-overlay{position:fixed!important;inset:0!important;background:rgba(0,0,0,.7)!important;z-index:9000!important;opacity:0!important;pointer-events:none!important;transition:opacity .3s!important;backdrop-filter:blur(4px)!important}
 .cart-overlay.open{opacity:1!important;pointer-events:all!important}
 
-/* Panel â full height, flex column */
+/* Panel full height, flex column */
 .cart-panel,
 .cart-panel.open,
 
-/* Header â fixed height, never shrinks */
+/* Header fixed height, never shrinks */
 .cart-hdr,.cart-header{
   flex:0 0 auto!important;
   padding:18px 22px!important;
@@ -252,7 +251,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 }
 .cart-x:hover,.cart-close:hover{border-color:#D93B3B!important;color:#D93B3B!important}
 
-/* Items â SCROLLABLE, fills remaining space */
+/* Items SCROLLABLE, fills remaining space */
 .cart-body,.cart-items{
   flex:1 1 0!important;          /* takes ALL remaining space */
   min-height:0!important;        /* critical for flex scroll */
@@ -327,7 +326,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 }
 .ci-del:hover,.cart-item-remove:hover{color:#D93B3B!important}
 
-/* Summary â fixed, never shrinks */
+/* Summary fixed, never shrinks */
 .cart-summary{
   flex:0 0 auto!important;
   padding:14px 22px!important;
@@ -347,7 +346,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 .cart-row.total-row span:last-child{color:#D4A017!important}
 .clabel,.cart-label{color:#888!important;font-size:13px!important}
 
-/* Checkout â fixed, never shrinks */
+/* Checkout fixed, never shrinks */
 .checkout-area,.checkout-section{
   flex:0 0 auto!important;
   padding:14px 22px 18px!important;
@@ -393,11 +392,9 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 
 
 
-}
 
-
-/* ââ FONT SIZE REDUCTIONS ââ */
-/* Hero â smaller so products show on first load */
+/* FONT SIZE REDUCTIONS */
+/* Hero smaller so products show on first load */
 .hero h1, .em-hero-in h1 {
   font-size: clamp(22px, 3vw, 36px) !important;
   line-height: 1.15 !important;
@@ -448,7 +445,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 .add-btn, .atc-btn { padding: 8px !important; font-size: 11px !important; }
 
 
-/* ââ FONT & HERO REDUCTION ââ */
+/* FONT & HERO REDUCTION */
 .page-hero, .em-hero { padding: 20px 24px 16px !important; }
 .page-hero h1, .em-hero-in h1 { font-size: 22px !important; margin-bottom: 6px !important; }
 .page-hero p, .em-hero-in p { font-size: 12.5px !important; margin-bottom: 0 !important; }
@@ -457,13 +454,13 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 .filter-bar { padding: 8px 0 !important; }
 .filter-btn, .fb { padding: 5px 13px !important; font-size: 11.5px !important; }
 
-/* ââ CART â ITEMS FIRST, CHECKOUT HIDDEN UNTIL READY ââ */
+/* CART ITEMS FIRST, CHECKOUT HIDDEN UNTIL READY */
 
 
 
 
 
-/* Header â fixed */
+/* Header fixed */
 #cartHeader, #cartHdr, .cart-hdr, .cart-header {
   flex-shrink: 0 !important;
   display: flex !important; align-items: center !important; justify-content: space-between !important;
@@ -472,7 +469,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
   border-bottom: 1px solid rgba(255,255,255,.08) !important;
 }
 
-/* Items area â scrollable, takes ALL space */
+/* Items area scrollable, takes ALL space */
 #cartScroll, #cartItemsWrap, .cart-body, .cart-items {
   flex: 1 1 0 !important;
   min-height: 0 !important;
@@ -484,7 +481,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 #cartScroll::-webkit-scrollbar-thumb,
 #cartItemsWrap::-webkit-scrollbar-thumb { background: #D4A017; border-radius: 2px; }
 
-/* Footer â ONLY summary + checkout button, NOT full form */
+/* Footer ONLY summary + checkout button, NOT full form */
 #cartFtr, #cartFooter { flex-shrink: 0 !important; }
 
 /* Summary box */
@@ -494,7 +491,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
   border-top: 1px solid rgba(255,255,255,.08) !important;
 }
 
-/* Proceed button â shown instead of full form */
+/* Proceed button shown instead of full form */
 #cartProceedBtn {
   display: block;
   width: calc(100% - 36px);
@@ -514,7 +511,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 }
 #cartProceedBtn:hover { background: #F0C040; }
 
-/* Checkout form â hidden by default, shown after proceed */
+/* Checkout form hidden by default, shown after proceed */
 #cartForm, #cartCheckout, .checkout-area, .checkout-section {
   display: none !important;
   flex-shrink: 0 !important;
@@ -698,7 +695,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
     font-size: 11px !important; padding: 8px 6px !important;
   }
 
-  /* Cart panel â full width on mobile */
+  /* Cart panel full width on mobile */
   
 
   /* Product modal */
@@ -723,9 +720,9 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 }
 
 
-/* ââââââââââââââââââââââââââââ
-   CART â CLEAN REBUILD v3
-ââââââââââââââââââââââââââââ */
+/* 
+   CART CLEAN REBUILD v3
+*/
 #cartOverlay {
   position: fixed; inset: 0;
   background: rgba(0,0,0,.65);
@@ -1011,7 +1008,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
   gap: 16px !important;
 }
 
-/* ââ MOBILE ââ */
+/* MOBILE */
 @media (max-width: 900px) {
   .prod-grid, #prodGrid, .grid {
     grid-template-columns: repeat(2, 1fr) !important;
@@ -1055,9 +1052,9 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 }
 
 
-/* ââ DEFINITIVE BUTTON + CART FIX ââ */
+/* DEFINITIVE BUTTON + CART FIX */
 
-/* Product cards â ensure clicks propagate correctly */
+/* Product cards ensure clicks propagate correctly */
 .prod-card, .pcard {
   position: relative !important;
   cursor: pointer !important;
@@ -1248,7 +1245,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 }
 
 
-/* ââ PRODUCT IMAGE FIT â ALL SIZES ââ */
+/* PRODUCT IMAGE FIT â ALL SIZES */
 
 /* Card image container â fixed height, never overflow */
 .prod-img, .prod-img-wrap, .pcard-img {
@@ -1338,9 +1335,9 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 <!-- TOPBAR -->
 <div class="topbar">
   <div class="topbar-inner">
-    <span>ð Call / WhatsApp: <strong>+254 740 190 837</strong></span>
-    <span class="gold-pill">ð Countrywide Delivery</span>
-    <span>âï¸ <a href="mailto:info@epicmart.co.ke">info@epicmart.co.ke</a></span>
+    <span>📞 Call / WhatsApp: <strong>+254 740 190 837</strong></span>
+    <span class="gold-pill">🚚 Countrywide Delivery</span>
+    <span>✉️ <a href="mailto:info@epicmart.co.ke">info@epicmart.co.ke</a></span>
   </div>
 </div>
 
@@ -1353,11 +1350,11 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
     </a>
     <div class="search-wrap">
       <input type="search" id="searchInput" placeholder="Search products..." autocomplete="off" >
-      <button type="button" aria-label="Search" >ð</button>
+      <button type="button" aria-label="Search" >🔍</button>
     </div>
     <div class="header-right">
       <a href="https://wa.me/254740190837?text=Hello%20Epic%20Mart!%20I%20am%20interested%20in%20salon%20equipment.%20Please%20assist%20me." target="_blank" class="btn-wa"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp</a>
-      <div class="cart-btn">ð<span class="cart-count" id="cartCount">0</span></div>
+      <div class="cart-btn">🛒<span class="cart-count" id="cartCount">0</span></div>
     </div>
   </div>
 </header>
@@ -1366,30 +1363,30 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 <nav class="nav-bar">
   <div class="nav-inner">
     <ul class="nav-list"><li><a href="index.html" >Shop All</a></li><li><a href="chairs.html" >Chairs &amp; Seating</a></li><li><a href="barber.html" >Barber Accessories</a></li><li><a href="massage.html" >Massage</a></li><li><a href="salon.html" class="active">Salon</a></li></ul>
-    <span class="nav-phone">ð 0740 190 837</span>
+    <span class="nav-phone">📞 0740 190 837</span>
   </div>
 </nav>
 
 <!-- TRUST BAR -->
 <div class="trust-bar">
   <div class="trust-inner">
-    <div class="ti"><span class="ti-icon">ð</span><div><div class="ti-title">Nationwide Delivery</div><div class="ti-sub">All 47 counties</div></div></div>
-    <div class="ti"><span class="ti-icon">ð³</span><div><div class="ti-title">M-Pesa Payments</div><div class="ti-sub">Safe &amp; instant</div></div></div>
-    <div class="ti"><span class="ti-icon">â</span><div><div class="ti-title">100% Genuine</div><div class="ti-sub">Authentic equipment</div></div></div>
-    <div class="ti"><span class="ti-icon">ð</span><div><div class="ti-title">Easy Returns</div><div class="ti-sub">7-day policy</div></div></div>
-    <div class="ti"><span class="ti-icon">ð</span><div><div class="ti-title">Expert Support</div><div class="ti-sub">Call or WhatsApp</div></div></div>
+    <div class="ti"><span class="ti-icon">🚚</span><div><div class="ti-title">Nationwide Delivery</div><div class="ti-sub">All 47 counties</div></div></div>
+    <div class="ti"><span class="ti-icon">💳</span><div><div class="ti-title">M-Pesa Payments</div><div class="ti-sub">Safe &amp; instant</div></div></div>
+    <div class="ti"><span class="ti-icon">✅</span><div><div class="ti-title">100% Genuine</div><div class="ti-sub">Authentic equipment</div></div></div>
+    <div class="ti"><span class="ti-icon">🔄</span><div><div class="ti-title">Easy Returns</div><div class="ti-sub">7-day policy</div></div></div>
+    <div class="ti"><span class="ti-icon">📞</span><div><div class="ti-title">Expert Support</div><div class="ti-sub">Call or WhatsApp</div></div></div>
   </div>
 </div>
 
 <!-- PAGE HERO -->
 <div class="page-hero">
   <div class="page-hero-inner">
-    <div class="hero-tag">ð Professional Salon</div>
+    <div class="hero-tag">💇 Professional Salon</div>
     <h1>Salon <em>Equipment</em> &amp; Supplies</h1>
-    <p>Everything your salon needs â shampoo units, hair dryers, manicure tables, UV sterilizers, warmers and supplies. All genuine, best prices in Kenya.</p>
+    <p>Everything your salon needs shampoo units, hair dryers, manicure tables, UV sterilizers, warmers and supplies. All genuine, best prices in Kenya.</p>
     <nav class="breadcrumb" aria-label="Breadcrumb">
-      <a href="index.html">Home</a><span>âº</span>
-      <a href="index.html">Shop</a><span>âº</span>
+      <a href="index.html">Home</a><span></span>
+      <a href="index.html">Shop</a><span></span>
       <span>Salon</span>
     </nav>
   </div>
@@ -1408,8 +1405,8 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
     <div class="sort-wrap">
       <select class="sort-select" id="sortSelect">
         <option value="default">Sort: Default</option>
-        <option value="price-low">Price: Low â High</option>
-        <option value="price-high">Price: High â Low</option>
+        <option value="price-low">Price: Low → High</option>
+        <option value="price-high">Price: High → Low</option>
         <option value="discount">Biggest Discount</option>
         <option value="rating">Highest Rated</option>
       </select>
@@ -1435,7 +1432,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
       <button class="btn-filter-apply" onclick="applyPrice()">Apply Filter</button>
     </div>
     <div class="promo-box">
-      <div style="font-size:34px;margin-bottom:10px">ð</div>
+      <div style="font-size:34px;margin-bottom:10px">🚚</div>
       <div class="promo-box-title">Nationwide Delivery</div>
       <div class="promo-box-sub">Order now, we deliver to your door</div>
       <a href="index.html" class="promo-shop-btn">Browse All Products</a>
@@ -1444,7 +1441,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
       <h3>Need Help?</h3>
       <p class="help-text">Our team is ready to help you choose the right equipment for your salon or barbershop.</p>
       <a href="https://wa.me/254740190837?text=Hello%20Epic%20Mart!%20I%20am%20interested%20in%20salon%20equipment.%20Please%20assist%20me." target="_blank" class="wa-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Chat on WhatsApp</a>
-      <a href="tel:+254740190837" class="call-link">ð Call: 0740 190 837</a>
+      <a href="tel:+254740190837" class="call-link">📞 Call: 0740 190 837</a>
     </div>
   </aside>
 
@@ -1453,8 +1450,8 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
     <div class="prod-topbar">
       <div class="prod-count">Showing <strong id="prodCount">34</strong> products</div>
       <div class="view-toggle">
-        <button class="view-btn active" id="gridBtn" onclick="setView('grid')" title="Grid view">â</button>
-        <button class="view-btn" id="listBtn" onclick="setView('list')" title="List view">â°</button>
+        <button class="view-btn active" id="gridBtn" onclick="setView('grid')" title="Grid view">⊞</button>
+        <button class="view-btn" id="listBtn" onclick="setView('list')" title="List view">☰</button>
       </div>
     </div>
     <div class="prod-grid" id="prodGrid">
@@ -1473,10 +1470,10 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
       </div>
       <p class="foot-desc">Kenya's premier supplier of professional salon and barbershop equipment. Genuine products, best prices, countrywide delivery.</p>
       <div class="foot-socials">
-        <a href="https://facebook.com/epicmartenterprises" target="_blank" class="soc-btn">ð</a>
-        <a href="https://instagram.com/epicmartenterprises" target="_blank" class="soc-btn">ð¸</a>
+        <a href="https://facebook.com/epicmartenterprises" target="_blank" class="soc-btn">📘</a>
+        <a href="https://instagram.com/epicmartenterprises" target="_blank" class="soc-btn">📸</a>
         <a href="https://wa.me/254740190837" target="_blank" class="soc-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="#fff"><path d="M17.472 16.382c-.297-.169-1.758-.867-2.03-.967-.273-.099-.471-.168-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.169-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.169-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.169.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.216-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.162 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
-        <a href="https://tiktok.com/@epicmartenterprises" target="_blank" class="soc-btn">ðµ</a>
+        <a href="https://tiktok.com/@epicmartenterprises" target="_blank" class="soc-btn">🎵</a>
       </div>
     </div>
     <div class="foot-col"><h4>Categories</h4><ul>
@@ -1494,16 +1491,16 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
     </ul></div>
     <div class="foot-col"><h4>Contact Us</h4>
       <address style="font-style:normal">
-        <div class="contact-row">ð <a href="tel:+254740190837">+254 740 190 837</a></div>
-        <div class="contact-row">ð¬ <a href="https://wa.me/254740190837">WhatsApp: 0740 190 837</a></div>
-        <div class="contact-row">âï¸ <a href="mailto:info@epicmart.co.ke">info@epicmart.co.ke</a></div>
-        <div class="contact-row">ð Ronald Ngala Street, Nairobi CBD</div>
-        <div class="contact-row">ð MonâSat: 8:00 AM â 7:00 PM</div>
+        <div class="contact-row">📞 <a href="tel:+254740190837">+254 740 190 837</a></div>
+        <div class="contact-row">💬<a href="https://wa.me/254740190837">WhatsApp: 0740 190 837</a></div>
+        <div class="contact-row">✉️<a href="mailto:info@epicmart.co.ke">info@epicmart.co.ke</a></div>
+        <div class="contact-row">📍 Duruma Road, DownTown Towers, Nairobi Kenya</div>
+        <div class="contact-row">🕒 Mon - Sat: 8:00 AM - 7:00 PM</div>
       </address>
     </div>
   </div>
   <div class="foot-bottom">
-    <span>Â© 2025 Epic Mart Enterprises. All rights reserved. | <a href="https://epicmart.co.ke/privacy-policy/">Privacy Policy</a> | <a href="https://epicmart.co.ke/terms-of-service/">Terms</a></span>
+    <span>Â© 2026 Epic Mart Enterprises. All rights reserved. | <a href="https://epicmart.co.ke/privacy-policy/">Privacy Policy</a> | <a href="https://epicmart.co.ke/terms-of-service/">Terms</a></span>
     <div class="pay-icons"><span class="pay-tag">M-PESA</span><span class="pay-tag">VISA</span><span class="pay-tag">MASTERCARD</span><span class="pay-tag">AIRTEL</span></div>
   </div>
 </footer>
@@ -1520,7 +1517,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
     <button id="cartXBtn">&#x2715;</button>
   </div>
 
-  <!-- Items â scrollable -->
+  <!-- Items scrollable -->
   <div id="cartScroll">
     <div id="cartItems">
       <div class="cempty">
@@ -1531,7 +1528,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
     </div>
   </div>
 
-  <!-- Footer â always at bottom -->
+  <!-- Footer always at bottom -->
   <div id="cartFtr">
 
     <!-- Summary (hidden when empty) -->
@@ -1539,7 +1536,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
       <div class="crow"><span class="clbl">Subtotal</span><span id="cSubtotal">KSh 0</span></div>
       <div class="crow"><span class="clbl">Delivery</span><span style="color:#22A05A;font-size:12.5px">Payment on order confirmation &#x2705;</span></div>
       <div class="crow ctotal"><span>Total</span><span id="cTotal">KSh 0</span></div>
-      <!-- PROCEED BUTTON â after total, before checkout form -->
+      <!-- PROCEED BUTTON after total, before checkout form -->
       <button id="cProceedBtn">Proceed to Checkout &#x2192;</button>
     </div>
 
@@ -1559,28 +1556,28 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 <!-- MPESA MODAL -->
 <div class="mpesa-modal" id="mpesaModal" style="z-index:10000">
   <div class="mpesa-box">
-    <div style="font-size:46px">ð±</div>
+    <div style="font-size:46px">📱</div>
     <h2>M-Pesa Payment</h2>
     <p>Complete your payment then confirm via WhatsApp with your receipt</p>
     <div class="mpesa-amt"><div class="mpesa-amt-label">Amount to Pay</div><div class="mpesa-amt-val" id="mpesaAmt">KSh 0</div></div>
     <div class="mpesa-num">0740 190 837</div>
     <p style="font-size:11.5px;color:var(--muted);margin-bottom:14px">Send to this number via M-Pesa Send Money</p>
     <ul class="mpesa-steps">
-      <li>Open M-Pesa â Send Money</li>
+      <li>Open M-Pesa → Send Money</li>
       <li>Enter number: <strong>0740 190 837</strong></li>
       <li>Enter the exact amount above</li>
       <li>Save the confirmation SMS</li>
       <li>Click button below to confirm on WhatsApp</li>
     </ul>
-    <button class="mpesa-confirm-btn" onclick="closeMpesa();orderWhatsApp()">â Confirm &amp; Send Order â</button>
+    <button class="mpesa-confirm-btn" onclick="closeMpesa();orderWhatsApp()">✓ Confirm &amp; Send Order →</button>
   </div>
 </div>
 
 <!-- TOAST -->
 <div class="toast" id="toast">
-  <span style="font-size:18px">â</span>
+  <span style="font-size:18px">✅</span>
   <div><strong id="toastName">Added!</strong><span id="toastSub">Item added to cart</span></div>
-  <button class="toast-x" onclick="hideToast()">Ã</button>
+  <button class="toast-x" onclick="hideToast()">×</button>
 </div>
 
 <!-- FLOATING WHATSAPP -->
@@ -1589,11 +1586,45 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 </a>
 
 <script>
-// ââ PRODUCT DATA ââ
+// PRODUCT DATA
 var wishlist = JSON.parse(localStorage.getItem("em_wish") || "[]");
-const PRODUCTS = [{"id":825,"name":"Shampoo Unit","cat":"salon","catLabel":"Salon Equipment","sub":"shampoo","price":13000,"oldPrice":15500,"img":"https://picsum.photos/seed/salon825a/400/400","imgs":["https://picsum.photos/seed/salon825a/400/400","https://picsum.photos/seed/salon825b/400/400","https://picsum.photos/seed/salon825c/400/400","https://picsum.photos/seed/salon825d/400/400"],"badge":"sale","stars":5,"reviews":19,"url":"https://epicmart.co.ke/product/shampoo-unit/"},{"id":837,"name":"VVIP Shampoo Unit / Sink","cat":"salon","catLabel":"Salon Equipment","sub":"shampoo","price":62000,"oldPrice":65000,"img":"https://picsum.photos/seed/salon837a/400/400","imgs":["https://picsum.photos/seed/salon837a/400/400","https://picsum.photos/seed/salon837b/400/400","https://picsum.photos/seed/salon837c/400/400","https://picsum.photos/seed/salon837d/400/400"],"badge":"hot","stars":5,"reviews":7,"url":"https://epicmart.co.ke/product/vvip-shampoo-unit-sink/"},{"id":887,"name":"Salon Sink","cat":"salon","catLabel":"Salon Equipment","sub":"shampoo","price":13000,"oldPrice":16000,"img":"https://picsum.photos/seed/salon887a/400/400","imgs":["https://picsum.photos/seed/salon887a/400/400","https://picsum.photos/seed/salon887b/400/400","https://picsum.photos/seed/salon887c/400/400","https://picsum.photos/seed/salon887d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/salon-sink/"},{"id":888,"name":"Salon Sink (Large)","cat":"salon","catLabel":"Salon Equipment","sub":"shampoo","price":30000,"oldPrice":32000,"img":"https://picsum.photos/seed/salon888a/400/400","imgs":["https://picsum.photos/seed/salon888a/400/400","https://picsum.photos/seed/salon888b/400/400","https://picsum.photos/seed/salon888c/400/400","https://picsum.photos/seed/salon888d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/salon-sink-2/"},{"id":889,"name":"Chrome Sink","cat":"salon","catLabel":"Salon Equipment","sub":"shampoo","price":42000,"oldPrice":45000,"img":"https://picsum.photos/seed/salon889a/400/400","imgs":["https://picsum.photos/seed/salon889a/400/400","https://picsum.photos/seed/salon889b/400/400","https://picsum.photos/seed/salon889c/400/400","https://picsum.photos/seed/salon889d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/chrome-sink/"},{"id":890,"name":"Chrome Sink Chair","cat":"salon","catLabel":"Salon Equipment","sub":"shampoo","price":40000,"oldPrice":42000,"img":"https://picsum.photos/seed/salon890a/400/400","imgs":["https://picsum.photos/seed/salon890a/400/400","https://picsum.photos/seed/salon890b/400/400","https://picsum.photos/seed/salon890c/400/400","https://picsum.photos/seed/salon890d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/chrome-sink-chair/"},{"id":813,"name":"Double Manicure Table","cat":"salon","catLabel":"Salon Equipment","sub":"manicure","price":36000,"oldPrice":40000,"img":"https://picsum.photos/seed/salon813a/400/400","imgs":["https://picsum.photos/seed/salon813a/400/400","https://picsum.photos/seed/salon813b/400/400","https://picsum.photos/seed/salon813c/400/400","https://picsum.photos/seed/salon813d/400/400"],"badge":"sale","stars":4,"reviews":22,"url":"https://epicmart.co.ke/product/double-manicure-table/"},{"id":829,"name":"Single Manicure Table","cat":"salon","catLabel":"Salon Equipment","sub":"manicure","price":29000,"oldPrice":32000,"img":"https://picsum.photos/seed/salon829a/400/400","imgs":["https://picsum.photos/seed/salon829a/400/400","https://picsum.photos/seed/salon829b/400/400","https://picsum.photos/seed/salon829c/400/400","https://picsum.photos/seed/salon829d/400/400"],"badge":"sale","stars":4,"reviews":11,"url":"https://epicmart.co.ke/product/single-manicure-table/"},{"id":841,"name":"Foldable Manicure Table","cat":"salon","catLabel":"Salon Equipment","sub":"manicure","price":14000,"oldPrice":15000,"img":"https://picsum.photos/seed/salon841a/400/400","imgs":["https://picsum.photos/seed/salon841a/400/400","https://picsum.photos/seed/salon841b/400/400","https://picsum.photos/seed/salon841c/400/400","https://picsum.photos/seed/salon841d/400/400"],"badge":"sale","stars":4,"reviews":17,"url":"https://epicmart.co.ke/product/foldable-manicure-table-2/"},{"id":826,"name":"Wall Mount Hair Dryer","cat":"salon","catLabel":"Salon Equipment","sub":"dryers","price":18500,"oldPrice":22000,"img":"https://picsum.photos/seed/salon826a/400/400","imgs":["https://picsum.photos/seed/salon826a/400/400","https://picsum.photos/seed/salon826b/400/400","https://picsum.photos/seed/salon826c/400/400","https://picsum.photos/seed/salon826d/400/400"],"badge":"sale","stars":5,"reviews":38,"url":"https://epicmart.co.ke/product/wall-mount-dryer/"},{"id":827,"name":"Super Hair Dryer Professional","cat":"salon","catLabel":"Salon Equipment","sub":"dryers","price":5500,"oldPrice":7000,"img":"https://picsum.photos/seed/salon827a/400/400","imgs":["https://picsum.photos/seed/salon827a/400/400","https://picsum.photos/seed/salon827b/400/400","https://picsum.photos/seed/salon827c/400/400","https://picsum.photos/seed/salon827d/400/400"],"badge":"sale","stars":5,"reviews":44,"url":"https://epicmart.co.ke/product/super-hair-dryer/"},{"id":838,"name":"Ceriotti Monsoon Hair Dryer","cat":"salon","catLabel":"Salon Equipment","sub":"dryers","price":7000,"oldPrice":7500,"img":"https://picsum.photos/seed/salon838a/400/400","imgs":["https://picsum.photos/seed/salon838a/400/400","https://picsum.photos/seed/salon838b/400/400","https://picsum.photos/seed/salon838c/400/400","https://picsum.photos/seed/salon838d/400/400"],"badge":"sale","stars":5,"reviews":28,"url":"https://epicmart.co.ke/product/cerriot-monsoon/"},{"id":839,"name":"Cerriot Blow Dryer","cat":"salon","catLabel":"Salon Equipment","sub":"dryers","price":7000,"oldPrice":8500,"img":"https://picsum.photos/seed/salon839a/400/400","imgs":["https://picsum.photos/seed/salon839a/400/400","https://picsum.photos/seed/salon839b/400/400","https://picsum.photos/seed/salon839c/400/400","https://picsum.photos/seed/salon839d/400/400"],"badge":"sale","stars":5,"reviews":48,"url":"https://epicmart.co.ke/product/cerriot-blowdrier/"},{"id":880,"name":"Stand Dryer","cat":"salon","catLabel":"Salon Equipment","sub":"dryers","price":13500,"oldPrice":15500,"img":"https://picsum.photos/seed/salon880a/400/400","imgs":["https://picsum.photos/seed/salon880a/400/400","https://picsum.photos/seed/salon880b/400/400","https://picsum.photos/seed/salon880c/400/400","https://picsum.photos/seed/salon880d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/stand-dryer/"},{"id":881,"name":"GEK Blowdryer","cat":"salon","catLabel":"Salon Equipment","sub":"dryers","price":3500,"oldPrice":4500,"img":"https://picsum.photos/seed/salon881a/400/400","imgs":["https://picsum.photos/seed/salon881a/400/400","https://picsum.photos/seed/salon881b/400/400","https://picsum.photos/seed/salon881c/400/400","https://picsum.photos/seed/salon881d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/gek-blowdry/"},{"id":882,"name":"Aspatek Professional Blow Dryer","cat":"salon","catLabel":"Salon Equipment","sub":"dryers","price":4500,"oldPrice":6500,"img":"https://picsum.photos/seed/salon882a/400/400","imgs":["https://picsum.photos/seed/salon882a/400/400","https://picsum.photos/seed/salon882b/400/400","https://picsum.photos/seed/salon882c/400/400","https://picsum.photos/seed/salon882d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/aspatek-professional-blow-dryer/"},{"id":814,"name":"32L Towel Warmer 2 Cabinet","cat":"salon","catLabel":"Salon Equipment","sub":"sterilizers","price":19000,"oldPrice":24000,"img":"https://picsum.photos/seed/salon814a/400/400","imgs":["https://picsum.photos/seed/salon814a/400/400","https://picsum.photos/seed/salon814b/400/400","https://picsum.photos/seed/salon814c/400/400","https://picsum.photos/seed/salon814d/400/400"],"badge":"sale","stars":5,"reviews":35,"url":"https://epicmart.co.ke/product/32l-towel-warmer-2-cabinet/"},{"id":891,"name":"23L Towel Warmer & UV Sterilizer","cat":"salon","catLabel":"Salon Equipment","sub":"sterilizers","price":13500,"oldPrice":16000,"img":"https://picsum.photos/seed/salon891a/400/400","imgs":["https://picsum.photos/seed/salon891a/400/400","https://picsum.photos/seed/salon891b/400/400","https://picsum.photos/seed/salon891c/400/400","https://picsum.photos/seed/salon891d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/23l-towel-warmer-uv-sterilization-cabinet/"},{"id":892,"name":"Double Wax Warmer","cat":"salon","catLabel":"Salon Equipment","sub":"sterilizers","price":8500,"oldPrice":11000,"img":"https://picsum.photos/seed/salon892a/400/400","imgs":["https://picsum.photos/seed/salon892a/400/400","https://picsum.photos/seed/salon892b/400/400","https://picsum.photos/seed/salon892c/400/400","https://picsum.photos/seed/salon892d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/double-wax-warmer/"},{"id":893,"name":"UV Sterilizer","cat":"salon","catLabel":"Salon Equipment","sub":"sterilizers","price":8000,"oldPrice":9000,"img":"https://picsum.photos/seed/salon893a/400/400","imgs":["https://picsum.photos/seed/salon893a/400/400","https://picsum.photos/seed/salon893b/400/400","https://picsum.photos/seed/salon893c/400/400","https://picsum.photos/seed/salon893d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/uv-sterilizer/"},{"id":894,"name":"UV Sterilizer (Pro)","cat":"salon","catLabel":"Salon Equipment","sub":"sterilizers","price":6500,"oldPrice":8500,"img":"https://picsum.photos/seed/salon894a/400/400","imgs":["https://picsum.photos/seed/salon894a/400/400","https://picsum.photos/seed/salon894b/400/400","https://picsum.photos/seed/salon894c/400/400","https://picsum.photos/seed/salon894d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/uv-sterilizer-2/"},{"id":895,"name":"2-in-1 UV Lamp","cat":"salon","catLabel":"Salon Equipment","sub":"sterilizers","price":5000,"oldPrice":6000,"img":"https://picsum.photos/seed/salon895a/400/400","imgs":["https://picsum.photos/seed/salon895a/400/400","https://picsum.photos/seed/salon895b/400/400","https://picsum.photos/seed/salon895c/400/400","https://picsum.photos/seed/salon895d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/2in1-uv-lamp/"},{"id":896,"name":"Rechargeable Cordless UV Lamp","cat":"salon","catLabel":"Salon Equipment","sub":"sterilizers","price":6500,"oldPrice":8000,"img":"https://picsum.photos/seed/salon896a/400/400","imgs":["https://picsum.photos/seed/salon896a/400/400","https://picsum.photos/seed/salon896b/400/400","https://picsum.photos/seed/salon896c/400/400","https://picsum.photos/seed/salon896d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/reachangable-cordless-uv-lamp/"},{"id":879,"name":"Facial Steamer (Pro)","cat":"salon","catLabel":"Salon Equipment","sub":"sterilizers","price":13500,"oldPrice":14500,"img":"https://picsum.photos/seed/salon879a/400/400","imgs":["https://picsum.photos/seed/salon879a/400/400","https://picsum.photos/seed/salon879b/400/400","https://picsum.photos/seed/salon879c/400/400","https://picsum.photos/seed/salon879d/400/400"],"badge":"new","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/facial-steamer-2/"},{"id":883,"name":"Steam Styler Flat Iron","cat":"salon","catLabel":"Salon Equipment","sub":"dryers","price":9000,"oldPrice":12000,"img":"https://picsum.photos/seed/salon883a/400/400","imgs":["https://picsum.photos/seed/salon883a/400/400","https://picsum.photos/seed/salon883b/400/400","https://picsum.photos/seed/salon883c/400/400","https://picsum.photos/seed/salon883d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/steam-styler-flat-iron/"},{"id":884,"name":"Ombre Machine","cat":"salon","catLabel":"Salon Equipment","sub":"dryers","price":7000,"oldPrice":8500,"img":"https://picsum.photos/seed/salon884a/400/400","imgs":["https://picsum.photos/seed/salon884a/400/400","https://picsum.photos/seed/salon884b/400/400","https://picsum.photos/seed/salon884c/400/400","https://picsum.photos/seed/salon884d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/ombre-machine/"},{"id":885,"name":"Wave Nouveau","cat":"salon","catLabel":"Salon Equipment","sub":"dryers","price":5500,"oldPrice":6500,"img":"https://picsum.photos/seed/salon885a/400/400","imgs":["https://picsum.photos/seed/salon885a/400/400","https://picsum.photos/seed/salon885b/400/400","https://picsum.photos/seed/salon885c/400/400","https://picsum.photos/seed/salon885d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/wave-nouveau/"},{"id":886,"name":"Artificial Dread Maker","cat":"salon","catLabel":"Salon Equipment","sub":"dryers","price":27000,"oldPrice":30000,"img":"https://picsum.photos/seed/salon886a/400/400","imgs":["https://picsum.photos/seed/salon886a/400/400","https://picsum.photos/seed/salon886b/400/400","https://picsum.photos/seed/salon886c/400/400","https://picsum.photos/seed/salon886d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/artificial-dread-maker/"},{"id":898,"name":"Low Level LED Therapy","cat":"salon","catLabel":"Salon Equipment","sub":"sterilizers","price":18000,"oldPrice":25000,"img":"https://picsum.photos/seed/salon898a/400/400","imgs":["https://picsum.photos/seed/salon898a/400/400","https://picsum.photos/seed/salon898b/400/400","https://picsum.photos/seed/salon898c/400/400","https://picsum.photos/seed/salon898d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/low-level-led-therapy/"},{"id":899,"name":"3-in-1 Facial Machine","cat":"salon","catLabel":"Salon Equipment","sub":"sterilizers","price":18500,"oldPrice":22000,"img":"https://picsum.photos/seed/salon899a/400/400","imgs":["https://picsum.photos/seed/salon899a/400/400","https://picsum.photos/seed/salon899b/400/400","https://picsum.photos/seed/salon899c/400/400","https://picsum.photos/seed/salon899d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/3-in-1-facial-machine/"},{"id":900,"name":"Phillips Smoother","cat":"salon","catLabel":"Salon Equipment","sub":"dryers","price":6500,"oldPrice":8000,"img":"https://picsum.photos/seed/salon900a/400/400","imgs":["https://picsum.photos/seed/salon900a/400/400","https://picsum.photos/seed/salon900b/400/400","https://picsum.photos/seed/salon900c/400/400","https://picsum.photos/seed/salon900d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/phillips-smoother/"},{"id":903,"name":"Black Essentials Shampoo/Conditioner","cat":"salon","catLabel":"Salon Equipment","sub":"shampoo","price":2500,"oldPrice":3000,"img":"https://picsum.photos/seed/salon903a/400/400","imgs":["https://picsum.photos/seed/salon903a/400/400","https://picsum.photos/seed/salon903b/400/400","https://picsum.photos/seed/salon903c/400/400","https://picsum.photos/seed/salon903d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/black-essentials-shampoo-conditioner/"},{"id":904,"name":"Depilatory Waxing Strips","cat":"salon","catLabel":"Salon Equipment","sub":"manicure","price":800,"oldPrice":1000,"img":"https://picsum.photos/seed/salon904a/400/400","imgs":["https://picsum.photos/seed/salon904a/400/400","https://picsum.photos/seed/salon904b/400/400","https://picsum.photos/seed/salon904c/400/400","https://picsum.photos/seed/salon904d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/product-9/"},{"id":905,"name":"Disposable Bed Roll","cat":"salon","catLabel":"Salon Equipment","sub":"manicure","price":3500,"oldPrice":4000,"img":"https://picsum.photos/seed/salon905a/400/400","imgs":["https://picsum.photos/seed/salon905a/400/400","https://picsum.photos/seed/salon905b/400/400","https://picsum.photos/seed/salon905c/400/400","https://picsum.photos/seed/salon905d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/product-4/"}];
+const PRODUCTS = [
+{"id":825,"name":"Shampoo Unit","cat":"salon","catLabel":"Salon Equipment","sub":"shampoo","price":13000,"oldPrice":15500,"img":"images/Shampoo unit1.png","imgs":["images/Shampoo unit2.jpg","images/Shampoo unit1.png","images/Shampoo unit2.jpg","images/Shampoo unit1.png"],"badge":"sale","stars":5,"reviews":19,"url":"images/Shampoo unit2.jpg"},
+{"id":837,"name":"VVIP Shampoo Unit / Sink","cat":"salon","catLabel":"Salon Equipment","sub":"shampoo","price":62000,"oldPrice":65000,"img":"images/VVIP Shampoo Unit Sink1.jpg","imgs":["images/VVIP Shampoo Unit Sink2.jpg","images/VVIP Shampoo Unit  Sink3.jpg","images/VVIP Shampoo Unit Sink1.jpg","images/VVIP Shampoo Unit Sink2.jpg"],"badge":"hot","stars":5,"reviews":7,"url":"https://epicmart.co.ke/product/vvip-shampoo-unit-sink/"},
+{"id":887,"name":"Salon Sink","cat":"salon","catLabel":"Salon Equipment","sub":"shampoo","price":13000,"oldPrice":16000,"img":"images/Salon Sink1.png","imgs":["images/Salon Sink2.jpg","images/Salon Sink1.png","images/Salon Sink2.jpg","images/Salon Sink1.png"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/salon-sink/"},
+{"id":888,"name":"Salon Sink (Large)","cat":"salon","catLabel":"Salon Equipment","sub":"shampoo","price":30000,"oldPrice":32000,"img":"images/Salon Sink (Large)1.jpg","imgs":["images/Salon Sink (Large)2.jpg","images/Salon Sink (Large)1.jpg","images/Salon Sink (Large)2.jpg","images/Salon Sink (Large)1.jpg"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/salon-sink-2/"},
+{"id":889,"name":"Chrome Sink","cat":"salon","catLabel":"Salon Equipment","sub":"shampoo","price":42000,"oldPrice":45000,"img":"images/Chrome sink Chair1.jpg","imgs":["images/Chrome sink Chair2.jpg","images/Chrome sink Chair3.jpg","images/Chrome sink Chair1.jpg","images/Chrome sink Chair2.jpg"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/chrome-sink/"},
+{"id":890,"name":"Chrome Sink Chair","cat":"salon","catLabel":"Salon Equipment","sub":"shampoo","price":40000,"oldPrice":42000,"img":"images/Chrome sink Chair1.jpg","imgs":["images/Chrome sink Chair2.jpg","images/Chrome sink Chair3.jpg","images/Chrome sink Chair1.jpg","images/Chrome sink Chair2.jpg"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/chrome-sink-chair/"},
+{"id":813,"name":"Double Manicure Table","cat":"salon","catLabel":"Salon Equipment","sub":"manicure","price":36000,"oldPrice":40000,"img":"images/Double Manicure Table1.jpg","imgs":["images/Double Manicure Table1.jpg","images/Double Manicure Table1.jpg","images/Double Manicure Table1.jpg","images/Double Manicure Table1.jpg"],"badge":"sale","stars":4,"reviews":22,"url":"https://epicmart.co.ke/product/double-manicure-table/"},
+{"id":829,"name":"Single Manicure Table","cat":"salon","catLabel":"Salon Equipment","sub":"manicure","price":29000,"oldPrice":32000,"img":"images/SINGLE MANICURE TABLE1.jpg","imgs":["images/SINGLE MANICURE TABLE2.jpg","images/SINGLE MANICURE TABLE3.jpg","images/SINGLE MANICURE TABLE1.jpg","images/SINGLE MANICURE TABLE2.jpg"],"badge":"sale","stars":4,"reviews":11,"url":"https://epicmart.co.ke/product/single-manicure-table/"},
+{"id":841,"name":"Foldable Manicure Table","cat":"salon","catLabel":"Salon Equipment","sub":"manicure","price":14000,"oldPrice":15000,"img":"images/Foldable Manicure Table1.jpg","imgs":["images/Foldable Manicure Table2.jpg","images/Foldable Manicure Table1.jpg","images/Foldable Manicure Table2.jpg","images/Foldable Manicure Table1.jpg"],"badge":"sale","stars":4,"reviews":17,"url":"https://epicmart.co.ke/product/foldable-manicure-table-2/"},
+{"id":826,"name":"Wall Mount Hair Dryer","cat":"salon","catLabel":"Salon Equipment","sub":"dryers","price":18500,"oldPrice":22000,"img":"images/Wall Mount Hair Dryer1.jpg","imgs":["images/Wall Mount Hair Dryer2.jpg","images/Wall Mount Hair Dryer3.jpg","images/Wall Mount Hair Dryer4.jpg","images/Wall Mount Hair Dryer1.jpg"],"badge":"sale","stars":5,"reviews":38,"url":"https://epicmart.co.ke/product/wall-mount-dryer/"},
+{"id":827,"name":"Super Hair Dryer Professional","cat":"salon","catLabel":"Salon Equipment","sub":"dryers","price":5500,"oldPrice":7000,"img":"images/Super Hair Dryer Professional1.jpg","imgs":["images/Super Hair Dryer Professional2.jpg","images/Super Hair Dryer Professional3.jpg","images/Super Hair Dryer Professional5.jpg","images/Super Hair Dryer Professional1.jpg"],"badge":"sale","stars":5,"reviews":44,"url":"https://epicmart.co.ke/product/super-hair-dryer/"},
+{"id":838,"name":"Ceriotti Monsoon Hair Dryer","cat":"salon","catLabel":"Salon Equipment","sub":"dryers","price":7000,"oldPrice":7500,"img":"images/Ceriotti Monsoon Hair Dryer1.jpg","imgs":["images/Ceriotti Monsoon Hair Dryer2.jpg","images/Ceriotti Monsoon Hair Dryer3.jpg","images/Ceriotti Monsoon Hair Dryer1.jpg","images/Ceriotti Monsoon Hair Dryer2.jpg"],"badge":"sale","stars":5,"reviews":28,"url":"https://epicmart.co.ke/product/cerriot-monsoon/"},
+{"id":839,"name":"Cerriot Blow Dryer","cat":"salon","catLabel":"Salon Equipment","sub":"dryers","price":7000,"oldPrice":8500,"img":"images/CERRIOT BLOWDRIER1.jpg","imgs":["images/CERRIOT BLOWDRIER2.jpg","images/CERRIOT BLOWDRIER3.jpg","images/CERRIOT BLOWDRIER3.jpg","images/CERRIOT BLOWDRIER4.jpg"],"badge":"sale","stars":5,"reviews":48,"url":"https://epicmart.co.ke/product/cerriot-blowdrier/"},
+{"id":880,"name":"Stand Dryer","cat":"salon","catLabel":"Salon Equipment","sub":"dryers","price":13500,"oldPrice":15500,"img":"images/Stand Dryer1.jpg","imgs":["images/Stand Dryer2.jpg","images/Stand Dryer3.jpg","images/Stand Dryer1.jpg","images/Stand Dryer2.jpg"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/stand-dryer/"},
+{"id":881,"name":"GEK Blowdryer","cat":"salon","catLabel":"Salon Equipment","sub":"dryers","price":3500,"oldPrice":4500,"img":"images/GEK Blowdryer1.jpg","imgs":["images/GEK Blowdryer2.jpg","images/GEK Blowdryer3.jpg","images/GEK Blowdryer1.jpg","images/GEK Blowdryer2.jpg"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/gek-blowdry/"},
+{"id":882,"name":"Aspatek Professional Blow Dryer","cat":"salon","catLabel":"Salon Equipment","sub":"dryers","price":4500,"oldPrice":6500,"img":"images/Aspatek Professional Blow Dryer1.jpg","imgs":["images/Aspatek Professional Blow Dryer2.jpg","images/Aspatek Professional Blow Dryer3.jpg","images/Aspatek Professional Blow Dryer1.jpg","images/Aspatek Professional Blow Dryer1.jpg"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/aspatek-professional-blow-dryer/"},
+{"id":814,"name":"32L Towel Warmer 2 Cabinet","cat":"salon","catLabel":"Salon Equipment","sub":"sterilizers","price":19000,"oldPrice":24000,"img":"images/32L towel warmer 2 cabinet1.jpg","imgs":["images/32L towel warmer 2 cabinet2.jpg","images/32L towel warmer 2 cabinet3.jpg","images/32L towel warmer 2 cabinet1.jpg","images/32L towel warmer 2 cabinet2.jpg"],"badge":"sale","stars":5,"reviews":35,"url":"https://epicmart.co.ke/product/32l-towel-warmer-2-cabinet/"},
+{"id":891,"name":"23L Towel Warmer & UV Sterilizer","cat":"salon","catLabel":"Salon Equipment","sub":"sterilizers","price":13500,"oldPrice":16000,"img":"images/23L Towel Warmer & UV Sterilizer1.jpg","imgs":["images/23L Towel Warmer & UV Sterilizer2.jpg","images/23L Towel Warmer & UV Sterilizer3.jpg","images/23L Towel Warmer & UV Sterilizer1.jpg","images/23L Towel Warmer & UV Sterilizer2.jpg"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/23l-towel-warmer-uv-sterilization-cabinet/"},
+{"id":892,"name":"Double Wax Warmer","cat":"salon","catLabel":"Salon Equipment","sub":"sterilizers","price":8500,"oldPrice":11000,"img":"images/Double Wax Warmer1.jpg","imgs":["images/Double Wax Warmer2.jpg","images/Double Wax Warmer3.jpg","images/Double Wax Warmer1.jpg","images/Double Wax Warmer2.jpg"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/double-wax-warmer/"},
+{"id":893,"name":"UV Sterilizer","cat":"salon","catLabel":"Salon Equipment","sub":"sterilizers","price":8000,"oldPrice":9000,"img":"images/UV Sterilizer1.jpg","imgs":["images/UV Sterilizer2.jpg","images/UV Sterilizer1.jpg","images/UV Sterilizer2.jpg","images/UV Sterilizer1.jpg"],"badge":"sale","stars":5,"reviews":0,"url":"images/UV Sterilizer2.jpg"},
+{"id":894,"name":"UV Sterilizer (Pro)","cat":"salon","catLabel":"Salon Equipment","sub":"sterilizers","price":6500,"oldPrice":8500,"img":"images/UV Sterilizer1.jpg","imgs":["images/UV Sterilizer2.jpg","images/UV Sterilizer1.jpg","images/UV Sterilizer2.jpg","images/UV Sterilizer1.jpg"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/uv-sterilizer-2/"},
+{"id":895,"name":"2-in-1 UV Lamp","cat":"salon","catLabel":"Salon Equipment","sub":"sterilizers","price":5000,"oldPrice":6000,"img":"images/2IN1 UV LAMP1.jpg","imgs":["images/2IN1 UV LAMP2.jpg","images/2IN1 UV LAMP3.jpg","images/2IN1 UV LAMP1.jpg","images/2IN1 UV LAMP2.jpg"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/2in1-uv-lamp/"},
+{"id":896,"name":"Rechargeable Cordless UV Lamp","cat":"salon","catLabel":"Salon Equipment","sub":"sterilizers","price":6500,"oldPrice":8000,"img":"images/Reachangable cordless uv lamp1.jpg","imgs":["images/Reachangable cordless uv lamp2.jpg","images/Reachangable cordless uv lamp3.jpg","images/Reachangable cordless uv lamp1.jpg","images/Reachangable cordless uv lamp3.jpg"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/reachangable-cordless-uv-lamp/"},
+{"id":879,"name":"Facial Steamer (Pro)","cat":"salon","catLabel":"Salon Equipment","sub":"sterilizers","price":13500,"oldPrice":14500,"img":"images/Facial Steamer (Pro)1.jpg","imgs":["images/Facial Steamer (Pro)2.jpg","images/Facial Steamer (Pro)3.jpg","images/Facial Steamer (Pro)1.jpg","images/Facial Steamer (Pro)2.jpg"],"badge":"new","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/facial-steamer-2/"},
+{"id":883,"name":"Steam Styler Flat Iron","cat":"salon","catLabel":"Salon Equipment","sub":"dryers","price":9000,"oldPrice":12000,"img":"images/Steam Styler Flat Iron1.jpg","imgs":["images/Steam Styler Flat Iron1.jpg","images/Steam Styler Flat Iron1.jpg","images/Steam Styler Flat Iron1.jpg","images/Steam Styler Flat Iron1.jpg"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/steam-styler-flat-iron/"},
+{"id":884,"name":"Ombre Machine","cat":"salon","catLabel":"Salon Equipment","sub":"dryers","price":7000,"oldPrice":8500,"img":"images/Ombre Machine1.jpg","imgs":["images/Ombre Machine2.jpg","images/Ombre Machine1.jpg","images/Ombre Machine2.jpg","images/Ombre Machine1.jpg"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/ombre-machine/"},
+{"id":885,"name":"Wave Nouveau","cat":"salon","catLabel":"Salon Equipment","sub":"dryers","price":5500,"oldPrice":6500,"img":"images/Wave Nouveau1.avif","imgs":["images/Wave Nouveau2.avif","images/Wave Nouveau1.avif","images/Wave Nouveau2.avif","images/Wave Nouveau1.avif"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/wave-nouveau/"},
+{"id":886,"name":"Artificial Dread Maker","cat":"salon","catLabel":"Salon Equipment","sub":"dryers","price":27000,"oldPrice":30000,"img":"images/Artificial Dread Maker1.jpg","imgs":["images/Artificial Dread Maker2.jpg","images/Artificial Dread Maker3.jpg","images/Artificial Dread Maker4.jpg","images/Artificial Dread Maker1.jpg"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/artificial-dread-maker/"},
+{"id":898,"name":"Low Level LED Therapy","cat":"salon","catLabel":"Salon Equipment","sub":"sterilizers","price":18000,"oldPrice":25000,"img":"images/LOW LEVEL LED THERAPY1.webp","imgs":["images/Low Level LED Therapy2.jpg","images/LOW LEVEL LED THERAPY3.webp","images/LOW LEVEL LED THERAPY4.webp","images/Low Level LED Therapy3.jpg"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/low-level-led-therapy/"},
+{"id":899,"name":"3-in-1 Facial Machine","cat":"salon","catLabel":"Salon Equipment","sub":"sterilizers","price":18500,"oldPrice":22000,"img":"images/3-in-1 Facial Machine1.jpg","imgs":["images/3-in-1 Facial Machine2.jpg","images/3-in-1 Facial Machine1.jpg","images/3-in-1 Facial Machine2.jpg","images/3-in-1 Facial Machine1.jpg"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/3-in-1-facial-machine/"},
+{"id":900,"name":"Phillips Smoother","cat":"salon","catLabel":"Salon Equipment","sub":"dryers","price":6500,"oldPrice":8000,"img":"images/Phillips smoother1.jpg","imgs":["images/Phillips smoother2.jpg","images/Phillips smoother3.jpg","images/Phillips smoother1.jpg","images/Salon rose gold barber chair2.jpg"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/phillips-smoother/"},
+{"id":903,"name":"Black Essentials Shampoo/Conditioner","cat":"salon","catLabel":"Salon Equipment","sub":"shampoo","price":2500,"oldPrice":3000,"img":"images/20L Professional Shampoo1.jpg","imgs":["images/20L Professional Shampoo1.jpg","images/20L Professional Shampoo1.jpg","images/20L Professional Shampoo1.jpg","images/20L Professional Shampoo1.jpg"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/black-essentials-shampoo-conditioner/"},
+{"id":904,"name":"Depilatory Waxing Strips","cat":"salon","catLabel":"Salon Equipment","sub":"manicure","price":800,"oldPrice":1000,"img":"images/DEPILATORY WAXINGSTRIPS1.jpg","imgs":["images/DEPILATORY WAXINGSTRIPS2.jpg","images/DEPILATORY WAXINGSTRIPS3.jpg","images/DEPILATORY WAXINGSTRIPS1.jpg","images/DEPILATORY WAXINGSTRIPS2.jpg"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/product-9/"},
+{"id":905,"name":"Disposable Bed Roll","cat":"salon","catLabel":"Salon Equipment","sub":"manicure","price":3500,"oldPrice":4000,"img":"images/DISPOSABLE BED ROLL1.jpg","imgs":["images/DISPOSABLE BED ROLL2.jpg","images/DISPOSABLE BED ROLL1.jpg","images/DISPOSABLE BED ROLL2.jpg","images/DISPOSABLE BED ROLL1.jpg"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/product-4/"}];
 
-// ââ STATE ââ
+//  STATE
 
 
 let activeFilter = 'all';
@@ -1601,12 +1632,12 @@ let activeSort = 'default';
 let searchQ = '';
 let toastT;
 
-// ââ HELPERS ââ
+// HELPERS
 function disc(p) { return p.oldPrice ? Math.round((p.oldPrice - p.price) / p.oldPrice * 100) : 0; }
-function stars(n) { return 'â'.repeat(n) + 'â'.repeat(5 - n); }
+function stars(n) { return '★'.repeat(n) + '☆'.repeat(5 - n); }
 function fmt(n) { return n.toLocaleString(); }
 
-// ââ RENDER ââ
+// RENDER
 function render() {
   let list = [...PRODUCTS];
 
@@ -1633,7 +1664,7 @@ function render() {
   grid.innerHTML = list.map(p => {
     const d = disc(p);
     const badge = d > 0 && p.badge === 'sale' ? '<span class="prod-badge badge-sale">-'+d+'%</span>' :
-      p.badge === 'hot' ? '<span class="prod-badge badge-hot">ð¥ HOT</span>' :
+      p.badge === 'hot' ? '<span class="prod-badge badge-hot">🔥HOT</span>' :
       p.badge === 'new' ? '<span class="prod-badge badge-new">NEW</span>' : '';
     const saveTag = d >= 15 ? '<span class="p-save">Save '+d+'%</span>' : '';
     const priceHtml = p.oldPrice
@@ -1646,7 +1677,7 @@ function render() {
       <div class="prod-img">
         <img src="${p.img}" alt="${nm}" loading="lazy" onerror="this.hidden=true">
         ${badge}
-        <button class="wish-btn ${inW ? 'wishlisted' : ''}" onclick="toggleWish(event, ${p.id})">${inW ? 'â¥' : 'â¡'}</button>
+        <button class="wish-btn ${inW ? 'wishlisted' : ''}" onclick="toggleWish(event, ${p.id})">${inW ? '♥' : '♡'}</button>
       </div>
       <div class="prod-body">
         <div class="prod-cat-tag" style="font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#D4A017;opacity:.7;margin-bottom:5px">Salon Equipment</div>
@@ -1655,13 +1686,13 @@ function render() {
         <div class="prod-prices">${priceHtml}</div>
       </div>
       <div class="prod-foot">
-        <button class="add-btn" >ð Buy Now</button>
+        <button class="add-btn" >Buy Now</button>
       </div>
     </div>`;
   }).join('');
 }
 
-// ââ FILTER TABS ââ
+// FILTER TABS 
 document.querySelectorAll('.filter-btn').forEach(btn => {
   btn.addEventListener('click', function() {
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
@@ -1671,19 +1702,19 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
   });
 });
 
-// ââ SORT ââ
+// SORT
 document.getElementById('sortSelect').addEventListener('change', function() {
   activeSort = this.value;
   render();
 });
 
-// ââ SEARCH ââ
+// SEARCH
 document.getElementById('searchInput').addEventListener('input', function() {
   searchQ = this.value;
   render();
 });
 
-// ââ VIEW TOGGLE ââ
+// VIEW TOGGLE
 function setView(type) {
   const grid = document.getElementById('prodGrid');
   grid.classList.toggle('list-view', type === 'list');
@@ -1691,7 +1722,7 @@ function setView(type) {
   document.getElementById('listBtn').classList.toggle('active', type === 'list');
 }
 
-// ââ PRICE FILTER ââ
+//  PRICE FILTER
 function applyPrice() {
   const mn = parseFloat(document.getElementById('priceMin').value) || 0;
   const mx = parseFloat(document.getElementById('priceMax').value) || Infinity;
@@ -1700,7 +1731,7 @@ function applyPrice() {
     if (pr) c.classList.toggle('hidden', pr.price < mn || pr.price > mx);
   });
 }
-// ââ WISHLIST ââ
+// WISHLIST 
 function toggleWish(e, id) {
   e.stopPropagation();
   const i = wishlist.indexOf(id);
@@ -1709,12 +1740,12 @@ function toggleWish(e, id) {
   render();
 }
 
-// ââ TOAST ââ
+//  TOAST
 
 function hideToast() { document.getElementById('toast').classList.remove('show'); }
 
-// ââ KEYBOARD ââ
-// ââ INIT ââ
+// KEYBOARD
+// INIT 
 render();
 if (typeof refreshCart === 'function') { refreshCart(); }
 
@@ -1726,7 +1757,7 @@ if (typeof refreshCart === 'function') { refreshCart(); }
 <!-- Modal Overlay -->
 <div id="pm-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:10000;backdrop-filter:blur(6px);overflow-y:auto;padding:20px" onclick="pmClose(event)">
   <div id="pm-box" style="position:relative;z-index:10001" onclick="event.stopPropagation()" style="background:#141414;border:1px solid rgba(212,160,23,.25);border-radius:16px;max-width:920px;margin:auto;overflow:hidden;position:relative;animation:pmPop .3s ease">
-    <button onclick="closePM()" style="position:absolute;top:14px;right:16px;background:rgba(255,255,255,.1);border:none;color:#fff;width:34px;height:34px;border-radius:50%;font-size:20px;cursor:pointer;z-index:10;display:flex;align-items:center;justify-content:center;line-height:1">Ã</button>
+    <button onclick="closePM()" style="position:absolute;top:14px;right:16px;background:rgba(255,255,255,.1);border:none;color:#fff;width:34px;height:34px;border-radius:50%;font-size:20px;cursor:pointer;z-index:10;display:flex;align-items:center;justify-content:center;line-height:1">×</button>
     <div style="display:grid;grid-template-columns:1fr 1fr;min-height:420px">
 
       <!-- LEFT: Image Gallery -->
@@ -1736,9 +1767,9 @@ if (typeof refreshCart === 'function') { refreshCart(); }
           <img id="pm-main-img" src="" alt="" style="width:100%;height:100%;object-fit:cover;transition:opacity .3s">
           <span id="pm-badge" style="position:absolute;top:14px;left:14px;background:#D93B3B;color:#fff;font-size:11px;font-weight:800;padding:4px 12px;border-radius:20px;letter-spacing:.04em"></span>
           <!-- Arrow Left -->
-          <button onclick="event.stopPropagation();pmPrevImg()" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.2);color:#fff;width:36px;height:36px;border-radius:50%;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center">â¹</button>
+          <button onclick="event.stopPropagation();pmPrevImg()" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.2);color:#fff;width:36px;height:36px;border-radius:50%;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center">‹</button>
           <!-- Arrow Right -->
-          <button onclick="event.stopPropagation();pmNextImg()" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.2);color:#fff;width:36px;height:36px;border-radius:50%;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center">âº</button>
+          <button onclick="event.stopPropagation();pmNextImg()" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.2);color:#fff;width:36px;height:36px;border-radius:50%;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center">›</button>
         </div>
         <!-- Thumbnails -->
         <div id="pm-thumbs" style="display:flex;gap:8px;padding:10px 12px;overflow-x:auto;background:#111"></div>
@@ -1769,16 +1800,16 @@ if (typeof refreshCart === 'function') { refreshCart(); }
         <div style="margin-bottom:20px">
           <div style="font-size:12px;font-weight:700;color:#888;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px">Quantity</div>
           <div style="display:flex;align-items:center;gap:0;border:1.5px solid rgba(255,255,255,.12);border-radius:9px;width:fit-content;overflow:hidden">
-            <button onclick="event.stopPropagation();pmQty(-1)" style="background:#1C1C1C;border:none;color:#F8F6F2;width:40px;height:40px;font-size:20px;cursor:pointer;transition:.2s;font-family:'Plus Jakarta Sans',sans-serif" onmouseover="this.style.background='#242424'" onmouseout="this.style.background='#1C1C1C'">â</button>
+            <button onclick="event.stopPropagation();pmChangeQty(-1)" style="background:#1C1C1C;border:none;color:#F8F6F2;width:40px;height:40px;font-size:20px;cursor:pointer;transition:.2s;font-family:'Plus Jakarta Sans',sans-serif" onmouseover="this.style.background='#242424'" onmouseout="this.style.background='#1C1C1C'">−</button>
             <span id="pm-qty" style="min-width:44px;text-align:center;font-size:16px;font-weight:700;color:#F8F6F2;background:#141414;height:40px;display:flex;align-items:center;justify-content:center;border-left:1px solid rgba(255,255,255,.1);border-right:1px solid rgba(255,255,255,.1)">1</span>
-            <button onclick="event.stopPropagation();pmQty(1)" style="background:#1C1C1C;border:none;color:#F8F6F2;width:40px;height:40px;font-size:20px;cursor:pointer;transition:.2s;font-family:'Plus Jakarta Sans',sans-serif" onmouseover="this.style.background='#242424'" onmouseout="this.style.background='#1C1C1C'">+</button>
+            <button onclick="event.stopPropagation();pmChangeQty(1)" style="background:#1C1C1C;border:none;color:#F8F6F2;width:40px;height:40px;font-size:20px;cursor:pointer;transition:.2s;font-family:'Plus Jakarta Sans',sans-serif" onmouseover="this.style.background='#242424'" onmouseout="this.style.background='#1C1C1C'">+</button>
           </div>
         </div>
 
         <!-- Buttons -->
         <div style="display:flex;flex-direction:column;gap:10px;margin-top:auto">
           <!-- Buy Now / Add to Cart -->
-          <button id="pm-buy-btn" onclick="event.stopPropagation();pmAddToCart()" style="background:#D4A017;color:#4A0910;border:none;padding:14px;border-radius:9px;font-weight:800;font-size:15px;letter-spacing:.05em;text-transform:uppercase;cursor:pointer;transition:.2s;display:flex;align-items:center;justify-content:center;gap:8px" onmouseover="this.style.background='#F0C040'" onmouseout="this.style.background='#D4A017'">ð Add to Cart</button>
+          <button id="pm-buy-btn" onclick="event.stopPropagation();pmAddToCart()" style="background:#D4A017;color:#4A0910;border:none;padding:14px;border-radius:9px;font-weight:800;font-size:15px;letter-spacing:.05em;text-transform:uppercase;cursor:pointer;transition:.2s;display:flex;align-items:center;justify-content:center;gap:8px" onmouseover="this.style.background='#F0C040'" onmouseout="this.style.background='#D4A017'">Add to Cart</button>
           <!-- WhatsApp Order -->
           <button id="pm-wa-btn" onclick="event.stopPropagation();pmWhatsApp()" style="background:#25D366;color:#fff;border:none;padding:13px;border-radius:9px;font-weight:800;font-size:14px;letter-spacing:.05em;text-transform:uppercase;cursor:pointer;transition:.2s;display:flex;align-items:center;justify-content:center;gap:8px" onmouseover="this.style.background='#1e8e3e'" onmouseout="this.style.background='#25D366'">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -1788,7 +1819,7 @@ if (typeof refreshCart === 'function') { refreshCart(); }
 
         <!-- Delivery note -->
         <div style="margin-top:14px;background:rgba(34,160,90,.08);border:1px solid rgba(34,160,90,.2);border-radius:8px;padding:10px 14px;font-size:12.5px;color:#22A05A;display:flex;align-items:center;gap:8px">
-          ð <span>Nationwide delivery Â· Payment on order confirmation</span>
+          🚚<span>Nationwide delivery Â· Payment on order confirmation</span>
         </div>
       </div>
     </div>
@@ -1812,12 +1843,12 @@ if (typeof refreshCart === 'function') { refreshCart(); }
 
 
 <script>
-/* âââââââââââââââââââââââââââââââ
+/*
    EPIC MART â MAIN CONTROLLER
    One script. No conflicts.
-âââââââââââââââââââââââââââââââ */
+*/
 
-/* ââ CART STATE ââ */
+/*  CART STATE  */
 var cart = JSON.parse(localStorage.getItem('em_cart') || '[]');
 
 function saveCart() {
@@ -1883,7 +1914,7 @@ function refreshCart() {
   if (amtEl) amtEl.textContent = t;
 }
 
-/* ââ CART OPEN / CLOSE ââ */
+/*  CART OPEN / CLOSE*/
 function openCart() {
   var panel   = document.getElementById('cartPanel');
   var overlay = document.getElementById('cartOverlay');
@@ -1908,7 +1939,7 @@ function showCheckout() {
   if (form) { form.style.display = 'block'; form.classList.add('show'); }
 }
 
-/* ââ SEARCH ââ */
+/*  SEARCH */
 function doSearch(q) {
   var val = (q || '').toLowerCase().trim();
   if (typeof searchQ !== 'undefined') { searchQ = val; if (typeof render === 'function') render(); }
@@ -1920,7 +1951,7 @@ function doSearch(q) {
   }
 }
 
-/* ââ CHECKOUT ââ */
+/* CHECKOUT */
 function openMpesa() {
   var n  = (document.getElementById('cfName')  || {}).value || '';
   var ph = (document.getElementById('cfPhone') || {}).value || '';
@@ -1954,9 +1985,9 @@ function orderViaWA() {
     'Please confirm my order. Thank you!', '_blank');
 }
 
-/* ââ INIT ON DOM READY ââ */
+/* INIT ON DOM READY*/
 
-/* ââ ADD TO CART ââ */
+/*  ADD TO CART */
 function addToCart(id, name, price, img, qty) {
   cart = JSON.parse(localStorage.getItem('em_cart') || '[]');
   qty = qty || 1;
@@ -1966,7 +1997,7 @@ function addToCart(id, name, price, img, qty) {
   saveCart(); refreshCart();
 }
 
-/* ââ PRODUCT MODAL ââ */
+/* PRODUCT MODAL */
 var pmProduct = null, pmImages = [], pmImgIdx = 0, pmQtyVal = 1;
 
 function openPM(id) {
@@ -1984,7 +2015,7 @@ function openPM(id) {
   // Stars
   var starsEl = document.querySelector('#pm-stars span:first-child');
   var rcEl    = document.querySelector('#pm-stars span:last-child');
-  if (starsEl) starsEl.textContent = 'â'.repeat(p.stars) + 'â'.repeat(5-p.stars);
+  if (starsEl) starsEl.textContent = '★'.repeat(p.stars) + '☆'.repeat(5-p.stars);
   if (rcEl)    rcEl.textContent = p.reviews > 0 ? '(' + p.reviews + ' reviews)' : '(New)';
 
   // Prices
@@ -2003,7 +2034,7 @@ function openPM(id) {
   if (badgeEl) {
     var d2 = p.oldPrice ? Math.round((p.oldPrice-p.price)/p.oldPrice*100) : 0;
     if (d2 > 0)           { badgeEl.textContent='-'+d2+'%'; badgeEl.style.background='#D93B3B'; badgeEl.style.display=''; }
-    else if (p.badge==='hot') { badgeEl.textContent='ð¥ HOT'; badgeEl.style.background='#D4A017'; badgeEl.style.display=''; }
+    else if (p.badge==='hot') { badgeEl.textContent='🔥 HOT'; badgeEl.style.background='#D4A017'; badgeEl.style.display=''; }
     else if (p.badge==='new') { badgeEl.textContent='NEW'; badgeEl.style.background='#22A05A'; badgeEl.style.display=''; }
     else                  { badgeEl.style.display='none'; }
   }
@@ -2012,7 +2043,7 @@ function openPM(id) {
 
   // Reset buy button
   var addBtn = el('pm-buy-btn') || el('pmAddBtn');
-  if (addBtn) { addBtn.textContent = 'ð Add to Cart'; addBtn.style.background = ''; }
+  if (addBtn) { addBtn.textContent = ' Add to Cart'; addBtn.style.background = ''; }
 
   // Show modal
   var overlay = el('pm-overlay');
@@ -2050,9 +2081,9 @@ function pmAddToCart() {
   addToCart(pmProduct.id, pmProduct.name, pmProduct.price, pmProduct.img, pmQtyVal);
   var btn = document.getElementById('pm-buy-btn') || document.getElementById('pmAddBtn');
   if (btn) {
-    btn.textContent = 'â Added to Cart!';
+    btn.textContent = ' Added to Cart!';
     btn.style.background = '#22A05A';
-    setTimeout(function(){ btn.textContent='ð Add to Cart'; btn.style.background=''; }, 2000);
+    setTimeout(function(){ btn.textContent=' Add to Cart'; btn.style.background=''; }, 2000);
   }
 }
 
@@ -2111,7 +2142,7 @@ document.addEventListener('DOMContentLoaded', function() {
     e.stopPropagation(); orderViaWA();
   });
 
-  /* Cart item qty/delete â event delegation on #cartItems */
+  /* Cart item qty/delete event delegation on #cartItems */
   var cartItems = document.getElementById('cartItems');
   if (cartItems) {
     cartItems.addEventListener('click', function(e) {
@@ -2139,7 +2170,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var si = document.getElementById('searchInput');
   if (si) si.addEventListener('input', function() { doSearch(this.value); });
 
-  /* Search button â the button right after the search input */
+  /* Search button the button right after the search input */
   if (si && si.nextElementSibling && si.nextElementSibling.tagName === 'BUTTON') {
     si.nextElementSibling.addEventListener('click', function() {
       doSearch(document.getElementById('searchInput').value);
@@ -2163,7 +2194,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (e.key === 'Escape') { closeCart(); closeMpesa(); }
   });
 
-  /* BUY NOW â delegation on prodGrid */
+  /* BUY NOW delegation on prodGrid */
   var grid = document.getElementById('prodGrid');
   if (grid) {
     grid.addEventListener('click', function(e) {

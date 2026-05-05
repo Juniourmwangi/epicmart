@@ -225,15 +225,15 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 }
 
 
-/* ââ CART COMPLETE RESTYLE ââ */
+/* CART COMPLETE RESTYLE */
 .cart-overlay{position:fixed!important;inset:0!important;background:rgba(0,0,0,.7)!important;z-index:9000!important;opacity:0!important;pointer-events:none!important;transition:opacity .3s!important;backdrop-filter:blur(4px)!important}
 .cart-overlay.open{opacity:1!important;pointer-events:all!important}
 
-/* Panel â full height, flex column */
+/* Panel full height, flex column */
 .cart-panel,
 .cart-panel.open,
 
-/* Header â fixed height, never shrinks */
+/* Header fixed height, never shrinks */
 .cart-hdr,.cart-header{
   flex:0 0 auto!important;
   padding:18px 22px!important;
@@ -252,7 +252,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 }
 .cart-x:hover,.cart-close:hover{border-color:#D93B3B!important;color:#D93B3B!important}
 
-/* Items â SCROLLABLE, fills remaining space */
+/* Items SCROLLABLE, fills remaining space */
 .cart-body,.cart-items{
   flex:1 1 0!important;          /* takes ALL remaining space */
   min-height:0!important;        /* critical for flex scroll */
@@ -327,7 +327,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 }
 .ci-del:hover,.cart-item-remove:hover{color:#D93B3B!important}
 
-/* Summary â fixed, never shrinks */
+/* Summary fixed, never shrinks */
 .cart-summary{
   flex:0 0 auto!important;
   padding:14px 22px!important;
@@ -347,7 +347,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 .cart-row.total-row span:last-child{color:#D4A017!important}
 .clabel,.cart-label{color:#888!important;font-size:13px!important}
 
-/* Checkout â fixed, never shrinks */
+/* Checkout fixed, never shrinks */
 .checkout-area,.checkout-section{
   flex:0 0 auto!important;
   padding:14px 22px 18px!important;
@@ -396,8 +396,8 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 }
 
 
-/* ââ FONT SIZE REDUCTIONS ââ */
-/* Hero â smaller so products show on first load */
+/* FONT SIZE REDUCTIONS  */
+/* Hero smaller so products show on first load */
 .hero h1, .em-hero-in h1 {
   font-size: clamp(22px, 3vw, 36px) !important;
   line-height: 1.15 !important;
@@ -448,7 +448,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 .add-btn, .atc-btn { padding: 8px !important; font-size: 11px !important; }
 
 
-/* ââ FONT & HERO REDUCTION ââ */
+/*  FONT & HERO REDUCTION  */
 .page-hero, .em-hero { padding: 20px 24px 16px !important; }
 .page-hero h1, .em-hero-in h1 { font-size: 22px !important; margin-bottom: 6px !important; }
 .page-hero p, .em-hero-in p { font-size: 12.5px !important; margin-bottom: 0 !important; }
@@ -457,13 +457,13 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 .filter-bar { padding: 8px 0 !important; }
 .filter-btn, .fb { padding: 5px 13px !important; font-size: 11.5px !important; }
 
-/* ââ CART â ITEMS FIRST, CHECKOUT HIDDEN UNTIL READY ââ */
+/*  CART ITEMS FIRST, CHECKOUT HIDDEN UNTIL READY ââ */
 
 
 
 
 
-/* Header â fixed */
+/* Header fixed */
 #cartHeader, #cartHdr, .cart-hdr, .cart-header {
   flex-shrink: 0 !important;
   display: flex !important; align-items: center !important; justify-content: space-between !important;
@@ -472,7 +472,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
   border-bottom: 1px solid rgba(255,255,255,.08) !important;
 }
 
-/* Items area â scrollable, takes ALL space */
+/* Items area scrollable, takes ALL space */
 #cartScroll, #cartItemsWrap, .cart-body, .cart-items {
   flex: 1 1 0 !important;
   min-height: 0 !important;
@@ -484,7 +484,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 #cartScroll::-webkit-scrollbar-thumb,
 #cartItemsWrap::-webkit-scrollbar-thumb { background: #D4A017; border-radius: 2px; }
 
-/* Footer â ONLY summary + checkout button, NOT full form */
+/* Footer ONLY summary + checkout button, NOT full form */
 #cartFtr, #cartFooter { flex-shrink: 0 !important; }
 
 /* Summary box */
@@ -494,7 +494,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
   border-top: 1px solid rgba(255,255,255,.08) !important;
 }
 
-/* Proceed button â shown instead of full form */
+/* Proceed button shown instead of full form */
 #cartProceedBtn {
   display: block;
   width: calc(100% - 36px);
@@ -514,7 +514,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 }
 #cartProceedBtn:hover { background: #F0C040; }
 
-/* Checkout form â hidden by default, shown after proceed */
+/* Checkout form hidden by default, shown after proceed */
 #cartForm, #cartCheckout, .checkout-area, .checkout-section {
   display: none !important;
   flex-shrink: 0 !important;
@@ -698,7 +698,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
     font-size: 11px !important; padding: 8px 6px !important;
   }
 
-  /* Cart panel â full width on mobile */
+  /* Cart panel full width on mobile */
   
 
   /* Product modal */
@@ -723,9 +723,9 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 }
 
 
-/* ââââââââââââââââââââââââââââ
-   CART â CLEAN REBUILD v3
-ââââââââââââââââââââââââââââ */
+/* 
+   CART  CLEAN REBUILD v3
+ */
 #cartOverlay {
   position: fixed; inset: 0;
   background: rgba(0,0,0,.65);
@@ -1011,7 +1011,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
   gap: 16px !important;
 }
 
-/* ââ MOBILE ââ */
+/*  MOBILE  */
 @media (max-width: 900px) {
   .prod-grid, #prodGrid, .grid {
     grid-template-columns: repeat(2, 1fr) !important;
@@ -1055,7 +1055,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 }
 
 
-/* ââ DEFINITIVE BUTTON + CART FIX ââ */
+/* DEFINITIVE BUTTON + CART FIX */
 
 /* Product cards â ensure clicks propagate correctly */
 .prod-card, .pcard {
@@ -1117,7 +1117,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
   z-index: 10 !important;
 }
 
-/* Cart panel â definitive z-index */
+/* Cart panel  definitive z-index */
 #cartOverlay {
   position: fixed !important;
   inset: 0 !important;
@@ -1248,9 +1248,9 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 }
 
 
-/* ââ PRODUCT IMAGE FIT â ALL SIZES ââ */
+/*  PRODUCT IMAGE FIT ALL SIZES */
 
-/* Card image container â fixed height, never overflow */
+/* Card image container fixed height, never overflow */
 .prod-img, .prod-img-wrap, .pcard-img {
   width: 100% !important;
   height: 200px !important;
@@ -1338,9 +1338,9 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 <!-- TOPBAR -->
 <div class="topbar">
   <div class="topbar-inner">
-    <span>ð Call / WhatsApp: <strong>+254 740 190 837</strong></span>
-    <span class="gold-pill">ð Countrywide Delivery</span>
-    <span>âï¸ <a href="mailto:info@epicmart.co.ke">info@epicmart.co.ke</a></span>
+    <span>📞 Call / WhatsApp: <strong>+254 740 190 837</strong></span>
+    <span class="gold-pill">🚚 Countrywide Delivery</span>
+    <span>✉️<a href="mailto:info@epicmart.co.ke">info@epicmart.co.ke</a></span>
   </div>
 </div>
 
@@ -1353,11 +1353,11 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
     </a>
     <div class="search-wrap">
       <input type="search" id="searchInput" placeholder="Search products..." autocomplete="off" >
-      <button type="button" aria-label="Search" >ð</button>
+      <button type="button" aria-label="Search" >🔍</button>
     </div>
     <div class="header-right">
       <a href="https://wa.me/254740190837?text=Hello%20Epic%20Mart!%20I%20am%20interested%20in%20barber%20accessories.%20Please%20assist%20me." target="_blank" class="btn-wa"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp</a>
-      <div class="cart-btn">ð<span class="cart-count" id="cartCount">0</span></div>
+      <div class="cart-btn">🛒<span class="cart-count" id="cartCount">0</span></div>
     </div>
   </div>
 </header>
@@ -1366,30 +1366,30 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 <nav class="nav-bar">
   <div class="nav-inner">
     <ul class="nav-list"><li><a href="index.html" >Shop All</a></li><li><a href="chairs.html" >Chairs &amp; Seating</a></li><li><a href="barber.html" class="active">Barber Accessories</a></li><li><a href="massage.html" >Massage</a></li><li><a href="salon.html" >Salon</a></li></ul>
-    <span class="nav-phone">ð 0740 190 837</span>
+    <span class="nav-phone"> 📞 0740 190 837</span>
   </div>
 </nav>
 
 <!-- TRUST BAR -->
 <div class="trust-bar">
   <div class="trust-inner">
-    <div class="ti"><span class="ti-icon">ð</span><div><div class="ti-title">Nationwide Delivery</div><div class="ti-sub">All 47 counties</div></div></div>
-    <div class="ti"><span class="ti-icon">ð³</span><div><div class="ti-title">M-Pesa Payments</div><div class="ti-sub">Safe &amp; instant</div></div></div>
-    <div class="ti"><span class="ti-icon">â</span><div><div class="ti-title">100% Genuine</div><div class="ti-sub">Authentic equipment</div></div></div>
-    <div class="ti"><span class="ti-icon">ð</span><div><div class="ti-title">Easy Returns</div><div class="ti-sub">7-day policy</div></div></div>
-    <div class="ti"><span class="ti-icon">ð</span><div><div class="ti-title">Expert Support</div><div class="ti-sub">Call or WhatsApp</div></div></div>
+    <div class="ti"><span class="ti-icon">🚚</span><div><div class="ti-title">Nationwide Delivery</div><div class="ti-sub">All 47 counties</div></div></div>
+    <div class="ti"><span class="ti-icon">💳</span><div><div class="ti-title">M-Pesa Payments</div><div class="ti-sub">Safe &amp; instant</div></div></div>
+    <div class="ti"><span class="ti-icon">✅</span><div><div class="ti-title">100% Genuine</div><div class="ti-sub">Authentic equipment</div></div></div>
+    <div class="ti"><span class="ti-icon">🔄</span><div><div class="ti-title">Easy Returns</div><div class="ti-sub">7-day policy</div></div></div>
+    <div class="ti"><span class="ti-icon">📞</span><div><div class="ti-title">Expert Support</div><div class="ti-sub">Call or WhatsApp</div></div></div>
   </div>
 </div>
 
 <!-- PAGE HERO -->
 <div class="page-hero">
   <div class="page-hero-inner">
-    <div class="hero-tag">âï¸ Professional Tools</div>
+    <div class="hero-tag"> ✂️ Professional Tools</div>
     <h1>Barber <em>Accessories</em> &amp; Tools</h1>
     <p>Professional clippers, trimmers, cables, gloves and barbershop supplies. Genuine Wahl products and top brands at the best prices in Kenya.</p>
     <nav class="breadcrumb" aria-label="Breadcrumb">
-      <a href="index.html">Home</a><span>âº</span>
-      <a href="index.html">Shop</a><span>âº</span>
+      <a href="index.html">Home</a><span>›</span>
+      <a href="index.html">Shop</a><span>›</span>
       <span>Barber Accessories</span>
     </nav>
   </div>
@@ -1407,8 +1407,8 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
     <div class="sort-wrap">
       <select class="sort-select" id="sortSelect">
         <option value="default">Sort: Default</option>
-        <option value="price-low">Price: Low â High</option>
-        <option value="price-high">Price: High â Low</option>
+        <option value="price-low">Price: Low → High</option>
+        <option value="price-high">Price: High → Low</option>
         <option value="discount">Biggest Discount</option>
         <option value="rating">Highest Rated</option>
       </select>
@@ -1434,7 +1434,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
       <button class="btn-filter-apply" onclick="applyPrice()">Apply Filter</button>
     </div>
     <div class="promo-box">
-      <div style="font-size:34px;margin-bottom:10px">ð</div>
+      <div style="font-size:34px;margin-bottom:10px">🚚</div>
       <div class="promo-box-title">Nationwide Delivery</div>
       <div class="promo-box-sub">Order now, we deliver to your door</div>
       <a href="index.html" class="promo-shop-btn">Browse All Products</a>
@@ -1443,7 +1443,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
       <h3>Need Help?</h3>
       <p class="help-text">Our team is ready to help you choose the right equipment for your salon or barbershop.</p>
       <a href="https://wa.me/254740190837?text=Hello%20Epic%20Mart!%20I%20am%20interested%20in%20barber%20accessories.%20Please%20assist%20me." target="_blank" class="wa-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Chat on WhatsApp</a>
-      <a href="tel:+254740190837" class="call-link">ð Call: 0740 190 837</a>
+      <a href="tel:+254740190837" class="call-link">📞 Call: 0740 190 837</a>
     </div>
   </aside>
 
@@ -1452,8 +1452,8 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
     <div class="prod-topbar">
       <div class="prod-count">Showing <strong id="prodCount">23</strong> products</div>
       <div class="view-toggle">
-        <button class="view-btn active" id="gridBtn" onclick="setView('grid')" title="Grid view">â</button>
-        <button class="view-btn" id="listBtn" onclick="setView('list')" title="List view">â°</button>
+        <button class="view-btn active" id="gridBtn" onclick="setView('grid')" title="Grid view">⊞</button>
+        <button class="view-btn" id="listBtn" onclick="setView('list')" title="List view">☰</button>
       </div>
     </div>
     <div class="prod-grid" id="prodGrid">
@@ -1472,10 +1472,10 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
       </div>
       <p class="foot-desc">Kenya's premier supplier of professional salon and barbershop equipment. Genuine products, best prices, countrywide delivery.</p>
       <div class="foot-socials">
-        <a href="https://facebook.com/epicmartenterprises" target="_blank" class="soc-btn">ð</a>
-        <a href="https://instagram.com/epicmartenterprises" target="_blank" class="soc-btn">ð¸</a>
+        <a href="https://facebook.com/epicmartenterprises" target="_blank" class="soc-btn">📘</a>
+        <a href="https://instagram.com/epicmartenterprises" target="_blank" class="soc-btn">📸</a>
         <a href="https://wa.me/254740190837" target="_blank" class="soc-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="#fff"><path d="M17.472 16.382c-.297-.169-1.758-.867-2.03-.967-.273-.099-.471-.168-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.169-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.169-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.169.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.216-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.162 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
-        <a href="https://tiktok.com/@epicmartenterprises" target="_blank" class="soc-btn">ðµ</a>
+        <a href="https://tiktok.com/@epicmartenterprises" target="_blank" class="soc-btn">🎵</a>
       </div>
     </div>
     <div class="foot-col"><h4>Categories</h4><ul>
@@ -1493,11 +1493,11 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
     </ul></div>
     <div class="foot-col"><h4>Contact Us</h4>
       <address style="font-style:normal">
-        <div class="contact-row">ð <a href="tel:+254740190837">+254 740 190 837</a></div>
-        <div class="contact-row">ð¬ <a href="https://wa.me/254740190837">WhatsApp: 0740 190 837</a></div>
-        <div class="contact-row">âï¸ <a href="mailto:info@epicmart.co.ke">info@epicmart.co.ke</a></div>
-        <div class="contact-row">ð Ronald Ngala Street, Nairobi CBD</div>
-        <div class="contact-row">ð MonâSat: 8:00 AM â 7:00 PM</div>
+        <div class="contact-row">📞 <a href="tel:+254740190837">+254 740 190 837</a></div>
+        <div class="contact-row">💬 <a href="https://wa.me/254740190837">WhatsApp: 0740 190 837</a></div>
+        <div class="contact-row">✉️<a href="mailto:info@epicmart.co.ke">info@epicmart.co.ke</a></div>
+        <div class="contact-row">📍 Duruma Road DownTown Towers, Nairobi CBD</div>
+        <div class="contact-row">🕒 Mon - Sat: 8:00 AM - 7:00 PM</div>
       </address>
     </div>
   </div>
@@ -1519,7 +1519,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
     <button id="cartXBtn">&#x2715;</button>
   </div>
 
-  <!-- Items â scrollable -->
+  <!-- Items scrollable -->
   <div id="cartScroll">
     <div id="cartItems">
       <div class="cempty">
@@ -1530,7 +1530,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
     </div>
   </div>
 
-  <!-- Footer â always at bottom -->
+  <!-- Footer always at bottom -->
   <div id="cartFtr">
 
     <!-- Summary (hidden when empty) -->
@@ -1538,7 +1538,7 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
       <div class="crow"><span class="clbl">Subtotal</span><span id="cSubtotal">KSh 0</span></div>
       <div class="crow"><span class="clbl">Delivery</span><span style="color:#22A05A;font-size:12.5px">Payment on order confirmation &#x2705;</span></div>
       <div class="crow ctotal"><span>Total</span><span id="cTotal">KSh 0</span></div>
-      <!-- PROCEED BUTTON â after total, before checkout form -->
+      <!-- PROCEED BUTTON after total, before checkout form -->
       <button id="cProceedBtn">Proceed to Checkout &#x2192;</button>
     </div>
 
@@ -1558,28 +1558,28 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 <!-- MPESA MODAL -->
 <div class="mpesa-modal" id="mpesaModal" style="z-index:10000">
   <div class="mpesa-box">
-    <div style="font-size:46px">ð±</div>
+    <div style="font-size:46px">📱</div>
     <h2>M-Pesa Payment</h2>
     <p>Complete your payment then confirm via WhatsApp with your receipt</p>
     <div class="mpesa-amt"><div class="mpesa-amt-label">Amount to Pay</div><div class="mpesa-amt-val" id="mpesaAmt">KSh 0</div></div>
     <div class="mpesa-num">0740 190 837</div>
     <p style="font-size:11.5px;color:var(--muted);margin-bottom:14px">Send to this number via M-Pesa Send Money</p>
     <ul class="mpesa-steps">
-      <li>Open M-Pesa â Send Money</li>
+      <li>Open M-Pesa → Send Money</li>
       <li>Enter number: <strong>0740 190 837</strong></li>
       <li>Enter the exact amount above</li>
       <li>Save the confirmation SMS</li>
       <li>Click button below to confirm on WhatsApp</li>
     </ul>
-    <button class="mpesa-confirm-btn" onclick="closeMpesa();orderWhatsApp()">â Confirm &amp; Send Order â</button>
+    <button class="mpesa-confirm-btn" onclick="closeMpesa();orderWhatsApp()">✓  Confirm &amp; Send Order →</button>
   </div>
 </div>
 
 <!-- TOAST -->
 <div class="toast" id="toast">
-  <span style="font-size:18px">â</span>
+  <span style="font-size:18px">✅</span>
   <div><strong id="toastName">Added!</strong><span id="toastSub">Item added to cart</span></div>
-  <button class="toast-x" onclick="hideToast()">Ã</button>
+  <button class="toast-x" onclick="hideToast()">×</button>
 </div>
 
 <!-- FLOATING WHATSAPP -->
@@ -1588,11 +1588,34 @@ footer{background:#060606;border-top:1px solid rgba(212,160,23,.12);padding:56px
 </a>
 
 <script>
-// ââ PRODUCT DATA ââ
+//  PRODUCT DATA 
 var wishlist = JSON.parse(localStorage.getItem("em_wish") || "[]");
-const PRODUCTS = [{"id":816,"name":"Wahl Balding Clipper","cat":"barber","catLabel":"Barber Accessories","sub":"clippers","price":9000,"oldPrice":9500,"img":"https://picsum.photos/seed/barber816a/400/400","imgs":["https://picsum.photos/seed/barber816a/400/400","https://picsum.photos/seed/barber816b/400/400","https://picsum.photos/seed/barber816c/400/400","https://picsum.photos/seed/barber816d/400/400"],"badge":"hot","stars":5,"reviews":118,"url":"https://epicmart.co.ke/product/wahl-balding/"},{"id":836,"name":"Wahl SuperTaper Cordless","cat":"barber","catLabel":"Barber Accessories","sub":"clippers","price":14000,"oldPrice":16000,"img":"https://picsum.photos/seed/barber836a/400/400","imgs":["https://picsum.photos/seed/barber836a/400/400","https://picsum.photos/seed/barber836b/400/400","https://picsum.photos/seed/barber836c/400/400","https://picsum.photos/seed/barber836d/400/400"],"badge":"hot","stars":5,"reviews":93,"url":"https://epicmart.co.ke/product/wahl-supertaper-cordless/"},{"id":818,"name":"Original Super Taper Clipper","cat":"barber","catLabel":"Barber Accessories","sub":"clippers","price":7500,"oldPrice":8500,"img":"https://picsum.photos/seed/barber818a/400/400","imgs":["https://picsum.photos/seed/barber818a/400/400","https://picsum.photos/seed/barber818b/400/400","https://picsum.photos/seed/barber818c/400/400","https://picsum.photos/seed/barber818d/400/400"],"badge":"sale","stars":5,"reviews":75,"url":"https://epicmart.co.ke/product/original-super-taper/"},{"id":817,"name":"Cordless Detailer Trimmer","cat":"barber","catLabel":"Barber Accessories","sub":"trimmers","price":19500,"oldPrice":22500,"img":"https://picsum.photos/seed/barber817a/400/400","imgs":["https://picsum.photos/seed/barber817a/400/400","https://picsum.photos/seed/barber817b/400/400","https://picsum.photos/seed/barber817c/400/400","https://picsum.photos/seed/barber817d/400/400"],"badge":"sale","stars":5,"reviews":46,"url":"https://epicmart.co.ke/product/cordless-detailer/"},{"id":832,"name":"Launch Wahl Trimmer","cat":"barber","catLabel":"Barber Accessories","sub":"trimmers","price":6000,"oldPrice":8000,"img":"https://picsum.photos/seed/barber832a/400/400","imgs":["https://picsum.photos/seed/barber832a/400/400","https://picsum.photos/seed/barber832b/400/400","https://picsum.photos/seed/barber832c/400/400","https://picsum.photos/seed/barber832d/400/400"],"badge":"sale","stars":5,"reviews":67,"url":"https://epicmart.co.ke/product/launch-wahl-trimmer/"},{"id":834,"name":"Rechargeable Clipper","cat":"barber","catLabel":"Barber Accessories","sub":"clippers","price":6500,"oldPrice":7500,"img":"https://picsum.photos/seed/barber834a/400/400","imgs":["https://picsum.photos/seed/barber834a/400/400","https://picsum.photos/seed/barber834b/400/400","https://picsum.photos/seed/barber834c/400/400","https://picsum.photos/seed/barber834d/400/400"],"badge":"sale","stars":5,"reviews":52,"url":"https://epicmart.co.ke/product/reachangable-clipper/"},{"id":859,"name":"Magic Taper","cat":"barber","catLabel":"Barber Accessories","sub":"clippers","price":5000,"oldPrice":6000,"img":"https://picsum.photos/seed/barber859a/400/400","imgs":["https://picsum.photos/seed/barber859a/400/400","https://picsum.photos/seed/barber859b/400/400","https://picsum.photos/seed/barber859c/400/400","https://picsum.photos/seed/barber859d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/magic-taper/"},{"id":860,"name":"Wahl Professional Detailer","cat":"barber","catLabel":"Barber Accessories","sub":"trimmers","price":13500,"oldPrice":16000,"img":"https://picsum.photos/seed/barber860a/400/400","imgs":["https://picsum.photos/seed/barber860a/400/400","https://picsum.photos/seed/barber860b/400/400","https://picsum.photos/seed/barber860c/400/400","https://picsum.photos/seed/barber860d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/wahl-professional-detailer/"},{"id":861,"name":"5-Star Gold Cordless Magic Clip","cat":"barber","catLabel":"Barber Accessories","sub":"clippers","price":22000,"oldPrice":27000,"img":"https://picsum.photos/seed/barber861a/400/400","imgs":["https://picsum.photos/seed/barber861a/400/400","https://picsum.photos/seed/barber861b/400/400","https://picsum.photos/seed/barber861c/400/400","https://picsum.photos/seed/barber861d/400/400"],"badge":"hot","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/5-star-gold-cordless-magic-clip/"},{"id":862,"name":"Starke Salon Pro Balding Clipper","cat":"barber","catLabel":"Barber Accessories","sub":"clippers","price":8000,"oldPrice":11500,"img":"https://picsum.photos/seed/barber862a/400/400","imgs":["https://picsum.photos/seed/barber862a/400/400","https://picsum.photos/seed/barber862b/400/400","https://picsum.photos/seed/barber862c/400/400","https://picsum.photos/seed/barber862d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/starke-salon-pro-balding-cordless-clipper/"},{"id":863,"name":"Wahl 300 Series Home Clipper","cat":"barber","catLabel":"Barber Accessories","sub":"clippers","price":6000,"oldPrice":7500,"img":"https://picsum.photos/seed/barber863a/400/400","imgs":["https://picsum.photos/seed/barber863a/400/400","https://picsum.photos/seed/barber863b/400/400","https://picsum.photos/seed/barber863c/400/400","https://picsum.photos/seed/barber863d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/wahl-300-series-home-use-hair-clipper/"},{"id":864,"name":"Nose Trimmer","cat":"barber","catLabel":"Barber Accessories","sub":"trimmers","price":2500,"oldPrice":3500,"img":"https://picsum.photos/seed/barber864a/400/400","imgs":["https://picsum.photos/seed/barber864a/400/400","https://picsum.photos/seed/barber864b/400/400","https://picsum.photos/seed/barber864c/400/400","https://picsum.photos/seed/barber864d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/nose-trimmer/"},{"id":865,"name":"Neck Ruffles","cat":"barber","catLabel":"Barber Accessories","sub":"supplies","price":600,"oldPrice":800,"img":"https://picsum.photos/seed/barber865a/400/400","imgs":["https://picsum.photos/seed/barber865a/400/400","https://picsum.photos/seed/barber865b/400/400","https://picsum.photos/seed/barber865c/400/400","https://picsum.photos/seed/barber865d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/neck-ruffles/"},{"id":866,"name":"Razor Holder","cat":"barber","catLabel":"Barber Accessories","sub":"supplies","price":1000,"oldPrice":1500,"img":"https://picsum.photos/seed/barber866a/400/400","imgs":["https://picsum.photos/seed/barber866a/400/400","https://picsum.photos/seed/barber866b/400/400","https://picsum.photos/seed/barber866c/400/400","https://picsum.photos/seed/barber866d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/razor-holder/"},{"id":867,"name":"Kinyozi Ruler","cat":"barber","catLabel":"Barber Accessories","sub":"supplies","price":1000,"oldPrice":1500,"img":"https://picsum.photos/seed/barber867a/400/400","imgs":["https://picsum.photos/seed/barber867a/400/400","https://picsum.photos/seed/barber867b/400/400","https://picsum.photos/seed/barber867c/400/400","https://picsum.photos/seed/barber867d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/knyozi-ruler/"},{"id":868,"name":"Adult Barber Gowns","cat":"barber","catLabel":"Barber Accessories","sub":"supplies","price":700,"oldPrice":1200,"img":"https://picsum.photos/seed/barber868a/400/400","imgs":["https://picsum.photos/seed/barber868a/400/400","https://picsum.photos/seed/barber868b/400/400","https://picsum.photos/seed/barber868c/400/400","https://picsum.photos/seed/barber868d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/adult-barber-gowns/"},{"id":869,"name":"Barber Blower","cat":"barber","catLabel":"Barber Accessories","sub":"supplies","price":3500,"oldPrice":4500,"img":"https://picsum.photos/seed/barber869a/400/400","imgs":["https://picsum.photos/seed/barber869a/400/400","https://picsum.photos/seed/barber869b/400/400","https://picsum.photos/seed/barber869c/400/400","https://picsum.photos/seed/barber869d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/barber-blower/"},{"id":870,"name":"Ayers Sterilizer","cat":"barber","catLabel":"Barber Accessories","sub":"supplies","price":6000,"oldPrice":8000,"img":"https://picsum.photos/seed/barber870a/400/400","imgs":["https://picsum.photos/seed/barber870a/400/400","https://picsum.photos/seed/barber870b/400/400","https://picsum.photos/seed/barber870c/400/400","https://picsum.photos/seed/barber870d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/ayers-sterilizer/"},{"id":871,"name":"Electric Surgical Spray","cat":"barber","catLabel":"Barber Accessories","sub":"supplies","price":6000,"oldPrice":8000,"img":"https://picsum.photos/seed/barber871a/400/400","imgs":["https://picsum.photos/seed/barber871a/400/400","https://picsum.photos/seed/barber871b/400/400","https://picsum.photos/seed/barber871c/400/400","https://picsum.photos/seed/barber871d/400/400"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/electric-surgical-spray/"},{"id":820,"name":"Wahl Cables","cat":"barber","catLabel":"Barber Accessories","sub":"supplies","price":1500,"oldPrice":2000,"img":"https://picsum.photos/seed/barber820a/400/400","imgs":["https://picsum.photos/seed/barber820a/400/400","https://picsum.photos/seed/barber820b/400/400","https://picsum.photos/seed/barber820c/400/400","https://picsum.photos/seed/barber820d/400/400"],"badge":"sale","stars":4,"reviews":82,"url":"https://epicmart.co.ke/product/wahl-cables/"},{"id":821,"name":"Disposable Gloves (Box)","cat":"barber","catLabel":"Barber Accessories","sub":"supplies","price":1000,"oldPrice":1200,"img":"https://picsum.photos/seed/barber821a/400/400","imgs":["https://picsum.photos/seed/barber821a/400/400","https://picsum.photos/seed/barber821b/400/400","https://picsum.photos/seed/barber821c/400/400","https://picsum.photos/seed/barber821d/400/400"],"badge":"sale","stars":5,"reviews":104,"url":"https://epicmart.co.ke/product/disposable-glooves/"},{"id":822,"name":"Lyons Electric Kettle","cat":"barber","catLabel":"Barber Accessories","sub":"supplies","price":1500,"oldPrice":2000,"img":"https://picsum.photos/seed/barber822a/400/400","imgs":["https://picsum.photos/seed/barber822a/400/400","https://picsum.photos/seed/barber822b/400/400","https://picsum.photos/seed/barber822c/400/400","https://picsum.photos/seed/barber822d/400/400"],"badge":"sale","stars":4,"reviews":56,"url":"https://epicmart.co.ke/product/lyons-electric-kettle/"},{"id":833,"name":"20L Professional Shampoo","cat":"barber","catLabel":"Barber Accessories","sub":"supplies","price":2400,"oldPrice":2800,"img":"https://picsum.photos/seed/barber833a/400/400","imgs":["https://picsum.photos/seed/barber833a/400/400","https://picsum.photos/seed/barber833b/400/400","https://picsum.photos/seed/barber833c/400/400","https://picsum.photos/seed/barber833d/400/400"],"badge":"sale","stars":5,"reviews":72,"url":"https://epicmart.co.ke/product/20l/"}];
+const PRODUCTS = [
+  {"id":816,"name":"Wahl Balding Clipper","cat":"barber","catLabel":"Barber Accessories","sub":"clippers","price":9000,"oldPrice":9500,"img":"images/WAHL BALDING1.webp","imgs":["images/WAHL BALDING2.webp","images/WAHL BALDING3.webp","images/WAHL BALDING4.webp","images/WAHL BALDING1.webp"],"badge":"hot","stars":5,"reviews":118,"url":"https://epicmart.co.ke/product/wahl-balding/"},
+  {"id":836,"name":"Wahl SuperTaper Cordless","cat":"barber","catLabel":"Barber Accessories","sub":"clippers","price":14000,"oldPrice":16000,"img":"images/Wahl SuperTaper Cordless1.jpg","imgs":["images/Wahl SuperTaper Cordless2.jpg","images/Wahl SuperTaper Cordless3.jpg","images/Wahl SuperTaper Cordless1.jpg","images/Wahl Professional Detailer2.jpg"],"badge":"hot","stars":5,"reviews":93,"url":"https://epicmart.co.ke/product/wahl-supertaper-cordless/"},
+  {"id":818,"name":"Original Super Taper Clipper","cat":"barber","catLabel":"Barber Accessories","sub":"clippers","price":7500,"oldPrice":8500,"img":"images/Original Super Taper Clipper1.webp","imgs":["images/Original Super Taper Clipper2.webp","images/Original Super Taper Clipper3.webp","images/Original Super Taper Clipper1.webp","images/Original Super Taper Clipper2.webp"],"badge":"sale","stars":5,"reviews":75,"url":"https://epicmart.co.ke/product/original-super-taper/"},
+  {"id":817,"name":"Cordless Detailer Trimmer","cat":"barber","catLabel":"Barber Accessories","sub":"trimmers","price":19500,"oldPrice":22500,"img":"images/Cordless Detailer Trimmer1.jpg","imgs":["images/Cordless Detailer Trimmer2.jpg","images/Cordless Detailer Trimmer3.jpg","images/Cordless Detailer Trimmer1.jpg","images/Cordless Detailer Trimmer2.jpg"],"badge":"sale","stars":5,"reviews":46,"url":"https://epicmart.co.ke/product/cordless-detailer/"},
+  {"id":832,"name":"Launch Wahl Trimmer","cat":"barber","catLabel":"Barber Accessories","sub":"trimmers","price":6000,"oldPrice":8000,"img":"images/LAUNCH WAHL TRIMMER1.jpg","imgs":["images/LAUNCH WAHL TRIMMER2.jpg","images/LAUNCH WAHL TRIMMER3.jpg","images/LAUNCH WAHL TRIMMER1.jpg","images/LAUNCH WAHL TRIMMER2.jpg"],"badge":"sale","stars":5,"reviews":67,"url":"https://epicmart.co.ke/product/launch-wahl-trimmer/"},
+  {"id":834,"name":"Rechargeable Clipper","cat":"barber","catLabel":"Barber Accessories","sub":"clippers","price":6500,"oldPrice":7500,"img":"images/Rechargeable Clipper1.jpg","imgs":["images/Rechargeable Clipper2.jpg","images/Rechargeable Clipper3.jpg","images/Rechargeable Clipper1.jpg","images/Rechargeable Clipper2.jpg"],"badge":"sale","stars":5,"reviews":52,"url":"https://epicmart.co.ke/product/reachangable-clipper/"},
+  {"id":859,"name":"Magic Taper","cat":"barber","catLabel":"Barber Accessories","sub":"clippers","price":5000,"oldPrice":6000,"img":"images/Magic Taper1.jpg","imgs":["images/Magic Taper2.jpg","images/Magic Taper3.jpg","images/Magic Taper4.jpg","images/Magic Taper1.jpg"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/magic-taper/"},
+  {"id":860,"name":"Wahl Professional Detailer","cat":"barber","catLabel":"Barber Accessories","sub":"trimmers","price":13500,"oldPrice":16000,"img":"images/Wahl Professional Detailer1.jpg","imgs":["images/Wahl Professional Detailer2.jpg","images/Wahl Professional Detailer3.jpg","images/Wahl Professional Detailer1.jpg","images/Wahl Professional Detailer2.jpg"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/wahl-professional-detailer/"},
+  {"id":861,"name":"5-Star Gold Cordless Magic Clip","cat":"barber","catLabel":"Barber Accessories","sub":"clippers","price":22000,"oldPrice":27000,"img":"images/5-Star Gold Cordless Magic Clip1.jpg","imgs":["images/5-Star Gold Cordless Magic Clip2.jpg","images/5-Star Gold Cordless Magic Clip3.jpg","images/5-Star Gold Cordless Magic Clip1.jpg","images/5-Star Gold Cordless Magic Clip2.jpg"],"badge":"hot","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/5-star-gold-cordless-magic-clip/"},
+  {"id":862,"name":"Starke Salon Pro Balding Clipper","cat":"barber","catLabel":"Barber Accessories","sub":"clippers","price":8000,"oldPrice":11500,"img":"images/Starke Salon Pro Balding Cordless Clipper1.jpg","imgs":["images/Starke Salon Pro Balding Cordless Clipper2.jpg","images/Starke Salon Pro Balding Cordless Clipper3.jpg","images/Starke Salon Pro Balding Cordless Clipper1.jpg","images/Starke Salon Pro Balding Cordless Clipper2.jpg"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/starke-salon-pro-balding-cordless-clipper/"},
+  {"id":863,"name":"Wahl 300 Series Home Clipper","cat":"barber","catLabel":"Barber Accessories","sub":"clippers","price":6000,"oldPrice":7500,"img":"images/Wahl-300 Series Home Use Hair Clipper1.jpg","imgs":["images/Wahl-300 Series Home Use Hair Clipper2.jpg","images/Wahl-300 Series Home Use Hair Clipper3.jpg","images/Wahl-300 Series Home Use Hair Clipper1.jpg","images/Wahl-300 Series Home Use Hair Clipper1.jpg"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/wahl-300-series-home-use-hair-clipper/"},
+  {"id":864,"name":"Nose Trimmer","cat":"barber","catLabel":"Barber Accessories","sub":"trimmers","price":2500,"oldPrice":3500,"img":"images/Nose Trimmer1.jpg","imgs":["images/Nose Trimmer1.jpg","images/Nose Trimmer2.jpg","images/Nose Trimmer3.jpg","images/Nose Trimmer1.jpg"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/nose-trimmer/"},
+  {"id":865,"name":"Neck Ruffles","cat":"barber","catLabel":"Barber Accessories","sub":"supplies","price":600,"oldPrice":800,"img":"images/NECK RUFFLES1.jpg","imgs":["images/NECK RUFFLES2.jpg","images/NECK RUFFLES3.jpg","images/NECK RUFFLES1.jpg","images/NECK RUFFLES2.jpg"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/neck-ruffles/"},
+  {"id":866,"name":"Razor Holder","cat":"barber","catLabel":"Barber Accessories","sub":"supplies","price":1000,"oldPrice":1500,"img":"images/RAZOR HOLDER1.jpg","imgs":["images/RAZOR HOLDER2.jpg","images/RAZOR HOLDER3.jpg","images/RAZOR HOLDER1.jpg","images/RAZOR HOLDER2.jpg"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/razor-holder/"},
+  {"id":867,"name":"Kinyozi Ruler","cat":"barber","catLabel":"Barber Accessories","sub":"supplies","price":1000,"oldPrice":1500,"img":"images/Kinyozi Ruler.jpg","imgs":["images/Kinyozi Ruler.jpg","images/Kinyozi Ruler.jpg","images/Kinyozi Ruler.jpg","images/Kinyozi Ruler.jpg"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/knyozi-ruler/"},
+  {"id":868,"name":"Adult Barber Gowns","cat":"barber","catLabel":"Barber Accessories","sub":"supplies","price":700,"oldPrice":1200,"img":"images/Adult barber gowns1.jpg","imgs":["images/Adult barber gowns2.jpg","images/Adult barber gowns3.jpg","images/Adult barber gowns1.jpg","images/Adult barber gowns2.jpg"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/adult-barber-gowns/"},
+  {"id":869,"name":"Barber Blower","cat":"barber","catLabel":"Barber Accessories","sub":"supplies","price":3500,"oldPrice":4500,"img":"images/Barber Blower1.jpg","imgs":["images/Barber Blower1.jpg","images/Barber Blower1.jpg","images/Barber Blower1.jpg","images/Barber Blower1.jpg"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/barber-blower/"},
+  {"id":870,"name":"Ayers Sterilizer","cat":"barber","catLabel":"Barber Accessories","sub":"supplies","price":6000,"oldPrice":8000,"img":"images/Ayers Sterilizer1.jpg","imgs":["images/Ayers Sterilizer3.jpg","images/Ayers Sterilizer2.png","images/Ayers Sterilizer1.jpg","images/Ayers Sterilizer2.png"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/ayers-sterilizer/"},
+  {"id":871,"name":"Electric Surgical Spray","cat":"barber","catLabel":"Barber Accessories","sub":"supplies","price":6000,"oldPrice":8000,"img":"images/ELECTRIC SURGICAL SPRAY1.jpg","imgs":["images/ELECTRIC SURGICAL SPRAY1.jpg","images/ELECTRIC SURGICAL SPRAY1.jpg","images/ELECTRIC SURGICAL SPRAY1.jpg","images/ELECTRIC SURGICAL SPRAY1.jpg"],"badge":"sale","stars":5,"reviews":0,"url":"https://epicmart.co.ke/product/electric-surgical-spray/"},
+  {"id":820,"name":"Wahl Cables","cat":"barber","catLabel":"Barber Accessories","sub":"supplies","price":1500,"oldPrice":2000,"img":"images/Wahl Cables1.png","imgs":["images/Wahl Cables2.jpg","images/Wahl Cables1.png","images/Wahl Cables2.jpg","images/Wahl Cables1.png"],"badge":"sale","stars":4,"reviews":82,"url":"https://epicmart.co.ke/product/wahl-cables/"},
+  {"id":821,"name":"Disposable Gloves (Box)","cat":"barber","catLabel":"Barber Accessories","sub":"supplies","price":1000,"oldPrice":1200,"img":"images/Disposable Gloves (Box)1.png","imgs":["images/Disposable Gloves (Box)2.png","images/Disposable Gloves (Box)3.jpg","images/Disposable Gloves (Box)1.png","images/Disposable Gloves (Box)2.png"],"badge":"sale","stars":5,"reviews":104,"url":"https://epicmart.co.ke/product/disposable-glooves/"},
+  {"id":822,"name":"Lyons Electric Kettle","cat":"barber","catLabel":"Barber Accessories","sub":"supplies","price":1500,"oldPrice":2000,"img":"images/Lyons Electric Kettle1.jpg","imgs":["images/Lyons Electric Kettle2.jpg","images/Lyons Electric Kettle3.jpg","images/Lyons Electric Kettle4.jpg","images/Lyons Electric Kettle3.jpg"],"badge":"sale","stars":4,"reviews":56,"url":"https://epicmart.co.ke/product/lyons-electric-kettle/"},
+  {"id":833,"name":"20L Professional Shampoo","cat":"barber","catLabel":"Barber Accessories","sub":"supplies","price":2400,"oldPrice":2800,"img":"images/20L Professional Shampoo1.jpg","imgs":["images/20L Professional Shampoo1.jpg","images/20L Professional Shampoo1.jpg","images/20L Professional Shampoo1.jpg","images/20L Professional Shampoo1.jpg"],"badge":"sale","stars":5,"reviews":72,"url":"https://epicmart.co.ke/product/20l/"}];
 
-// ââ STATE ââ
+//  STATE
 
 
 let activeFilter = 'all';
@@ -1600,12 +1623,12 @@ let activeSort = 'default';
 let searchQ = '';
 let toastT;
 
-// ââ HELPERS ââ
+//  HELPERS
 function disc(p) { return p.oldPrice ? Math.round((p.oldPrice - p.price) / p.oldPrice * 100) : 0; }
-function stars(n) { return 'â'.repeat(n) + 'â'.repeat(5 - n); }
+function stars(n) { return '★'.repeat(n) + '☆'.repeat(5 - n); }
 function fmt(n) { return n.toLocaleString(); }
 
-// ââ RENDER ââ
+// RENDER
 function render() {
   let list = [...PRODUCTS];
 
@@ -1632,7 +1655,7 @@ function render() {
   grid.innerHTML = list.map(p => {
     const d = disc(p);
     const badge = d > 0 && p.badge === 'sale' ? '<span class="prod-badge badge-sale">-'+d+'%</span>' :
-      p.badge === 'hot' ? '<span class="prod-badge badge-hot">ð¥ HOT</span>' :
+      p.badge === 'hot' ? '<span class="prod-badge badge-hot">🔥 HOT</span>' :
       p.badge === 'new' ? '<span class="prod-badge badge-new">NEW</span>' : '';
     const saveTag = d >= 15 ? '<span class="p-save">Save '+d+'%</span>' : '';
     const priceHtml = p.oldPrice
@@ -1645,7 +1668,7 @@ function render() {
       <div class="prod-img">
         <img src="${p.img}" alt="${nm}" loading="lazy" onerror="this.hidden=true">
         ${badge}
-        <button class="wish-btn ${inW ? 'wishlisted' : ''}" onclick="toggleWish(event, ${p.id})">${inW ? 'â¥' : 'â¡'}</button>
+        <button class="wish-btn ${inW ? 'wishlisted' : ''}" onclick="toggleWish(event, ${p.id})">${inW ? '♥' : '♡'}</button>
       </div>
       <div class="prod-body">
         <div class="prod-cat-tag" style="font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#D4A017;opacity:.7;margin-bottom:5px">Barber Accessories</div>
@@ -1654,13 +1677,13 @@ function render() {
         <div class="prod-prices">${priceHtml}</div>
       </div>
       <div class="prod-foot">
-        <button class="add-btn" >ð Buy Now</button>
+        <button class="add-btn" >🛒 Buy Now</button>
       </div>
     </div>`;
   }).join('');
 }
 
-// ââ FILTER TABS ââ
+// FILTER TABS
 document.querySelectorAll('.filter-btn').forEach(btn => {
   btn.addEventListener('click', function() {
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
@@ -1670,19 +1693,19 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
   });
 });
 
-// ââ SORT ââ
+// SORT 
 document.getElementById('sortSelect').addEventListener('change', function() {
   activeSort = this.value;
   render();
 });
 
-// ââ SEARCH ââ
+//  SEARCH
 document.getElementById('searchInput').addEventListener('input', function() {
   searchQ = this.value;
   render();
 });
 
-// ââ VIEW TOGGLE ââ
+//  VIEW TOGGLE
 function setView(type) {
   const grid = document.getElementById('prodGrid');
   grid.classList.toggle('list-view', type === 'list');
@@ -1690,7 +1713,7 @@ function setView(type) {
   document.getElementById('listBtn').classList.toggle('active', type === 'list');
 }
 
-// ââ PRICE FILTER ââ
+// PRICE FILTER
 function applyPrice() {
   const mn = parseFloat(document.getElementById('priceMin').value) || 0;
   const mx = parseFloat(document.getElementById('priceMax').value) || Infinity;
@@ -1699,7 +1722,7 @@ function applyPrice() {
     if (pr) c.classList.toggle('hidden', pr.price < mn || pr.price > mx);
   });
 }
-// ââ WISHLIST ââ
+//  WISHLIST
 function toggleWish(e, id) {
   e.stopPropagation();
   const i = wishlist.indexOf(id);
@@ -1708,12 +1731,12 @@ function toggleWish(e, id) {
   render();
 }
 
-// ââ TOAST ââ
+//  TOAST
 
 function hideToast() { document.getElementById('toast').classList.remove('show'); }
 
-// ââ KEYBOARD ââ
-// ââ INIT ââ
+//  KEYBOARD
+// INIT 
 render();
 if (typeof refreshCart === 'function') { refreshCart(); }
 
@@ -1725,7 +1748,7 @@ if (typeof refreshCart === 'function') { refreshCart(); }
 <!-- Modal Overlay -->
 <div id="pm-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:10000;backdrop-filter:blur(6px);overflow-y:auto;padding:20px" onclick="pmClose(event)">
   <div id="pm-box" style="position:relative;z-index:10001" onclick="event.stopPropagation()" style="background:#141414;border:1px solid rgba(212,160,23,.25);border-radius:16px;max-width:920px;margin:auto;overflow:hidden;position:relative;animation:pmPop .3s ease">
-    <button onclick="closePM()" style="position:absolute;top:14px;right:16px;background:rgba(255,255,255,.1);border:none;color:#fff;width:34px;height:34px;border-radius:50%;font-size:20px;cursor:pointer;z-index:10;display:flex;align-items:center;justify-content:center;line-height:1">Ã</button>
+    <button onclick="closePM()" style="position:absolute;top:14px;right:16px;background:rgba(255,255,255,.1);border:none;color:#fff;width:34px;height:34px;border-radius:50%;font-size:20px;cursor:pointer;z-index:10;display:flex;align-items:center;justify-content:center;line-height:1">×</button>
     <div style="display:grid;grid-template-columns:1fr 1fr;min-height:420px">
 
       <!-- LEFT: Image Gallery -->
@@ -1735,9 +1758,9 @@ if (typeof refreshCart === 'function') { refreshCart(); }
           <img id="pm-main-img" src="" alt="" style="width:100%;height:100%;object-fit:cover;transition:opacity .3s">
           <span id="pm-badge" style="position:absolute;top:14px;left:14px;background:#D93B3B;color:#fff;font-size:11px;font-weight:800;padding:4px 12px;border-radius:20px;letter-spacing:.04em"></span>
           <!-- Arrow Left -->
-          <button onclick="event.stopPropagation();pmPrevImg()" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.2);color:#fff;width:36px;height:36px;border-radius:50%;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center">â¹</button>
+          <button onclick="event.stopPropagation();pmPrevImg()" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.2);color:#fff;width:36px;height:36px;border-radius:50%;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center">‹</button>
           <!-- Arrow Right -->
-          <button onclick="event.stopPropagation();pmNextImg()" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.2);color:#fff;width:36px;height:36px;border-radius:50%;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center">âº</button>
+          <button onclick="event.stopPropagation();pmNextImg()" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.2);color:#fff;width:36px;height:36px;border-radius:50%;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center">›</button>
         </div>
         <!-- Thumbnails -->
         <div id="pm-thumbs" style="display:flex;gap:8px;padding:10px 12px;overflow-x:auto;background:#111"></div>
@@ -1768,16 +1791,16 @@ if (typeof refreshCart === 'function') { refreshCart(); }
         <div style="margin-bottom:20px">
           <div style="font-size:12px;font-weight:700;color:#888;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px">Quantity</div>
           <div style="display:flex;align-items:center;gap:0;border:1.5px solid rgba(255,255,255,.12);border-radius:9px;width:fit-content;overflow:hidden">
-            <button onclick="event.stopPropagation();pmQty(-1)" style="background:#1C1C1C;border:none;color:#F8F6F2;width:40px;height:40px;font-size:20px;cursor:pointer;transition:.2s;font-family:'Plus Jakarta Sans',sans-serif" onmouseover="this.style.background='#242424'" onmouseout="this.style.background='#1C1C1C'">â</button>
+            <button onclick="event.stopPropagation();pmChangeQty(-1)" style="background:#1C1C1C;border:none;color:#F8F6F2;width:40px;height:40px;font-size:20px;cursor:pointer;transition:.2s;font-family:'Plus Jakarta Sans',sans-serif" onmouseover="this.style.background='#242424'" onmouseout="this.style.background='#1C1C1C'">−</button>
             <span id="pm-qty" style="min-width:44px;text-align:center;font-size:16px;font-weight:700;color:#F8F6F2;background:#141414;height:40px;display:flex;align-items:center;justify-content:center;border-left:1px solid rgba(255,255,255,.1);border-right:1px solid rgba(255,255,255,.1)">1</span>
-            <button onclick="event.stopPropagation();pmQty(1)" style="background:#1C1C1C;border:none;color:#F8F6F2;width:40px;height:40px;font-size:20px;cursor:pointer;transition:.2s;font-family:'Plus Jakarta Sans',sans-serif" onmouseover="this.style.background='#242424'" onmouseout="this.style.background='#1C1C1C'">+</button>
+            <button onclick="event.stopPropagation();pmChangeQty(1)" style="background:#1C1C1C;border:none;color:#F8F6F2;width:40px;height:40px;font-size:20px;cursor:pointer;transition:.2s;font-family:'Plus Jakarta Sans',sans-serif" onmouseover="this.style.background='#242424'" onmouseout="this.style.background='#1C1C1C'">+</button>
           </div>
         </div>
 
         <!-- Buttons -->
         <div style="display:flex;flex-direction:column;gap:10px;margin-top:auto">
           <!-- Buy Now / Add to Cart -->
-          <button id="pm-buy-btn" onclick="event.stopPropagation();pmAddToCart()" style="background:#D4A017;color:#4A0910;border:none;padding:14px;border-radius:9px;font-weight:800;font-size:15px;letter-spacing:.05em;text-transform:uppercase;cursor:pointer;transition:.2s;display:flex;align-items:center;justify-content:center;gap:8px" onmouseover="this.style.background='#F0C040'" onmouseout="this.style.background='#D4A017'">ð Add to Cart</button>
+          <button id="pm-buy-btn" onclick="event.stopPropagation();pmAddToCart()" style="background:#D4A017;color:#4A0910;border:none;padding:14px;border-radius:9px;font-weight:800;font-size:15px;letter-spacing:.05em;text-transform:uppercase;cursor:pointer;transition:.2s;display:flex;align-items:center;justify-content:center;gap:8px" onmouseover="this.style.background='#F0C040'" onmouseout="this.style.background='#D4A017'">Add to Cart</button>
           <!-- WhatsApp Order -->
           <button id="pm-wa-btn" onclick="event.stopPropagation();pmWhatsApp()" style="background:#25D366;color:#fff;border:none;padding:13px;border-radius:9px;font-weight:800;font-size:14px;letter-spacing:.05em;text-transform:uppercase;cursor:pointer;transition:.2s;display:flex;align-items:center;justify-content:center;gap:8px" onmouseover="this.style.background='#1e8e3e'" onmouseout="this.style.background='#25D366'">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -1787,7 +1810,7 @@ if (typeof refreshCart === 'function') { refreshCart(); }
 
         <!-- Delivery note -->
         <div style="margin-top:14px;background:rgba(34,160,90,.08);border:1px solid rgba(34,160,90,.2);border-radius:8px;padding:10px 14px;font-size:12.5px;color:#22A05A;display:flex;align-items:center;gap:8px">
-          ð <span>Nationwide delivery Â· Payment on order confirmation</span>
+          🚚 <span>Nationwide delivery Â· Payment on order confirmation</span>
         </div>
       </div>
     </div>
@@ -1811,12 +1834,12 @@ if (typeof refreshCart === 'function') { refreshCart(); }
 
 
 <script>
-/* âââââââââââââââââââââââââââââââ
-   EPIC MART â MAIN CONTROLLER
+/* 
+   EPIC MART MAIN CONTROLLER
    One script. No conflicts.
-âââââââââââââââââââââââââââââââ */
+ */
 
-/* ââ CART STATE ââ */
+/* CART STATE */
 var cart = JSON.parse(localStorage.getItem('em_cart') || '[]');
 
 function saveCart() {
@@ -1882,7 +1905,7 @@ function refreshCart() {
   if (amtEl) amtEl.textContent = t;
 }
 
-/* ââ CART OPEN / CLOSE ââ */
+/* CART OPEN / CLOSE */
 function openCart() {
   var panel   = document.getElementById('cartPanel');
   var overlay = document.getElementById('cartOverlay');
@@ -1907,7 +1930,7 @@ function showCheckout() {
   if (form) { form.style.display = 'block'; form.classList.add('show'); }
 }
 
-/* ââ SEARCH ââ */
+/* SEARCH */
 function doSearch(q) {
   var val = (q || '').toLowerCase().trim();
   if (typeof searchQ !== 'undefined') { searchQ = val; if (typeof render === 'function') render(); }
@@ -1919,7 +1942,7 @@ function doSearch(q) {
   }
 }
 
-/* ââ CHECKOUT ââ */
+/* CHECKOUT */
 function openMpesa() {
   var n  = (document.getElementById('cfName')  || {}).value || '';
   var ph = (document.getElementById('cfPhone') || {}).value || '';
@@ -1953,9 +1976,9 @@ function orderViaWA() {
     'Please confirm my order. Thank you!', '_blank');
 }
 
-/* ââ INIT ON DOM READY ââ */
+/*  INIT ON DOM READY */
 
-/* ââ ADD TO CART ââ */
+/* ADD TO CART */
 function addToCart(id, name, price, img, qty) {
   cart = JSON.parse(localStorage.getItem('em_cart') || '[]');
   qty = qty || 1;
@@ -1965,7 +1988,7 @@ function addToCart(id, name, price, img, qty) {
   saveCart(); refreshCart();
 }
 
-/* ââ PRODUCT MODAL ââ */
+/* PRODUCT MODAL */
 var pmProduct = null, pmImages = [], pmImgIdx = 0, pmQtyVal = 1;
 
 function openPM(id) {
@@ -1983,7 +2006,7 @@ function openPM(id) {
   // Stars
   var starsEl = document.querySelector('#pm-stars span:first-child');
   var rcEl    = document.querySelector('#pm-stars span:last-child');
-  if (starsEl) starsEl.textContent = 'â'.repeat(p.stars) + 'â'.repeat(5-p.stars);
+  if (starsEl) starsEl.textContent = '★'.repeat(p.stars) + '☆'.repeat(5-p.stars);
   if (rcEl)    rcEl.textContent = p.reviews > 0 ? '(' + p.reviews + ' reviews)' : '(New)';
 
   // Prices
@@ -2002,7 +2025,7 @@ function openPM(id) {
   if (badgeEl) {
     var d2 = p.oldPrice ? Math.round((p.oldPrice-p.price)/p.oldPrice*100) : 0;
     if (d2 > 0)           { badgeEl.textContent='-'+d2+'%'; badgeEl.style.background='#D93B3B'; badgeEl.style.display=''; }
-    else if (p.badge==='hot') { badgeEl.textContent='ð¥ HOT'; badgeEl.style.background='#D4A017'; badgeEl.style.display=''; }
+    else if (p.badge==='hot') { badgeEl.textContent='🔥 HOT'; badgeEl.style.background='#D4A017'; badgeEl.style.display=''; }
     else if (p.badge==='new') { badgeEl.textContent='NEW'; badgeEl.style.background='#22A05A'; badgeEl.style.display=''; }
     else                  { badgeEl.style.display='none'; }
   }
@@ -2011,7 +2034,7 @@ function openPM(id) {
 
   // Reset buy button
   var addBtn = el('pm-buy-btn') || el('pmAddBtn');
-  if (addBtn) { addBtn.textContent = 'ð Add to Cart'; addBtn.style.background = ''; }
+  if (addBtn) { addBtn.textContent = 'Add to Cart'; addBtn.style.background = ''; }
 
   // Show modal
   var overlay = el('pm-overlay');
@@ -2049,7 +2072,7 @@ function pmAddToCart() {
   addToCart(pmProduct.id, pmProduct.name, pmProduct.price, pmProduct.img, pmQtyVal);
   var btn = document.getElementById('pm-buy-btn') || document.getElementById('pmAddBtn');
   if (btn) {
-    btn.textContent = 'â Added to Cart!';
+    btn.textContent = 'Added to Cart!';
     btn.style.background = '#22A05A';
     setTimeout(function(){ btn.textContent='ð Add to Cart'; btn.style.background=''; }, 2000);
   }
@@ -2110,7 +2133,7 @@ document.addEventListener('DOMContentLoaded', function() {
     e.stopPropagation(); orderViaWA();
   });
 
-  /* Cart item qty/delete â event delegation on #cartItems */
+  /* Cart item qty/delete event delegation on #cartItems */
   var cartItems = document.getElementById('cartItems');
   if (cartItems) {
     cartItems.addEventListener('click', function(e) {
@@ -2138,7 +2161,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var si = document.getElementById('searchInput');
   if (si) si.addEventListener('input', function() { doSearch(this.value); });
 
-  /* Search button â the button right after the search input */
+  /* Search button the button right after the search input */
   if (si && si.nextElementSibling && si.nextElementSibling.tagName === 'BUTTON') {
     si.nextElementSibling.addEventListener('click', function() {
       doSearch(document.getElementById('searchInput').value);
@@ -2162,7 +2185,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (e.key === 'Escape') { closeCart(); closeMpesa(); }
   });
 
-  /* BUY NOW â delegation on prodGrid */
+  /* BUY NOW delegation on prodGrid */
   var grid = document.getElementById('prodGrid');
   if (grid) {
     grid.addEventListener('click', function(e) {
